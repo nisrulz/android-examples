@@ -8,7 +8,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * @author Nishant Srivastava
@@ -19,6 +24,12 @@ import android.widget.TextView;
  */
 
 public class Main2Activity extends AppCompatActivity {
+
+    ListView lv;
+    ArrayAdapter<String> adapter;
+    ArrayList<String> data;
+
+    ImplicitIntents implicitIntents;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +57,49 @@ public class Main2Activity extends AppCompatActivity {
                                 launchImplicitIntent();
                             }
                         }).show();
+            }
+        });
+
+
+        implicitIntents = new ImplicitIntents();
+
+
+        data = new ArrayList<>();
+        data.add("Call a number");
+        data.add("Send an email");
+        data.add("Open a webpage");
+        data.add("Open app page in playstore");
+        data.add("Send SMS");
+        data.add("Take a picture");
+
+
+        lv = (ListView) findViewById(R.id.listView);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        implicitIntents.call(Main2Activity.this, "0001112223");
+                        break;
+                    case 1:
+                        implicitIntents.sendEmail(Main2Activity.this, new String[]{"someone@email.com"}, "subject", "body");
+                        break;
+                    case 2:
+                        implicitIntents.openUrlInBrowser(Main2Activity.this, "http://www.google.com");
+                        break;
+                    case 3:
+                        implicitIntents.openAppPageInPlaystore(Main2Activity.this);
+                        break;
+                    case 4:
+                        implicitIntents.sendSMS(Main2Activity.this, "0001112223", "Hello");
+                        break;
+                    case 5:
+                        implicitIntents.takeAPic(Main2Activity.this, "saved_img", "img_1");
+                        break;
+                }
             }
         });
     }
