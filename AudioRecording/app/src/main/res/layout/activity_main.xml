@@ -25,11 +25,20 @@
     <include layout="@layout/content_main"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"/>
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/ic_play"
+        app:fabSize="mini"/>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_mic"/>
 </android.support.design.widget.CoordinatorLayout>
