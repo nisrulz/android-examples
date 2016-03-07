@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:arc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.capricorn.RayMenu
+        android:id="@+id/ray_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+
+    <com.capricorn.ArcMenu
+        android:id="@+id/arc_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.capricorn.ArcMenu
+        android:id="@+id/arc_menu_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        arc:childSize="@dimen/menuChildSize"
+        arc:fromDegrees="@dimen/menuFromDegrees"
+        arc:toDegrees="@dimen/menuToDegrees"/>
+
+</LinearLayout>
