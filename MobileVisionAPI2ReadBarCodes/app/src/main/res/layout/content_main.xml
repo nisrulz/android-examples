@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-    <SurfaceView
-        android:id="@+id/camera_view"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/code_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/camera_view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:gravity="center_horizontal"
-        android:text="Nothing to read."
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Point the camera view to a QR Code to read the information"
         android:textSize="20sp"/>
 
-</RelativeLayout>
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="320dp"
+        android:layout_height="320dp"/>
+</LinearLayout>
