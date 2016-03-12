@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ItemViewHolder> {
@@ -43,5 +44,16 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ItemViewHolder> {
             super(itemView);
             txt = (TextView) itemView.findViewById(R.id.txt);
         }
+    }
+
+
+    public void remove(int position) {
+        dataList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void swap(int firstPosition, int secondPosition) {
+        Collections.swap(dataList, firstPosition, secondPosition);
+        notifyItemMoved(firstPosition, secondPosition);
     }
 }

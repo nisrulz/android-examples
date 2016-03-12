@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -47,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
         rv.hasFixedSize();
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
+
+
+        // Setup onItemTouchHandler
+        ItemTouchHelper.Callback callback = new RVOnItemtouchHelper(adapter);
+        ItemTouchHelper helper = new ItemTouchHelper(callback);
+        helper.attachToRecyclerView(rv);
 
         // Set the divider
         rv.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
