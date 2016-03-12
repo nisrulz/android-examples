@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
 
+        // Set the divider
+        rv.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+
+        // Set On Click
         rv.addOnItemTouchListener(new RVItemClickListener(this, new RVItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
