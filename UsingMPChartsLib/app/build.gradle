@@ -26,7 +26,7 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
 
     // MPCharts
-    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.3'
 }
 
 repositories {

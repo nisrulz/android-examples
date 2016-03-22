@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Library at  : https://github.com/PhilJay/MPAndroidChart/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Using MPAndroidCharts 2.2.3", Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -58,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
         labels.add("June");
 
         // Declare the bar chart and set it as the view for this activity
-        final BarChart chart = new BarChart(this);
-        setContentView(chart);
+        final BarChart chart = (BarChart) findViewById(R.id.bar_chart);
 
         // Set data for the bar chart
         BarData data = new BarData(labels, dataset);
