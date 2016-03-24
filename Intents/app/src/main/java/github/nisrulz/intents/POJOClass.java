@@ -3,13 +3,6 @@ package github.nisrulz.intents;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * @author Nishant Srivastava
- * @project Intents
- * @company Excogitation
- * @package github.nisrulz.intents
- * @date 26/Feb/2016
- */
 public class POJOClass implements Parcelable {
 
     private String name;

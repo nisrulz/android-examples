@@ -11,13 +11,7 @@ import android.support.v4.app.ActivityCompat;
 
 import java.io.File;
 
-/**
- * @author Nishant Srivastava
- * @project Intents
- * @company Excogitation
- * @package github.nisrulz.intents
- * @date 26/Feb/2016
- */
+
 public class ImplicitIntents {
 
     void openAppPageInPlaystore(Context context) {

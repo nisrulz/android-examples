@@ -2,27 +2,40 @@ package github.nisrulz.intents;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 /**
- * @author Nishant Srivastava
- * @project Intents
- * @company Excogitation
- * @package github.nisrulz.intents
- * @date 26/Feb/2016
+ * The type Main activity.
  */
-
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * The Text view 1.
+     */
     TextView textView_1;
+    /**
+     * The Lv.
+     */
+    ListView lv;
+    /**
+     * The Adapter.
+     */
+    ArrayAdapter<String> adapter;
+    /**
+     * The Data.
+     */
+    ArrayList<String> data;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +45,29 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        textView_1 = (TextView) findViewById(R.id.textView);
+        textView_1 = (TextView) findViewById(R.id.textView_1);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        data = new ArrayList<>();
+        data.add("Explicit Intent with Parceable Object");
+        data.add("Explicit Intent for Result");
+
+
+        lv = (ListView) findViewById(R.id.listView);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Click Ok to fire an Explicit Intent for Result", Snackbar
-                        .LENGTH_LONG)
-                        .setAction("OK", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                launchExplicitIntent();
-                            }
-                        }).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        launchExplicitIntentWithParceableObj();
+                        break;
+                    case 1:
+                        launchExplicitIntentForResult();
+                        break;
+                }
             }
         });
     }
@@ -55,34 +76,42 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Explicit Intent
      */
-    public void launchExplicitIntent() {
+    private void launchExplicitIntentWithParceableObj() {
         // first parameter is the context, second is the class of the activity to launch
         Intent i = new Intent(MainActivity.this, Main2Activity.class);
         POJOClass pojoClass = new POJOClass("Radix", "This is some text");
         i.putExtra("data", pojoClass);
+        i.putExtra("type", "pojo");
         startActivity(i); // brings up the second activity
     }
 
+    /**
+     * Explicit Intent For Result
+     */
+    private void launchExplicitIntentForResult() {
+        Bundle bundle = new Bundle();
+        bundle.putInt("number", 10);
+        bundle.putString("text", "This is text sent from MainActivity");
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        // first parameter is the context, second is the class of the activity to launch
+        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+        i.putExtra("bundle", bundle);
+        i.putExtra("type", "result");
+        startActivityForResult(i, 100); // brings up the second activity
     }
 
+
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 100 && data != null) {
+                Bundle bundle = data.getBundleExtra("returndata");
+                String text = bundle.getString("text");
+
+                Toast.makeText(MainActivity.this, "Text Received : " + text, Toast.LENGTH_LONG).show();
+            }
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
