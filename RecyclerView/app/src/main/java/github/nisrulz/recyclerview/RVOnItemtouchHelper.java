@@ -26,6 +26,7 @@ public class RVOnItemtouchHelper extends ItemTouchHelper.SimpleCallback {
                 System.out.println("Swipped Left");
                 break;
             case ItemTouchHelper.RIGHT:
+                rvAdapter.remove(swipped.getAdapterPosition());
                 System.out.println("Swipped Right");
                 break;
         }
