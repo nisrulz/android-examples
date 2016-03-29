@@ -1,8 +1,6 @@
 # Android Examples
 
-
-
-
+Main repository containing all the example apps demonstrating features/functionality/integrations in android application development
 
 
 License
