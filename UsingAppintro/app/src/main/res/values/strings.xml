@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">UsingAppintro</string>
+    <!-- Intro : Title -->
+    <string name="title_1">Title 1</string>
+    <string name="title_2">Title 2</string>
+    <string name="title_3">Title 3</string>
+    <string name="title_4">Title 4</string>
+
+    <!-- Intro : Description -->
+    <string name="desc_1">This is description with lots of words.</string>
+    <string name="desc_2">Yo ! whatsup </string>
+    <string name="desc_3">Hello , how may I help you ?</string>
+    <string name="desc_4">cats cats cats ..meow..cats cats</string>
+
+
 </resources>

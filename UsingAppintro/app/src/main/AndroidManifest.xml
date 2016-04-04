@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="github.nisrulz.usingappintro"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="github.nisrulz.usingappintro"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".MyIntroActivity"
+            android:theme="@style/AppTheme.NoActionBAr">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
