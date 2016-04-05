@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Bind to Service
         Intent intent = new Intent(getApplicationContext(), MyBoundService.class);
-        bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
+        bindService(intent, myServiceConnection, Context.BIND_AUTO_CREATE);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Send Message
-                sendMesaage();
+                sendMessage();
             }
         });
     }
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         // Unbind from service so as to not leak the service connection
-        unbindService(myConnection);
+        unbindService(myServiceConnection);
     }
 
-    void sendMesaage() {
+    void sendMessage() {
         if (!isBound) return;
 
         Message msg = Message.obtain();
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Service Connection
-    private ServiceConnection myConnection = new ServiceConnection() {
+    private ServiceConnection myServiceConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className,
                                        IBinder service) {
             myService = new Messenger(service);
