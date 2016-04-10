@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/navigation_drawer_item1"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Navigation Item 1"/>
+        <item
+            android:id="@+id/navigation_drawer_item2"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Navigation Item 2"/>
+
+        <item
+            android:id="@+id/navigation_drawer_item3"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="Navigation Item 3"/>
+    </group>
+
+</menu>
