@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.0 rc3"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "github.nisrulz.example.usingpocketsphinxforvoicerecognition"
@@ -25,3 +25,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
 }
+
+ant.importBuild 'assets.xml'
+preBuild.dependsOn(list, checksum)
+clean.dependsOn(clean_assets)
+
