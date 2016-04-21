@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">JUnitTests</string>
+    <string name="app_name">OrderCoffee</string>
+    <string name="coffee_price">Coffee: $%.1f</string>
+    <string name="total_price">Total price: $%.1f</string>
+    <string name="increment_label">+</string>
+    <string name="decrement_label">-</string>
+    <string name="default_coffee_count">0</string>
 </resources>
