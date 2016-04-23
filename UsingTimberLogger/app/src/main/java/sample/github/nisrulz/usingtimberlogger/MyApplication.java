@@ -9,12 +9,18 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Timber.plant(new Timber.DebugTree() {
-            // Add line numbers to logs
-            @Override
-            protected String createStackElementTag(StackTraceElement element) {
-                return super.createStackElementTag(element) + ":" + element.getLineNumber();
-            }
-        });
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree() {
+                // Add line numbers to logs
+                @Override
+                protected String createStackElementTag(StackTraceElement element) {
+                    return super.createStackElementTag(element) + ":" + element.getLineNumber();
+                }
+            });
+        } else {
+            //Release Mode
+            // Init your Crashlytics here
+            Timber.plant(new ReleaseTree());
+        }
     }
 }
