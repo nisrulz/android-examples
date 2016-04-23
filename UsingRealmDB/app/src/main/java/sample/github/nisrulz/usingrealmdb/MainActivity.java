@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         realm.commitTransaction();
 
-        RealmResults<Tasks> tasksRealmResults = realm.allObjects(Tasks.class);
+        RealmResults<Tasks> tasksRealmResults = realm.allObjects(Tasks.class)
+                .where().contains("title", "NewDay").findAll();
 
         for (Tasks t : tasksRealmResults) {
             Log.d("Realm", String.format("ID : %s , Title : %s, Description : %s", t.getId(), t
