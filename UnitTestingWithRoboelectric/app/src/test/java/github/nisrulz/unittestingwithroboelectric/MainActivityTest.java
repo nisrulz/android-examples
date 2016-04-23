@@ -13,8 +13,8 @@ import org.robolectric.annotation.Config;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
-@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 @RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 public class MainActivityTest {
 
     private MainActivity activity;
@@ -26,13 +26,15 @@ public class MainActivityTest {
 
 
     @Test
-    public void validateTextViewHasText(){
+    public void validateTextViewHasText() {
         TextView tvHelloWorld = (TextView) activity.findViewById(R.id.tvHelloWorld);
         assertNotNull("TextView could not be found", tvHelloWorld);
 
         assertTrue("TextView contains incorrect text",
                 "Hello World!".equals(tvHelloWorld.getText().toString()));
 
+
+        assertNotNull(activity);
 
     }
 
