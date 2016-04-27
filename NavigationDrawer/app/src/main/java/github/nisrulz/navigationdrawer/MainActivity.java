@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
+
+                //Checking if the item is in checked state or not, if not make it in checked state
+                if (item.isChecked())
+                    item.setChecked(false);
+                else
+                    item.setChecked(true);
+
+                //Closing drawer on item click
+                androidDrawerLayout.closeDrawers();
+
                 switch (item.getItemId()) {
                     case R.id.nav_menu_item1:
                         Toast.makeText(MainActivity.this, "Item 1 Clicked", Toast.LENGTH_SHORT).show();
