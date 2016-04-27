@@ -23,6 +23,9 @@ android {
         app2 {
             applicationIdSuffix ".app2"
         }
+        app3 {
+            applicationIdSuffix ".app3"
+        }
     }
 }
 
