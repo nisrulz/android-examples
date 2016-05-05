@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Sets location listening.
+     */
     void setupLocationListening() {
 
         LocationManager locationManager;
