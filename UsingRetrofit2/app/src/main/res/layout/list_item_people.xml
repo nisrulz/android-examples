@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+  <TextView
+      android:id="@+id/textview_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="25sp"
+      android:textStyle="bold|italic"
+      tools:text="Name"
+      />
+  <TextView
+      android:id="@+id/textview_height"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_mass"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_haircolor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_skincolor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_eyecolor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_gender"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/textview_birthyear"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+</LinearLayout>
