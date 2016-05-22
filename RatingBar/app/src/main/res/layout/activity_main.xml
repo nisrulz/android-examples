@@ -22,6 +22,7 @@
       android:numStars="5"
       android:rating="3.5"
       android:stepSize="0.5"
+      android:theme="@style/RatingBar"
       />
 
   <TextView
