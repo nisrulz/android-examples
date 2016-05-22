@@ -14,14 +14,25 @@
 
   <RatingBar
       android:id="@+id/ratingBar"
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentTop="true"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="118dp"
       android:numStars="5"
       android:rating="3.5"
-
       android:stepSize="0.5"
+      />
+
+  <TextView
+      android:id="@+id/txtstatus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:gravity="center"
+      android:textSize="80sp"
+      tools:text="5.0"
       />
 </RelativeLayout>
