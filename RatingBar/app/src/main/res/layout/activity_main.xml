@@ -11,9 +11,17 @@
     tools:context="github.nisrulz.sample.ratingbar.MainActivity"
     >
 
-  <TextView
-      android:layout_width="wrap_content"
+
+  <RatingBar
+      android:id="@+id/ratingBar"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="118dp"
+      android:numStars="5"
+      android:rating="3.5"
+
+      android:stepSize="0.5"
       />
 </RelativeLayout>
