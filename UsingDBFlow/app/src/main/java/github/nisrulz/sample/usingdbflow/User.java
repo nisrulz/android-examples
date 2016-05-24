@@ -9,16 +9,11 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
 @Table(database = MyDatabase.class)
 public class User extends BaseModel {
 
-  @Column
-  @PrimaryKey
-  int id;
+  @Column @PrimaryKey int id;
 
-  @Column
-  String name;
+  @Column String name;
 
-  @Column
-  @ForeignKey(saveForeignKeyModel = false)
-  Organization organization;
+  @Column @ForeignKey(saveForeignKeyModel = false) Organization organization;
 
   public void setOrganization(Organization organization) {
     this.organization = organization;
@@ -26,5 +21,17 @@ public class User extends BaseModel {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Organization getOrganization() {
+    return organization;
   }
 }

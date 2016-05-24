@@ -8,10 +8,23 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
 @Table(database = MyDatabase.class)
 public class Organization extends BaseModel {
 
-  @Column
-  @PrimaryKey
-  int id;
+  @Column @PrimaryKey int id;
 
-  @Column
-  String name;
+  @Column String name;
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public String getName() {
+    return name;
+  }
 }
