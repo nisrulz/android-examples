@@ -11,6 +11,7 @@ import com.roughike.bottombar.OnMenuTabClickListener;
 public class MainActivity extends AppCompatActivity {
 
   private String LOGTAG = "UsingBottomNavigationBar";
+  // Using lib from : https://github.com/roughike/BottomBar
   private BottomBar mBottomBar;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
