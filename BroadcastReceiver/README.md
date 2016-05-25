@@ -5,7 +5,7 @@ Android component which allows you to register for system or application events.
 ### Reference
 
 + [Docs](https://developer.android.com/reference/android/content/BroadcastReceiver.html)
-+ [Codepath](https://guides.codepath.com/android/Starting-Background-Services)
++ [Vogella](http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html)
 
 License
 =======
