@@ -12,12 +12,12 @@ public class GCMNetMUtil {
 
   private GcmNetworkManager mGcmNetworkManager;
   private Context context;
-
-  private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+  private GoogleApiAvailability googleAPI;
 
   public GCMNetMUtil(Context context) {
     this.context = context;
     mGcmNetworkManager = GcmNetworkManager.getInstance(context);
+    googleAPI = GoogleApiAvailability.getInstance();
   }
 
   void oneOffTask() {
@@ -59,13 +59,8 @@ public class GCMNetMUtil {
   }
 
   private boolean checkPlayServices() {
-    GoogleApiAvailability googleAPI = GoogleApiAvailability.getInstance();
     int result = googleAPI.isGooglePlayServicesAvailable(context);
     if (result != ConnectionResult.SUCCESS) {
-      if (googleAPI.isUserResolvableError(result)) {
-        googleAPI.getErrorDialog(this, result, PLAY_SERVICES_RESOLUTION_REQUEST).show();
-      }
-
       return false;
     }
 
