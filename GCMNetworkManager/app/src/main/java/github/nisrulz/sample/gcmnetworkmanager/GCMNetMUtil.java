@@ -2,7 +2,7 @@ package github.nisrulz.sample.gcmnetworkmanager;
 
 import android.content.Context;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.gcm.GcmNetworkManager;
 import com.google.android.gms.gcm.OneoffTask;
 import com.google.android.gms.gcm.PeriodicTask;
@@ -12,10 +12,13 @@ public class GCMNetMUtil {
 
   private GcmNetworkManager mGcmNetworkManager;
   private Context context;
+  private GoogleApiAvailability googleAPI;
 
   public GCMNetMUtil(Context context) {
     this.context = context;
     mGcmNetworkManager = GcmNetworkManager.getInstance(context);
+
+    googleAPI = GoogleApiAvailability.getInstance();
   }
 
   void oneOffTask() {
@@ -27,7 +30,7 @@ public class GCMNetMUtil {
         .setRequiresCharging(false)
         .build();
 
-    int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
+    int resultCode = googleAPI.isGooglePlayServicesAvailable(context);
     if (resultCode == ConnectionResult.SUCCESS) {
       mGcmNetworkManager.schedule(task);
     } else {
@@ -40,7 +43,7 @@ public class GCMNetMUtil {
         new PeriodicTask.Builder().setService(CustomService.class).setPeriod(30) //in seconds
             .setFlex(10).setTag(CustomService.TAG_TASK_PERIODIC_LOG).setPersisted(true).build();
 
-    int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
+    int resultCode = googleAPI.isGooglePlayServicesAvailable(context);
     if (resultCode == ConnectionResult.SUCCESS) {
       mGcmNetworkManager.schedule(task);
     } else {
