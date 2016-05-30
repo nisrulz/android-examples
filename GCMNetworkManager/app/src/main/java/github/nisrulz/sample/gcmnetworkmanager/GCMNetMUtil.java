@@ -12,13 +12,12 @@ public class GCMNetMUtil {
 
   private GcmNetworkManager mGcmNetworkManager;
   private Context context;
-  private GoogleApiAvailability googleAPI;
+
+  private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
   public GCMNetMUtil(Context context) {
     this.context = context;
     mGcmNetworkManager = GcmNetworkManager.getInstance(context);
-
-    googleAPI = GoogleApiAvailability.getInstance();
   }
 
   void oneOffTask() {
@@ -30,8 +29,7 @@ public class GCMNetMUtil {
         .setRequiresCharging(false)
         .build();
 
-    int resultCode = googleAPI.isGooglePlayServicesAvailable(context);
-    if (resultCode == ConnectionResult.SUCCESS) {
+    if (checkPlayServices()) {
       mGcmNetworkManager.schedule(task);
     } else {
       // Deal with this networking task some other way
@@ -43,8 +41,7 @@ public class GCMNetMUtil {
         new PeriodicTask.Builder().setService(CustomService.class).setPeriod(30) //in seconds
             .setFlex(10).setTag(CustomService.TAG_TASK_PERIODIC_LOG).setPersisted(true).build();
 
-    int resultCode = googleAPI.isGooglePlayServicesAvailable(context);
-    if (resultCode == ConnectionResult.SUCCESS) {
+    if (checkPlayServices()) {
       mGcmNetworkManager.schedule(task);
     } else {
       // Deal with this networking task some other way
@@ -59,5 +56,19 @@ public class GCMNetMUtil {
 
   void cancelSpecificTask() {
     mGcmNetworkManager.cancelTask(CustomService.TAG_TASK_PERIODIC_LOG, CustomService.class);
+  }
+
+  private boolean checkPlayServices() {
+    GoogleApiAvailability googleAPI = GoogleApiAvailability.getInstance();
+    int result = googleAPI.isGooglePlayServicesAvailable(context);
+    if (result != ConnectionResult.SUCCESS) {
+      if (googleAPI.isUserResolvableError(result)) {
+        googleAPI.getErrorDialog(this, result, PLAY_SERVICES_RESOLUTION_REQUEST).show();
+      }
+
+      return false;
+    }
+
+    return true;
   }
 }
