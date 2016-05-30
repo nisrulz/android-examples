@@ -31,5 +31,12 @@ public class CustomService extends GcmTaskService {
     super.onInitializeTasks();
 
     // Reschedule removed tasks here
+    GCMNetMUtil gcmNetMUtil = new GCMNetMUtil(this);
+
+    // One Off Task
+    gcmNetMUtil.oneOffTask();
+
+    // Periodic Task
+    gcmNetMUtil.periodicTask();
   }
 }
