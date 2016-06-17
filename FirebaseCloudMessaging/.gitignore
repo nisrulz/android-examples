@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+
+# Google Services Config JSON
+google-services.json

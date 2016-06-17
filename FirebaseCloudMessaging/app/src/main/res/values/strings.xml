@@ -1,3 +1,9 @@
 <resources>
   <string name="app_name">FirebaseCloudMessaging</string>
+  <string name="text">
+    Hello in the FCM World!
+    \nPlease download google-services.json from firebase console for the package : sample.github.nisrulz.firebasecloudmessaging
+    \nDrop it under your app module in Android Studio, to compile the app successfully.
+    \n\nSend messages from the Firebase console >  Notifications
+  </string>
 </resources>
