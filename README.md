@@ -1,4 +1,6 @@
-# Android Examples [![Twitter](https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat)](http://twitter.com/nisrulz)
+# Android Examples
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
 Main repository containing all the example apps demonstrating features/functionality/integrations in android application development
 
