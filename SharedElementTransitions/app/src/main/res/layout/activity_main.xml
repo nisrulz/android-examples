@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="15dp"
     tools:context="nisrulz.github.example.sharedelementtransitions.MainActivity"
     >
 
-  <TextView
-      android:layout_width="wrap_content"
+  <android.support.v7.widget.CardView
+      android:id="@+id/card_view"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
-      />
+      android:clickable="true"
+      android:transitionName="@string/transition_string"
+      card_view:cardBackgroundColor="@color/colorAccent"
+      card_view:cardCornerRadius="5dp"
+      card_view:cardElevation="3dp"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Hello World! \n\nClick me to see the transition to another activity"
+        android:textColor="@android:color/white"
+        />
+  </android.support.v7.widget.CardView>
 </RelativeLayout>

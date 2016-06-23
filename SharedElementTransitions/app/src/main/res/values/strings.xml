@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">SharedElementTransitions</string>
+  <string name="transition_string">transition_1</string>
 </resources>
