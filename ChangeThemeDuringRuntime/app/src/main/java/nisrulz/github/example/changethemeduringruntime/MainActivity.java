@@ -11,6 +11,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
+
+    // Call setTheme before supper constructor and setContentView
     setTheme(getFlag() ? R.style.AppThemeDark : R.style.AppThemeLight);
 
     super.onCreate(savedInstanceState);
@@ -19,7 +21,11 @@ public class MainActivity extends AppCompatActivity {
     Button btn_change = (Button) findViewById(R.id.btn_change);
     btn_change.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
+
+        // Flip the flag
         saveFlag(!getFlag());
+
+        // Restart the same activity
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
