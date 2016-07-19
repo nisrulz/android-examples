@@ -9,6 +9,7 @@ import android.view.View;
 public class CustomView extends View {
 
   Paint paint = new Paint();
+  String text = "Custom Text";
 
   public CustomView(Context context) {
     super(context);
@@ -21,9 +22,14 @@ public class CustomView extends View {
     super.onDraw(canvas);
 
     setBackgroundColor(Color.BLUE);
-    canvas.drawText("Custom Text", 100, 100, paint);
-    invalidate();
+    canvas.drawText(text, 100, 100, paint);
 
+  }
+  
+  public void setText(String text) {
+    this.text = text;
+    invalidate();
+    requestLayout();
   }
 
 
