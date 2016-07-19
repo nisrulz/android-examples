@@ -29,6 +29,7 @@ public class CustomView extends View {
   public void setText(String text) {
     this.text = text;
     invalidate();
+    requestLayout();
   }
 
 
