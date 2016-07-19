@@ -22,7 +22,6 @@ public class CustomView extends View {
 
     setBackgroundColor(Color.BLUE);
     canvas.drawText("Custom Text", 100, 100, paint);
-    invalidate();
 
   }
 
