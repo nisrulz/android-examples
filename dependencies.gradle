@@ -1,0 +1,10 @@
+ext {
+ compileSdkVer = 24
+ buildToolsVer = "24.0.1"
+
+ minSdkVer = 9
+ targetSdkVer = 24
+
+ supportLibVer = "24.1.1"
+ googlePlayServicesVer = "9.2.1"
+}
