@@ -1,4 +1,5 @@
 ext {
+ androidPluginVer = "2.1.2"
  compileSdkVer = 24
  buildToolsVer = "24.0.1"
 

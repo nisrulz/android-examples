@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.3"
+  compileSdkVersion compileSdkVer
+  buildToolsVersion buildToolsVer
 
   defaultConfig {
     applicationId "github.nisrulz.sample.usingeasygcmlib"
-    minSdkVersion 9
-    targetSdkVersion 23
+    minSdkVersion minSdkVer
+    targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
   }
@@ -22,10 +22,10 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   testCompile 'junit:junit:4.12'
-  compile 'com.android.support:appcompat-v7:23.4.0'
+  compile "com.android.support:appcompat-v7:$supportLibVer"
 
 
-  compile 'com.google.android.gms:play-services-gcm:8.4.0'
+  compile "com.google.android.gms:play-services-gcm:$googlePlayServicesVer"
   compile 'eu.inloop:easygcm:1.6.2@aar'
 }
 
