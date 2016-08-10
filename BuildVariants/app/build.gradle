@@ -12,9 +12,27 @@ android {
     versionName "1.0"
   }
   buildTypes {
+    debug {
+      applicationIdSuffix ".debug"
+    }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  productFlavors {
+    free {
+      applicationIdSuffix ".free"
+      manifestPlaceholders = [
+          appName : "Free App"
+      ]
+    }
+    pro {
+      applicationIdSuffix ".pro"
+      manifestPlaceholders = [
+          appName : "Pro App"
+      ]
     }
   }
 }
