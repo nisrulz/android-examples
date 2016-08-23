@@ -25,5 +25,5 @@ dependencies {
     compile "com.android.support:appcompat-v7:$supportLibVer"
     compile "com.android.support:design:$supportLibVer"
 
-    testCompile 'org.robolectric:robolectric:3.0'
+    testCompile 'org.robolectric:robolectric:3.1.2'
 }
