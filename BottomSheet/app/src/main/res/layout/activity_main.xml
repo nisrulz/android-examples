@@ -1,17 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="github.nisrulz.sample.bottomsheet.MainActivity">
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Bottom Sheet"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:text="Close Bottom Sheet"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:text="Make Bottom Sheet Peek"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:clipToPadding="true"
+        android:background="@android:color/darker_gray"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Bottom Sheet Data Here"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
