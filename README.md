@@ -13,6 +13,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [ActivityLifecycle](https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
 + [AudioRecording](https://github.com/nisrulz/android-examples/tree/master/AudioRecording)
 + [BoundServices](https://github.com/nisrulz/android-examples/tree/master/BoundServices)
++ [BottomSheet](https://github.com/nisrulz/android-examples/tree/master/BottomSheet)
 + [BroadcastReceiver](https://github.com/nisrulz/android-examples/tree/master/BroadcastReceiver)
 + [BuilderPattern](https://github.com/nisrulz/android-examples/tree/master/BuilderPattern)
 + [BuildVariants](https://github.com/nisrulz/android-examples/tree/master/BuildVariants)
