@@ -1,7 +1,7 @@
 ext {
  androidPluginVer = "2.1.3"
  compileSdkVer = 24
- buildToolsVer = "24.0.1"
+ buildToolsVer = "24.0.2"
 
  minSdkVer = 9
  targetSdkVer = 24
