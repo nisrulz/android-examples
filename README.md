@@ -1,4 +1,4 @@
-# Android Examples
+![Image](https://github.com/nisrulz/android-examples/blob/master/img/github_banner.png)
 
 ### Featured in
 [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23100-blue.svg)](https://www.androiddevdigest.com/digest-100/)

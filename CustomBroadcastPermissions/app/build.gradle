@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    ccompileSdkVersion compileSdkVer
+    compileSdkVersion compileSdkVer
     buildToolsVersion buildToolsVer
     defaultConfig {
         applicationId "sample.github.nisrulz.custombroadcastpermissions"
