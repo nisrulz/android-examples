@@ -1,3 +1,8 @@
 <resources>
   <string name="app_name">UsingRobolectric</string>
+  <string name="Welcome_text">Welcome!</string>
+  <string name="NAME_ENTRY_HINT">This is hint on mae entry</string>
+  <string name="LOGIN_BTN_TEXT">Login</string>
+  <string name="HINT_BTN_TEXT">Hint</string>
+  <string name="HINT_TEXT">Hint Text</string>
 </resources>
