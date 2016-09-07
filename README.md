@@ -75,6 +75,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [UsingPocketSphinxForVoiceRecognition](https://github.com/nisrulz/android-examples/tree/master/UsingPocketSphinxForVoiceRecognition)
 + [UsingRealmDB](https://github.com/nisrulz/android-examples/tree/master/UsingRealmDB)
 + [UsingRetrofit2](https://github.com/nisrulz/android-examples/tree/master/UsingRetrofit2)
++ [UsingRobolectric](https://github.com/nisrulz/android-examples/tree/master/UsingRobolectric)
 + [UsingRxJava](https://github.com/nisrulz/android-examples/tree/master/UsingRxJava)
 + [UsingStetho](https://github.com/nisrulz/android-examples/tree/master/UsingStetho)
 + [UsingSugarORM](https://github.com/nisrulz/android-examples/tree/master/UsingSugarORM)
