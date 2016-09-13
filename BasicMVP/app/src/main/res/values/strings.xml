@@ -1,3 +1,5 @@
 <resources>
   <string name="app_name">BasicMVP</string>
+  <string name="user_info">User Info</string>
+  <string name="submit">Submit</string>
 </resources>
