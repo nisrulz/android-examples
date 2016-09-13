@@ -27,6 +27,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [CustomView](https://github.com/nisrulz/android-examples/tree/master/CustomView)
 + [DebuggingWebViews](https://github.com/nisrulz/android-examples/tree/master/DebuggingWebViews)
 + [Encryption](https://github.com/nisrulz/android-examples/tree/master/Encryption)
++ [ExtractingColorFromBitmap](https://github.com/nisrulz/android-examples/tree/master/ExtractingColorFromBitmap)
 + [Firebase](https://github.com/nisrulz/android-examples/tree/master/Firebase)
 + [FirebaseCloudMessaging](https://github.com/nisrulz/android-examples/tree/master/FirebaseCloudMessaging)
 + [GCMNetworkManager](https://github.com/nisrulz/android-examples/tree/master/GCMNetworkManager)
