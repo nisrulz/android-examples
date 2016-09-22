@@ -7,5 +7,5 @@ ext {
  targetSdkVer = 24
 
  supportLibVer = "24.2.1"
- googlePlayServicesVer = "9.4.0"
+ googlePlayServicesVer = "9.6.0"
 }
