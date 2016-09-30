@@ -25,6 +25,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [CustomBroadcastPermissions](https://github.com/nisrulz/android-examples/tree/master/CustomBroadcastPermissions)
 + [CustomOnboardingIntro](https://github.com/nisrulz/android-examples/tree/master/CustomOnboardingIntro)
 + [CustomView](https://github.com/nisrulz/android-examples/tree/master/CustomView)
++ [DataBinding](https://github.com/nisrulz/android-examples/tree/master/DataBinding)
 + [DebuggingWebViews](https://github.com/nisrulz/android-examples/tree/master/DebuggingWebViews)
 + [Encryption](https://github.com/nisrulz/android-examples/tree/master/Encryption)
 + [ExtractingColorFromBitmap](https://github.com/nisrulz/android-examples/tree/master/ExtractingColorFromBitmap)
