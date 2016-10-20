@@ -21,8 +21,11 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    
+    testCompile "junit:junit:$junitVer"
+
     compile "com.android.support:appcompat-v7:$supportLibVer"
+
     // AppIntro | https://github.com/PaoloRotolo/AppIntro
-    compile 'com.github.paolorotolo:appintro:4.0.0'
+    compile "com.github.paolorotolo:appintro:$appintroVer"
 }

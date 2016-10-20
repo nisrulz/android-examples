@@ -22,18 +22,17 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+
+    testCompile "junit:junit:$junitVer"
+
     compile "com.android.support:appcompat-v7:$supportLibVer"
 
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-
-    compile 'com.google.code.gson:gson:2.7'
-
-    compile 'com.jakewharton:butterknife:8.2.1'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
-
-    compile 'io.reactivex:rxandroid:1.2.1'
+    compile "com.squareup.okhttp3:okhttp:$okhttpVer"
+    compile "com.google.code.gson:gson:$gsonVer"
+    compile "com.jakewharton:butterknife:$butterknifeVer"
+    apt "com.jakewharton:butterknife-compiler:$butterknifeVer"
+    compile "io.reactivex:rxandroid:$rxandroidVer"
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
-    compile 'io.reactivex:rxjava:1.2.0'
+    compile "io.reactivex:rxjava:$rxjavaVer"
 }

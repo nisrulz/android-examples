@@ -21,15 +21,15 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  testCompile 'junit:junit:4.12'
+  testCompile "junit:junit:$junitVer"
   compile "com.android.support:appcompat-v7:$supportLibVer"
 
   // retrofit, gson
-  compile 'com.google.code.gson:gson:2.7'
-  compile 'com.squareup.retrofit2:retrofit:2.1.0'
-  compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+  compile "com.google.code.gson:gson:$gsonVer"
+  compile "com.squareup.retrofit2:retrofit:$retrofitVer"
+  compile "com.squareup.retrofit2:converter-gson:$retrofitConverterGsonVer"
   // http logging interceptor
-  compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+  compile "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVer"
 
   // recycler view
   compile "com.android.support:recyclerview-v7:$supportLibVer"

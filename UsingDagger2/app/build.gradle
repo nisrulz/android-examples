@@ -23,11 +23,12 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  testCompile 'junit:junit:4.12'
+  
+  testCompile "junit:junit:$junitVer"
 
-  apt 'com.google.dagger:dagger-compiler:2.2'
-  provided 'javax.annotation:jsr250-api:1.0'
-  compile 'com.google.dagger:dagger:2.2'
+  apt "com.google.dagger:dagger-compiler:$daggerVer"
+  provided "javax.annotation:jsr250-api:$jsr250apiVer"
+  compile "com.google.dagger:dagger:$daggerVer"
 
   compile "com.android.support:appcompat-v7:$supportLibVer"
   compile "com.android.support:support-v4:$supportLibVer"

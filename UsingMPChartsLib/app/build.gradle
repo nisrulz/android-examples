@@ -21,12 +21,14 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    
+    testCompile "junit:junit:$junitVer"
+
     compile "com.android.support:appcompat-v7:$supportLibVer"
     compile "com.android.support:design:$supportLibVer"
 
     // MPCharts
-    compile 'com.github.PhilJay:MPAndroidChart:v2.2.3'
+    compile "com.github.PhilJay:MPAndroidChart:$mpAndroidChartVer"
 }
 
 repositories {
