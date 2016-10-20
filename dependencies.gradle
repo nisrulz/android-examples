@@ -8,4 +8,9 @@ ext {
 
  supportLibVer = "25.0.0"
  googlePlayServicesVer = "9.6.1"
+
+ junitVer = "4.12"
+ espressoCoreVer = "2.2.2"
+
+ stethoVer = "1.4.1"
 }
