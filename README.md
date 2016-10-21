@@ -100,8 +100,9 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
     + Upgrade your gradle wrapper to the one all other apps are using. Use the below command at root of your project
 
         ```
-        ./gradlew wrapper --gradle-version 3.1
+        ./gradlew wrapper --gradle-version <version_name>
         ```
+        i.e `./gradlew wrapper --gradle-version 3.1`
     + Use `ext` variables as defined in [`dependencies.gradle`](https://github.com/nisrulz/android-examples/blob/master/dependencies.gradle), in your `build.gradle` files to make sure all apps are in sync with configurations and dependencies. Take a look [here](https://github.com/nisrulz/android-examples/blob/master/DataBinding/app/build.gradle) and [here](https://github.com/nisrulz/android-examples/blob/master/DataBinding/build.gradle) 
     + Use the package name of the format `github.nisrulz.sample.*` where `*` is the example you are adding to the repo. I am trying to follow a set standard in the repo, please adhere to that.
   7. Have fun!
