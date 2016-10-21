@@ -107,6 +107,17 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
     + Use the package name of the format `github.nisrulz.sample.*` where `*` is the example you are adding to the repo. I am trying to follow a set standard in the repo, please adhere to that.
   7. Have fun!
 
+## Extra
+Since the repo is pretty large now , I am sure a lot of you guys would like to download only some of the projects. To tackle that I came across this cool tool - [Gitzip](https://github.com/KinoLien/gitzip) (All credits to the [author](https://github.com/KinoLien), really cool work). To download a specific project 
+  + Navigate to the specific project you want to download and copy the path from address bar.
+
+    i.e `https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle` 
+  + Next goto [Gitzip](https://kinolien.github.io/gitzip/)
+  + Paste the path into the provided box and hit **Download**.
+  + Done now load the project into Android Studio as you would normally.
+
+> P.S. : I saw if you use Adblocker then Gitzip downloads an empty `zip` file, so disable Adblocker to get the correct `zip` file.
+
 ### Created & Maintained By
 [Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
 
