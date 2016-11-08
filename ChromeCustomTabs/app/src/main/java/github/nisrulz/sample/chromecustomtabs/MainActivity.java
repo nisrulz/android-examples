@@ -1,6 +1,10 @@
 package github.nisrulz.sample.chromecustomtabs;
 
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
@@ -62,6 +66,18 @@ public class MainActivity extends AppCompatActivity {
 
     // add share action to menu list
     intentBuilder.addDefaultShareMenuItem();
+
+    // Setup a icon in the menu bar
+    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_share_white_24dp);
+    Intent intent = new Intent(Intent.ACTION_SEND);
+    intent.setType("text/plain");
+    intent.putExtra(Intent.EXTRA_TEXT, url);
+    int requestCode = 100;
+    PendingIntent pendingIntent =
+        PendingIntent.getActivity(this, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    // Map the bitmap, text, and pending intent to this icon
+    // Set tint to be true so it matches the toolbar color
+    intentBuilder.setActionButton(bitmap, "Share Link", pendingIntent, true);
 
     // and launch the desired Url with CustomTabsIntent.launchUrl()
     customTabsIntent.launchUrl(context, uri);
