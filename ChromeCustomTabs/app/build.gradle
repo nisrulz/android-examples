@@ -5,7 +5,14 @@ android {
   buildToolsVersion buildToolsVer
   defaultConfig {
     applicationId "github.nisrulz.sample.chromecustomtabs"
-    minSdkVersion minSdkVer
+
+    // Required minSDK is 15 for Chrome Custom Tabs
+    // The library only works on API 15 an above. If you are supporting previous API,
+    // you can add <uses-sdk tools:overrideLibrary="android.support.customtabs"/> to your
+    // manifest to force its use and check the API version at runtime and just use Chrome
+    // Custom tabs if its >= 16
+    minSdkVersion 15
+
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
@@ -28,4 +35,7 @@ dependencies {
 
   compile "com.android.support:appcompat-v7:$supportLibVer"
   compile "com.android.support:design:$supportLibVer"
+
+  // Chrome Custom Tabs
+  compile "com.android.support:customtabs:$supportLibVer"
 }
