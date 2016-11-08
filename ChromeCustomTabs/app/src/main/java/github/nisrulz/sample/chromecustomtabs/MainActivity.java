@@ -50,10 +50,13 @@ public class MainActivity extends AppCompatActivity {
     intentBuilder.setToolbarColor(ContextCompat.getColor(context, R.color.colorPrimary));
     intentBuilder.setSecondaryToolbarColor(
         ContextCompat.getColor(context, R.color.colorPrimaryDark));
+    intentBuilder.setShowTitle(true);
 
     // set start and exit animations
-    intentBuilder.setStartAnimations(context, android.R.anim.fade_out, android.R.anim.fade_in);
-    intentBuilder.setExitAnimations(context, android.R.anim.fade_in, android.R.anim.fade_out);
+    intentBuilder.setStartAnimations(context, android.R.anim.slide_in_left,
+        android.R.anim.slide_out_right);
+    intentBuilder.setExitAnimations(context, android.R.anim.slide_out_right,
+        android.R.anim.slide_in_left);
 
     // Once ready, call CustomTabsIntent.Builder.build() to create a CustomTabsIntent
     // NOTE : If you do not have Chrome installed, the intent will launch the default
@@ -78,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
     // Map the bitmap, text, and pending intent to this icon
     // Set tint to be true so it matches the toolbar color
     intentBuilder.setActionButton(bitmap, "Share Link", pendingIntent, true);
+
+    // Set close button icon
+    Bitmap bitmapBack =
+        BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow_back_white_24dp);
+    intentBuilder.setCloseButtonIcon(bitmapBack);
 
     // and launch the desired Url with CustomTabsIntent.launchUrl()
     customTabsIntent.launchUrl(context, uri);
