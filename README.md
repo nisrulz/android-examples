@@ -21,6 +21,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [Camera2](https://github.com/nisrulz/android-examples/tree/master/Camera2)
 + [ChangeThemeDuringRuntime](https://github.com/nisrulz/android-examples/tree/master/ChangeThemeDuringRuntime)
 + [CheckIfScreenLocked](https://github.com/nisrulz/android-examples/tree/master/CheckIfScreenLocked)
++ [ChromeCustomTabs](https://github.com/nisrulz/android-examples/tree/master/ChromeCustomTabs)
 + [CollapsibleToolbar](https://github.com/nisrulz/android-examples/tree/master/CollapsibleToolbar)
 + [CustomBroadcastPermissions](https://github.com/nisrulz/android-examples/tree/master/CustomBroadcastPermissions)
 + [CustomOnboardingIntro](https://github.com/nisrulz/android-examples/tree/master/CustomOnboardingIntro)
