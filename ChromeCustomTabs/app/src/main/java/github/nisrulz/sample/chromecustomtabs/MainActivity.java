@@ -1,8 +1,12 @@
 package github.nisrulz.sample.chromecustomtabs;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -24,11 +28,42 @@ public class MainActivity extends AppCompatActivity {
             .setAction("Yes", new View.OnClickListener() {
               @Override
               public void onClick(View view) {
-                // TODO: 11/8/16 Open Custom Chrome Tabs
+                loadChromeCustomTab(MainActivity.this, "http://crushingcode.co/");
               }
             })
             .show();
       }
     });
+  }
+
+  private void loadChromeCustomTab(Context context, String url) {
+    Uri uri = Uri.parse(url);
+
+    // Use a CustomTabsIntent.Builder to configure CustomTabsIntent.
+    CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+
+    // set toolbar color
+    intentBuilder.setToolbarColor(ContextCompat.getColor(context, R.color.colorPrimary));
+    intentBuilder.setSecondaryToolbarColor(
+        ContextCompat.getColor(context, R.color.colorPrimaryDark));
+
+    // set start and exit animations
+    intentBuilder.setStartAnimations(context, android.R.anim.fade_out, android.R.anim.fade_in);
+    intentBuilder.setExitAnimations(context, android.R.anim.fade_in, android.R.anim.fade_out);
+
+    // Once ready, call CustomTabsIntent.Builder.build() to create a CustomTabsIntent
+    // NOTE : If you do not have Chrome installed, the intent will launch the default
+    // browser installed on the device. The CustomTabsIntent simply launches an
+    // implicit intent (android.intent.action.VIEW) and passes an extra data in the
+    // intent (i.e. android.support.customtabs.extra.SESSION and
+    // android.support.customtabs.extra.TOOLBAR_COLOR) that gets ignored if the
+    // default browser cannot process this information.
+    CustomTabsIntent customTabsIntent = intentBuilder.build();
+
+    // add share action to menu list
+    intentBuilder.addDefaultShareMenuItem();
+
+    // and launch the desired Url with CustomTabsIntent.launchUrl()
+    customTabsIntent.launchUrl(context, uri);
   }
 }
