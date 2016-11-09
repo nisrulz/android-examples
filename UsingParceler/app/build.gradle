@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
   compileSdkVersion 25
@@ -27,4 +28,8 @@ dependencies {
   compile 'com.android.support:appcompat-v7:25.0.0'
   compile 'com.android.support:design:25.0.0'
   testCompile 'junit:junit:4.12'
+
+  def parcelerVer = '1.1.6'
+  compile "org.parceler:parceler-api:$parcelerVer"
+  apt "org.parceler:parceler:$parcelerVer"
 }
