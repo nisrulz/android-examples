@@ -75,6 +75,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [UsingEasyGCMlib](https://github.com/nisrulz/android-examples/tree/master/UsingEasyGCMlib)
 + [UsingFontAwesomeLib](https://github.com/nisrulz/android-examples/tree/master/UsingFontAwesomeLib)
 + [UsingMPChartsLib](https://github.com/nisrulz/android-examples/tree/master/UsingMPChartsLib)
++ [UsingParceler](https://github.com/nisrulz/android-examples/tree/master/UsingParceler)
 + [UsingPercentSupportLib](https://github.com/nisrulz/android-examples/tree/master/UsingPercentSupportLib)
 + [UsingPocketSphinxForVoiceRecognition](https://github.com/nisrulz/android-examples/tree/master/UsingPocketSphinxForVoiceRecognition)
 + [UsingRealmDB](https://github.com/nisrulz/android-examples/tree/master/UsingRealmDB)
