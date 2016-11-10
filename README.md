@@ -10,7 +10,7 @@
 Main repository containing all the example apps demonstrating features/functionality/integrations in android application development
 
 ## Example apps
-+ [ActivityLifecycle](/ActivityLifecycle)
++ [ActivityLifecycle](/ActivityLifecycle) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
 + [AudioRecording](/AudioRecording)
 + [BasicMVP](/BasicMVP)
 + [BoundServices](/BoundServices)
