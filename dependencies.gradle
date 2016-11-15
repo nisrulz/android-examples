@@ -6,7 +6,7 @@ ext {
  minSdkVer = 10
  targetSdkVer = 25
 
- supportLibVer = "25.0.0"
+ supportLibVer = "25.0.1"
  googlePlayServicesVer = "9.8.0"
 
  junitVer = "4.12"
