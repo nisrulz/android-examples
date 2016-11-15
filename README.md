@@ -43,6 +43,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [JNI](/JNI) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/JNI)
 + [JUnitTests](/JUnitTests) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/JUnitTests)
 + [ListView](/ListView) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ListView)
++ [ListViewWithCustomAdapter](/ListViewWithCustomAdapter) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ListViewWithCustomAdapter)
 + [LoadHtmlIntoWebview](/LoadHtmlIntoWebview) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/LoadHtmlIntoWebview)
 + [LocalBroadcastManager](/LocalBroadcastManager) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/LocalBroadcastManager)
 + [MobileVisionAPI2ReadBarCodes](/MobileVisionAPI2ReadBarCodes) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/MobileVisionAPI2ReadBarCodes)
