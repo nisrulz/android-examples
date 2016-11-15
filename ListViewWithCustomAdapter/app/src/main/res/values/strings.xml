@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ListView With Custom Adapter</string>
+
+    <string-array name="friends">
+        <item>Narendra Modi</item>
+        <item>Donald Trump</item>
+        <item>Kim Jong-un</item>
+        <item>Xi Jinping</item>
+        <item>Vladimir Putin</item>
+        <item>Osama bin Laden</item>
+        <item>Arvind Kejriwal</item>
+    </string-array>
+</resources>

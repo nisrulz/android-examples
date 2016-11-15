@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="@dimen/margin_16dp"
+    android:layout_marginRight="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    tools:context=".MainActivity" />
