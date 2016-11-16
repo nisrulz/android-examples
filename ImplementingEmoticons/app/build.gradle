@@ -5,7 +5,6 @@ android {
   buildToolsVersion buildToolsVer
   defaultConfig {
     applicationId "github.nisrulz.sample.implementingemoticons"
-    // Min SDK of library is 16
     minSdkVersion minSdkVer
     targetSdkVersion targetSdkVer
     versionCode 1
