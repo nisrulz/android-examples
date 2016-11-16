@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.0"
+  compileSdkVersion compileSdkVer
+  buildToolsVersion buildToolsVer
   defaultConfig {
     applicationId "github.nisrulz.sample.usingparceler"
-    minSdkVersion 10
-    targetSdkVersion 25
+    minSdkVersion minSdkVer
+    targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,12 +22,14 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+  testCompile "junit:junit:$junitVer"
+  androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  compile 'com.android.support:appcompat-v7:25.0.0'
-  compile 'com.android.support:design:25.0.0'
-  testCompile 'junit:junit:4.12'
+
+  compile "com.android.support:appcompat-v7:$supportLibVer"
+  compile "com.android.support:design:$supportLibVer"
+
 
   def parcelerVer = '1.1.6'
   compile "org.parceler:parceler-api:$parcelerVer"
