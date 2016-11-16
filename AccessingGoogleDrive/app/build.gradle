@@ -28,4 +28,7 @@ dependencies {
   })
 
   compile "com.android.support:appcompat-v7:$supportLibVer"
+
+  // Add Google Play Services Drive api
+  compile "com.google.android.gms:play-services-drive:$googlePlayServicesVer"
 }
