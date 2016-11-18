@@ -37,6 +37,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [GestureDetection](/GestureDetection) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/GestureDetection)
 + [GridView](/GridView) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/GridView)
 + [HeadlessFragment](/HeadlessFragment) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/HeadlessFragment)
++ [ImplementingEmoticons](/ImplementingEmoticons) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ImplementingEmoticons)
 + [IntentService](/IntentService) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/IntentService)
 + [Intents](/Intents) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Intents)
 + [InterProcessService](/InterProcessService) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/InterProcessService)
