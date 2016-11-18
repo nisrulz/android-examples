@@ -29,4 +29,6 @@ dependencies {
   compile "com.android.support:appcompat-v7:$supportLibVer"
 
   compile "com.android.support:design:$supportLibVer"
+
+  compile 'com.firebase:firebase-jobdispatcher:0.5.0'
 }

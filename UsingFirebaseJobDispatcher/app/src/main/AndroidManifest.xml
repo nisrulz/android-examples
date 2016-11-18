@@ -18,6 +18,15 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+    <!-- Add the service here -->
+    <service
+        android:name=".MyJobService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>"
+      </intent-filter>
+    </service>
   </application>
 
 </manifest>
