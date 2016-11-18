@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">UsingFirebaseJobDispatcher</string>
+  <string name="action_settings">Settings</string>
+</resources>

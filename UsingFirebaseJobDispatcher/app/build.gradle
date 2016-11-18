@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion compileSdkVer
+  buildToolsVersion buildToolsVer
+  defaultConfig {
+    applicationId "github.nisrulz.sample.usingfirebasejobdispatcher"
+    minSdkVersion minSdkVer
+    targetSdkVersion targetSdkVer
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  testCompile "junit:junit:$junitVer"
+  androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+
+  compile "com.android.support:appcompat-v7:$supportLibVer"
+
+  compile "com.android.support:design:$supportLibVer"
+}
