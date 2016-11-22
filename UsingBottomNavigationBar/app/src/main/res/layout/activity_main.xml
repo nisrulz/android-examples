@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="github.nisrulz.sample.usingbottomnavigationbar.MainActivity"
     >
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
+  <!-- This could be your fragment container, or something -->
+  <FrameLayout
+      android:id="@+id/contentContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/bottomBar"
+      >
+    <TextView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="30sp"
+        tools:text="Selected Screen"
+        />
+
+  </FrameLayout>
+
+  <com.roughike.bottombar.BottomBar
+      android:id="@+id/bottomBar"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_alignParentBottom="true"
+      app:bb_activeTabAlpha="1"
+      app:bb_activeTabColor="@android:color/white"
+      app:bb_inActiveTabAlpha="0.6"
+      app:bb_inActiveTabColor="@android:color/background_dark"
+      app:bb_tabXmlResource="@xml/bottombar_tabs"
       />
+
+
 </RelativeLayout>

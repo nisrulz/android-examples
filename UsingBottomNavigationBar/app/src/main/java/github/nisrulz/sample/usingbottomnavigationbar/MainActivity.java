@@ -2,72 +2,80 @@ package github.nisrulz.sample.usingbottomnavigationbar;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnMenuTabClickListener;
+import com.roughike.bottombar.BottomBarTab;
+import com.roughike.bottombar.OnTabReselectListener;
+import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
 
-  private String LOGTAG = "UsingBottomNavigationBar";
+  private String LOGTAG = "BottomNavigationBar";
   // Using lib from : https://github.com/roughike/BottomBar
-  private BottomBar mBottomBar;
+  private BottomBar bottomBar;
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
+  private TextView textView;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    mBottomBar = BottomBar.attach(this, savedInstanceState);
-    mBottomBar.setItemsFromMenu(R.menu.bottombar_menu, new OnMenuTabClickListener() {
-      @Override public void onMenuTabSelected(@IdRes int menuItemId) {
-        switch (menuItemId) {
-          case R.id.bottomBarItem1:
-            Log.d(LOGTAG, "The user selected item number one");
-            break;
-          case R.id.bottomBarItem2:
-            Log.d(LOGTAG, "The user selected item number two");
-            break;
-          case R.id.bottomBarItem3:
-            Log.d(LOGTAG, "The user selected item number three");
-            break;
-          case R.id.bottomBarItem4:
-            Log.d(LOGTAG, "The user selected item number four");
-            break;
-        }
-      }
+    textView = (TextView) findViewById(R.id.text_view);
 
-      @Override public void onMenuTabReSelected(@IdRes int menuItemId) {
-        switch (menuItemId) {
+    bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+    bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+      @Override
+      public void onTabSelected(@IdRes int tabId) {
+        switch (tabId) {
           case R.id.bottomBarItem1:
-            Log.d(LOGTAG, "The user reselected item number one, scroll your content to top.");
+            logData("1");
             break;
           case R.id.bottomBarItem2:
-            Log.d(LOGTAG, "The user reselected item number two, scroll your content to top.");
+            logData("2");
             break;
           case R.id.bottomBarItem3:
-            Log.d(LOGTAG, "The user reselected item number three, scroll your content to top.");
+            logData("3");
             break;
           case R.id.bottomBarItem4:
-            Log.d(LOGTAG, "The user reselected item number four, scroll your content to top.");
+            logData("4");
             break;
         }
       }
     });
 
-    // Setting colors for different tabs when there's more than three of them.
-    // You can set colors for tabs in three different ways as shown below.
-    mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
-    mBottomBar.mapColorForTab(1, 0xFF5D4037);
-    mBottomBar.mapColorForTab(2, "#7B1FA2");
-    mBottomBar.mapColorForTab(3, "#FF5252");
+    BottomBarTab accountTab = bottomBar.getTabWithId(R.id.bottomBarItem2);
+    accountTab.setBadgeCount(5);
+
+    // Remove Badge when done
+    //accountTab.removeBadge();
+
+    bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
+      @Override
+      public void onTabReSelected(@IdRes int tabId) {
+        switch (tabId) {
+          case R.id.bottomBarItem1:
+            logData("1 (Re)");
+            break;
+          case R.id.bottomBarItem2:
+            logData("2 (Re)");
+            break;
+          case R.id.bottomBarItem3:
+            logData("3 (Re)");
+            break;
+          case R.id.bottomBarItem4:
+            logData("4 (Re)");
+            break;
+        }
+      }
+    });
   }
 
-  @Override protected void onSaveInstanceState(Bundle outState) {
-    super.onSaveInstanceState(outState);
-
-    // Necessary to restore the BottomBar's state, otherwise we would
-    // lose the current tab on orientation change.
-    mBottomBar.onSaveInstanceState(outState);
+  private void logData(String data) {
+    String msg = "Selected Tab - " + data;
+    textView.setText(msg);
+    Log.d(LOGTAG, msg);
   }
 }

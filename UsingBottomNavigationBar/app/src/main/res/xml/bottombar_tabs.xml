@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+  <tab
+      barColorWhenSelected="#7B1FA2"
+      icon="@drawable/ic_accessibility"
+      id="@+id/bottomBarItem1"
+      title="Recent"/>
+
+  <tab
+      barColorWhenSelected="#ff1b6b"
+
+      icon="@drawable/ic_account"
+      id="@+id/bottomBarItem2"
+      title="Account"/>
+
+  <tab
+      barColorWhenSelected="#0176ec"
+      icon="@drawable/ic_announcement"
+      id="@+id/bottomBarItem3"
+      title="Info"/>
+
+  <tab
+      barColorWhenSelected="#00b153"
+      icon="@drawable/ic_assessment"
+      id="@+id/bottomBarItem4"
+      title="Graph"/>
+</tabs>
