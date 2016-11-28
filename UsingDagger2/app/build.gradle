@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'com.neenbedankt.android-apt'
-
 android {
   compileSdkVersion compileSdkVer
   buildToolsVersion buildToolsVer
@@ -26,7 +24,7 @@ dependencies {
   
   testCompile "junit:junit:$junitVer"
 
-  apt "com.google.dagger:dagger-compiler:$daggerVer"
+  annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
   provided "javax.annotation:jsr250-api:$jsr250apiVer"
   compile "com.google.dagger:dagger:$daggerVer"
 
