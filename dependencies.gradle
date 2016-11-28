@@ -1,7 +1,7 @@
 ext {
  androidPluginVer = "2.2.2"
  compileSdkVer = 25
- buildToolsVer = "25.0.0"
+ buildToolsVer = "25.0.1"
 
  minSdkVer = 10
  targetSdkVer = 25
@@ -18,7 +18,7 @@ ext {
  appintroVer = "4.1.0"
  bottombarVer = "2.0.2"
  butterknifeVer = "8.4.0"
- daggerVer = "2.2"
+ daggerVer = "2.8"
  jsr250apiVer = "1.0"
  okhttpVer = "3.4.2"
  okhttpLoggingInterceptorVer = "3.4.2"
