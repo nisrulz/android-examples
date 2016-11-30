@@ -7,7 +7,7 @@ ext {
  targetSdkVer = 25
 
  supportLibVer = "25.0.1"
- googlePlayServicesVer = "10.0.0"
+ googlePlayServicesVer = "10.0.1"
 
  junitVer = "4.12"
  espressoCoreVer = "2.2.2"
