@@ -15,6 +15,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [BasicMVP](/BasicMVP) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BasicMVP)
 + [BoundServices](/BoundServices) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BoundServices)
 + [BottomSheet](/BottomSheet) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BottomSheet)
++ [BottomNavigationView](/BottomNavigationView) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BottomNavigationView)
 + [BroadcastReceiver](/BroadcastReceiver) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BroadcastReceiver)
 + [BuilderPattern](/BuilderPattern) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BuilderPattern)
 + [BuildVariants](/BuildVariants) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BuildVariants)
