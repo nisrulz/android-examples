@@ -27,4 +27,7 @@ dependencies {
 
   testCompile "junit:junit:$junitVer"
   compile "com.android.support:appcompat-v7:$supportLibVer"
+
+  //Design support Library
+  compile "com.android.support:design:$supportLibVer"
 }
