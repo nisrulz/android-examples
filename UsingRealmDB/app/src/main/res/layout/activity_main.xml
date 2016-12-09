@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="sample.github.nisrulz.usingrealmdb.MainActivity">
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-</RelativeLayout>
+  <EditText
+      android:id="@+id/id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Enter ID"
+      />
+
+  <EditText
+      android:id="@+id/desc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Enter Description"
+      />
+
+  <Button
+      android:id="@+id/add"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="clickAction"
+      android:text="Add"
+      />
+
+  <Button
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="clickAction"
+      android:text="View"
+      />
+
+  <Button
+      android:id="@+id/update"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="clickAction"
+      android:text="Update"
+      />
+
+  <Button
+      android:id="@+id/delete"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="clickAction"
+      android:text="Delete"
+      />
+
+  <TextView
+      android:id="@+id/text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+</LinearLayout>

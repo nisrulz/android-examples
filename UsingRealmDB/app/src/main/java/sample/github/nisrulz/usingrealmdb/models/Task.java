@@ -2,10 +2,9 @@ package sample.github.nisrulz.usingrealmdb.models;
 
 import io.realm.RealmObject;
 
-public class Tasks extends RealmObject {
+public class Task extends RealmObject {
 
-  private String id;
-  private String title;
+  private int id;
   private String description;
 
   // NOTE : Donot put logic in any of the getters and setters as realm makes them useless and
@@ -18,19 +17,11 @@ public class Tasks extends RealmObject {
     this.description = description;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(int id) {
     this.id = id;
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
-    this.title = title;
   }
 }

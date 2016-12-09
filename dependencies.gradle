@@ -25,6 +25,7 @@ ext {
  gsonVer = "2.8.0"
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.2.0"
+ realmdbVer = "2.2.1"
  retrofitVer = "2.1.0"
  retrofitConverterGsonVer = "2.1.0"
  mpAndroidChartVer = "v3.0.1"
