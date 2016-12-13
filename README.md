@@ -31,6 +31,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [DebuggingWebViews](/DebuggingWebViews) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/DebuggingWebViews)
 + [Encryption](/Encryption) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Encryption)
 + [ExtractingColorFromBitmap](/ExtractingColorFromBitmap) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ExtractingColorFromBitmap)
++ [FingerprintAPI](/FingerprintAPI) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/FingerprintAPI)
 + [Firebase](/Firebase) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Firebase)
 + [FirebaseCloudMessaging](/FirebaseCloudMessaging) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/FirebaseCloudMessaging)
 + [GCMNetworkManager](/GCMNetworkManager) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/GCMNetworkManager)
