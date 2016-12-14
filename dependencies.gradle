@@ -1,12 +1,12 @@
 ext {
  androidPluginVer = "2.2.3"
  compileSdkVer = 25
- buildToolsVer = "25.0.1"
+ buildToolsVer = "25.0.2"
 
  minSdkVer = 10
  targetSdkVer = 25
 
- supportLibVer = "25.0.1"
+ supportLibVer = "25.1.0"
  googlePlayServicesVer = "10.0.1"
 
  junitVer = "4.12"
