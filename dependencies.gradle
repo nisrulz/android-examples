@@ -12,7 +12,7 @@ ext {
  junitVer = "4.12"
  espressoCoreVer = "2.2.2"
 
- stethoVer = "1.4.1"
+ stethoVer = "1.4.2"
  picassoVer = "2.5.2"
  robolectricVer = "3.1.4"
  appintroVer = "4.1.0"
@@ -31,6 +31,6 @@ ext {
  mpAndroidChartVer = "v3.0.1"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"
- timberVer = "4.3.1"
+ timberVer = "4.4.0"
  sugarOrmVer = "1.4"
 }

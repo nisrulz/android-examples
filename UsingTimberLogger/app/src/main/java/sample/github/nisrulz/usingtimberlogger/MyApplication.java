@@ -18,7 +18,7 @@ public class MyApplication extends Application {
       });
     }
     else {
-      //Release Mode
+      // Release Mode
       // Init your Crashlytics here
       Timber.plant(new ReleaseTree());
     }
