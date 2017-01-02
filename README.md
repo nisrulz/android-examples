@@ -3,7 +3,7 @@
 ### Featured in
 [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23100-blue.svg)](https://www.androiddevdigest.com/digest-100/)
 
-### Show some :heart:
+### Show some :heart: and star the repo to support the project
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/android-examples.svg?style=social&label=Star)](https://github.com/nisrulz/android-examples) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/android-examples.svg?style=social&label=Fork)](https://github.com/nisrulz/android-examples/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/android-examples.svg?style=social&label=Watch)](https://github.com/nisrulz/android-examples) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/android-examples)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
