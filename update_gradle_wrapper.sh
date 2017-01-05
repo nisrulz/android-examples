@@ -11,7 +11,7 @@ for dir in ./*;
 do 
 	echo ""
 	echo ">>>> Updating directory : " $dir
-	(cd "$dir" && ./gradlew wrapper --gradle-version $1); 
+	(cd "$dir" && ./gradlew wrapper --gradle-version $1 --distribution-type all); 
 	echo ""
 	echo ">>>> Done."
 done
