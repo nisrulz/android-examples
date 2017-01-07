@@ -14,7 +14,7 @@ ext {
 
  stethoVer = "1.4.2"
  picassoVer = "2.5.2"
- robolectricVer = "3.1.4"
+ robolectricVer = "3.2.1"
  appintroVer = "4.1.0"
  bottombarVer = "2.0.2"
  butterknifeVer = "8.4.0"
@@ -24,7 +24,7 @@ ext {
  okhttpLoggingInterceptorVer = "3.5.0"
  gsonVer = "2.8.0"
  rxandroidVer = "1.2.1"
- rxjavaVer = "1.2.0"
+ rxjavaVer = "1.2.5"
  realmdbVer = "2.2.1"
  retrofitVer = "2.1.0"
  retrofitConverterGsonVer = "2.1.0"
