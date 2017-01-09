@@ -54,6 +54,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [Notification](/Notification) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Notification)
 + [ParallaxHeaderListview](/ParallaxHeaderListview) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ParallaxHeaderListview)
 + [ProductFlavors](/ProductFlavors) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ProductFlavors)
++ [QuickSettingsTile](/QuickSettingsTile) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/QuickSettingsTile)
 + [RatingBar](/RatingBar) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/RatingBar)
 + [ReadJSONFile](/ReadJSONFile) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ReadJSONFile)
 + [RecyclerView](/RecyclerView) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/RecyclerView)
