@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">"Quick Settings Tile "</string>
+  <string name="tile_label">Debugging</string>
 </resources>
