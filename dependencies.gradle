@@ -20,7 +20,7 @@ ext {
  butterknifeVer = "8.4.0"
  daggerVer = "2.8"
  jsr250apiVer = "1.0"
- okhttpVer = "3.5.0"
+ okhttpVer = "3.6.0"
  okhttpLoggingInterceptorVer = "3.5.0"
  gsonVer = "2.8.0"
  rxandroidVer = "1.2.1"
