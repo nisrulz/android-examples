@@ -6,7 +6,7 @@ ext {
  minSdkVer = 10
  targetSdkVer = 25
 
- supportLibVer = "25.1.0"
+ supportLibVer = "25.1.1"
  googlePlayServicesVer = "10.0.1"
 
  junitVer = "4.12"
@@ -14,23 +14,23 @@ ext {
 
  stethoVer = "1.4.2"
  picassoVer = "2.5.2"
- robolectricVer = "3.2.1"
+ robolectricVer = "3.2.2"
  appintroVer = "4.1.0"
- bottombarVer = "2.0.2"
- butterknifeVer = "8.4.0"
+ bottombarVer = "2.1.1"
+ butterknifeVer = "8.5.1"
  daggerVer = "2.8"
  jsr250apiVer = "1.0"
  okhttpVer = "3.6.0"
- okhttpLoggingInterceptorVer = "3.5.0"
+ okhttpLoggingInterceptorVer = "3.6.0"
  gsonVer = "2.8.0"
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.2.5"
- realmdbVer = "2.2.1"
+ realmdbVer = "2.3.0"
  retrofitVer = "2.1.0"
  retrofitConverterGsonVer = "2.1.0"
  mpAndroidChartVer = "v3.0.1"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"
- timberVer = "4.4.0"
- sugarOrmVer = "1.4"
+ timberVer = "4.5.1"
+ sugarOrmVer = "1.5"
 }
