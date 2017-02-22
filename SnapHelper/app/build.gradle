@@ -5,7 +5,7 @@ android {
   buildToolsVersion buildToolsVer
   defaultConfig {
     applicationId "github.nisrulz.sample.snaphelper"
-    minSdkVersion minSdkVer
+    minSdkVersion 15
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
@@ -27,4 +27,6 @@ dependencies {
 
   testCompile "junit:junit:$junitVer"
   compile "com.android.support:appcompat-v7:$supportLibVer"
+  compile "com.android.support:recyclerview-v7:$supportLibVer"
+  compile "com.android.support:cardview-v7:$supportLibVer"
 }
