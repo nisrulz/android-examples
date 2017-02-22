@@ -66,6 +66,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [SharedElementTransitions](/SharedElementTransitions) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SharedElementTransitions)
 + [SimulateClick](/SimulateClick) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SimulateClick)
 + [SnackBar](/SnackBar) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SnackBar)
++ [SnapHelper](/SnapHelper) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SnapHelper)
 + [SpeechRecognition](/SpeechRecognition) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SpeechRecognition)
 + [SplashScreen](/SplashScreen) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SplashScreen)
 + [TabLayout](/TabLayout) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TabLayout)
