@@ -29,4 +29,6 @@ dependencies {
   compile "com.android.support:appcompat-v7:$supportLibVer"
   compile "com.android.support:recyclerview-v7:$supportLibVer"
   compile "com.android.support:cardview-v7:$supportLibVer"
+
+  compile 'com.github.rubensousa:gravitysnaphelper:1.0'
 }

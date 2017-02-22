@@ -6,36 +6,58 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SnapHelper;
+import android.view.Gravity;
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
   private ArrayList<Item> items;
-  private RecyclerView recyclerView;
-
+  private RecyclerView recyclerViewSnapCenter, recyclerViewSnapStart, recyclerViewSnapEnd;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+    // Get ref to all views
+    recyclerViewSnapCenter = (RecyclerView) findViewById(R.id.recycler_view_snap_center);
+    recyclerViewSnapStart = (RecyclerView) findViewById(R.id.recycler_view_snap_start);
+    recyclerViewSnapEnd = (RecyclerView) findViewById(R.id.recycler_view_snap_end);
 
-    createApps();
+    // Dummy list
+    createAppsList();
 
-    /**
-     * Center snapping
-     */
+    // Setup adapter
+    SnapRecyclerAdapter adapter = new SnapRecyclerAdapter(items, this);
+
+
+    // Snap Center
     SnapHelper snapHelper = new LinearSnapHelper();
-    snapHelper.attachToRecyclerView(recyclerView);
+    snapHelper.attachToRecyclerView(recyclerViewSnapCenter);
+    recyclerViewSnapCenter.setAdapter(adapter);
+    recyclerViewSnapCenter.setLayoutManager(
+        new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-    SnapRecyclerAdapter adapter = new SnapRecyclerAdapter(items,this);
-    recyclerView.setAdapter(adapter);
-    recyclerView.setLayoutManager(new LinearLayoutManager(this,
-        LinearLayoutManager.HORIZONTAL, false));
+    // Using library : GravitySnapHelper
+    // Snap Start
+    SnapHelper snapHelperGravityStart = new GravitySnapHelper(Gravity.START);
+    snapHelperGravityStart.attachToRecyclerView(recyclerViewSnapStart);
+    recyclerViewSnapStart.setAdapter(adapter);
+    recyclerViewSnapStart.setLayoutManager(
+        new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+    // Snap End
+    SnapHelper snapHelperGravityEnd = new GravitySnapHelper(Gravity.END);
+    snapHelperGravityEnd.attachToRecyclerView(recyclerViewSnapEnd);
+    recyclerViewSnapEnd.setAdapter(adapter);
+    recyclerViewSnapEnd.setLayoutManager(
+        new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+
   }
 
-  private void createApps() {
+  private void createAppsList() {
     items = new ArrayList<>();
     items.add(new Item("Google+", R.drawable.googleplus));
     items.add(new Item("Facebook", R.drawable.facebook));
