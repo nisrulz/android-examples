@@ -98,6 +98,19 @@ Main repository containing all the example apps demonstrating features/functiona
 + [ViewPager](/ViewPager) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ViewPager)
 + [WebViewDialogueBox](/WebViewDialogueBox) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/WebViewDialogueBox)
 
+#### Example apps from my android libraries
++ [UsingEasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo/tree/master/app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/easydeviceinfo/tree/master/app)
++ [UsingSensey](https://github.com/nisrulz/sensey/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/sensey/tree/master/sample)
++ [UsingRecyclerViewHelper](https://github.com/nisrulz/recyclerviewhelper/tree/master/app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/recyclerviewhelper/tree/master/app)
++ [UsingScreenshott](https://github.com/nisrulz/screenshott/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/screenshott/tree/master/sample)
++ [UsingStackedHorizontalProgressbar](https://github.com/nisrulz/stackedhorizontalprogressbar/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/stackedhorizontalprogressbar/tree/master/sample)
++ [UsingQREader](https://github.com/nisrulz/qreader/tree/master/app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/qreader/tree/master/app)
++ [UsingPackageHunter](https://github.com/nisrulz/packagehunter/tree/master/app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/packagehunter/tree/master/app)
++ [UsingAndroidUtils](https://github.com/nisrulz/android-utils/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-utils/tree/master/sample)
++ [UsingZentone](https://github.com/nisrulz/zentone/tree/master/app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/zentone/tree/master/app)
++ [UsingOptimusHTTP](https://github.com/nisrulz/OptimusHTTP/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/OptimusHTTP/tree/master/sample)
++ [UsingShoutout](https://github.com/nisrulz/ShoutOut/tree/master/sample) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/ShoutOut/tree/master/sample)
+
 
 # Pull Requests
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
