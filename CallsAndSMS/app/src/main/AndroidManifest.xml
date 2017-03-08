@@ -4,13 +4,18 @@
 
   <!--Required to make the call directly-->
   <uses-permission android:name="android.permission.CALL_PHONE"/>
+
   <!--Required to monitor call states-->
   <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
   <!--To listen to outgoing calls-->
   <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
 
   <!--To send sms directly -->
   <uses-permission android:name="android.permission.SEND_SMS"/>
+
+  <!--To receive sms-->
+  <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
   <application
       android:allowBackup="true"
@@ -33,6 +38,12 @@
 
         <!--To mmonitor outgoing calls-->
         <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name=".SMSReceiver">
+      <intent-filter>
+        <action android:name="android.provider.Telephony.SMS_RECEIVED" />
       </intent-filter>
     </receiver>
   </application>
