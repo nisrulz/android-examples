@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
   private Button btnDial;
   private Button btnCall;
   private TelephonyManager telephonyManager;
+  private EditText etMessage;
+  private Button btnSendMessage;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +78,22 @@ public class MainActivity extends AppCompatActivity {
         }
       }
     });
-  }
 
+    etMessage = (EditText) findViewById(R.id.et_message);
+    btnSendMessage = (Button) findViewById(R.id.btn_send_message);
+    btnSendMessage.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        String message = etMessage.getText().toString();
+        String phoneNo = etPhoneNo.getText().toString();
+        if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
+          Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + phoneNo));
+          smsIntent.putExtra("sms_body", message);
+          startActivity(smsIntent);
+        }
+      }
+    });
+  }
 
   @Override
   protected void onResume() {
@@ -100,13 +116,16 @@ public class MainActivity extends AppCompatActivity {
 
       switch (state) {
         case TelephonyManager.CALL_STATE_IDLE:
-          Toast.makeText(MainActivity.this, "CALL_STATE_IDLE : Detected in FG", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_IDLE : Detected in FG", Toast.LENGTH_SHORT)
+              .show();
           break;
         case TelephonyManager.CALL_STATE_RINGING:
-          Toast.makeText(MainActivity.this, "CALL_STATE_RINGING : Detected in FG", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_RINGING : Detected in FG",
+              Toast.LENGTH_SHORT).show();
           break;
         case TelephonyManager.CALL_STATE_OFFHOOK:
-          Toast.makeText(MainActivity.this, "CALL_STATE_OFFHOOK : Detected in FG", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_OFFHOOK : Detected in FG",
+              Toast.LENGTH_SHORT).show();
           break;
       }
     }

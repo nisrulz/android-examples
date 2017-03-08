@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal|center_vertical"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".MainActivity"
@@ -33,4 +33,22 @@
       android:layout_gravity="center_horizontal"
       android:text="Call"
       />
+
+
+  <EditText
+      android:id="@+id/et_message"
+      android:hint="Enter message"
+      android:inputType="textCapSentences|textMultiLine"
+      android:maxLength="2000"
+      android:maxLines="12"
+      android:layout_marginTop="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <Button
+      android:id="@+id/btn_send_message"
+      android:layout_gravity="center_horizontal"
+      android:text="Send Messange"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 </LinearLayout>
