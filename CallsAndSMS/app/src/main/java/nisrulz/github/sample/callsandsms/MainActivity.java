@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneStateListener;
@@ -23,17 +25,46 @@ public class MainActivity extends AppCompatActivity {
   private Button btnCall;
   private TelephonyManager telephonyManager;
   private EditText etMessage;
-  private Button btnSendMessage, btnSendMessageDirectly;
+  private Button btnSendMessage;
+  private Button btnSendMessageDirectly;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    checkIfPermissionGranted();
+
     initView();
 
     telephonyManager =
         (TelephonyManager) getSystemService(getApplicationContext().TELEPHONY_SERVICE);
+  }
+
+  boolean isPermissionGranted(String permission) {
+    return ContextCompat.checkSelfPermission(MainActivity.this, permission)
+        == PackageManager.PERMISSION_GRANTED;
+  }
+
+  void checkIfPermissionGranted() {
+    if (isPermissionGranted(Manifest.permission.CALL_PHONE)
+        || isPermissionGranted(Manifest.permission.SEND_SMS)
+        || isPermissionGranted(Manifest.permission.RECEIVE_SMS)
+        || isPermissionGranted(Manifest.permission.READ_PHONE_STATE)
+        || isPermissionGranted(Manifest.permission.PROCESS_OUTGOING_CALLS)) {
+
+      // Request runtime permission
+      ActivityCompat.requestPermissions(this, new String[] {
+          Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS,
+          Manifest.permission.RECEIVE_SMS, Manifest.permission.READ_PHONE_STATE,
+          Manifest.permission.PROCESS_OUTGOING_CALLS
+      }, 100);
+    }
+  }
+
+  @Override
+  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+      @NonNull int[] grantResults) {
   }
 
   private void initView() {
@@ -65,8 +96,7 @@ public class MainActivity extends AppCompatActivity {
           // Requires Permission to be declared in manifest
           // <uses-permission android:name="android.permission.CALL_PHONE"/>
           // Then check and request for permission during runtime
-          if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)
-              == PackageManager.PERMISSION_GRANTED) {
+          if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
             startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
           }
           else {
@@ -106,8 +136,7 @@ public class MainActivity extends AppCompatActivity {
           // Requires Permission to be declared in manifest
           // <uses-permission android:name="android.permission.SEND_SMS"/>
           // Then check and request for permission during runtime
-          if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS)
-              == PackageManager.PERMISSION_GRANTED) {
+          if (isPermissionGranted(Manifest.permission.SEND_SMS)) {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, message, null, null);
           }
