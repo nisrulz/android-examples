@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
     telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
   }
 
+  // This listener only works when the app is in foreground
   PhoneStateListener phoneStateListener = new PhoneStateListener() {
     @Override
     public void onCallStateChanged(int state, String incomingNumber) {
@@ -99,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
 
       switch (state) {
         case TelephonyManager.CALL_STATE_IDLE:
-          Toast.makeText(MainActivity.this, "CALL_STATE_IDLE", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_IDLE : Detected in FG", Toast.LENGTH_SHORT).show();
           break;
         case TelephonyManager.CALL_STATE_RINGING:
-          Toast.makeText(MainActivity.this, "CALL_STATE_RINGING", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_RINGING : Detected in FG", Toast.LENGTH_SHORT).show();
           break;
         case TelephonyManager.CALL_STATE_OFFHOOK:
-          Toast.makeText(MainActivity.this, "CALL_STATE_OFFHOOK", Toast.LENGTH_SHORT).show();
+          Toast.makeText(MainActivity.this, "CALL_STATE_OFFHOOK : Detected in FG", Toast.LENGTH_SHORT).show();
           break;
       }
     }
