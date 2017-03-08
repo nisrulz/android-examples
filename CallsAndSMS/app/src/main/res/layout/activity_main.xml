@@ -37,18 +37,27 @@
 
   <EditText
       android:id="@+id/et_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
       android:hint="Enter message"
       android:inputType="textCapSentences|textMultiLine"
       android:maxLength="2000"
       android:maxLines="12"
-      android:layout_marginTop="20dp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      />
 
   <Button
       android:id="@+id/btn_send_message"
-      android:layout_gravity="center_horizontal"
-      android:text="Send Messange"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Send Message"
+      />
+  <Button
+      android:id="@+id/btn_send_message_directly"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Send Message"
+      />
 </LinearLayout>

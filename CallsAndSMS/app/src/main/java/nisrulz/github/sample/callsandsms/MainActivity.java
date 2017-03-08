@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneStateListener;
+import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.View;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
   private Button btnCall;
   private TelephonyManager telephonyManager;
   private EditText etMessage;
-  private Button btnSendMessage;
+  private Button btnSendMessage, btnSendMessageDirectly;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,29 @@ public class MainActivity extends AppCompatActivity {
           Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + phoneNo));
           smsIntent.putExtra("sms_body", message);
           startActivity(smsIntent);
+        }
+      }
+    });
+
+    btnSendMessageDirectly = (Button) findViewById(R.id.btn_send_message_directly);
+    btnSendMessageDirectly.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+
+        String message = etMessage.getText().toString();
+        String phoneNo = etPhoneNo.getText().toString();
+        if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
+          // Requires Permission to be declared in manifest
+          // <uses-permission android:name="android.permission.SEND_SMS"/>
+          // Then check and request for permission during runtime
+          if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS)
+              == PackageManager.PERMISSION_GRANTED) {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+          }
+          else {
+            Toast.makeText(MainActivity.this, "Permission denied", Toast.LENGTH_SHORT).show();
+          }
         }
       }
     });
