@@ -91,6 +91,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [UsingRetrofit2](/UsingRetrofit2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRetrofit2)
 + [UsingRobolectric](/UsingRobolectric) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRobolectric)
 + [UsingRxJava](/UsingRxJava) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRxJava)
++ [UsingRxJava2](/UsingRxJava2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRxJava2)
 + [UsingStetho](/UsingStetho) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingStetho)
 + [UsingSugarORM](/UsingSugarORM) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingSugarORM)
 + [UsingTimberLogger](/UsingTimberLogger) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingTimberLogger)
