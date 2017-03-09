@@ -26,6 +26,7 @@ ext {
  gsonVer = "2.8.0"
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.2.5"
+ rxjava2Ver = "2.0.7"
  realmdbVer = "2.3.0"
  retrofitVer = "2.1.0"
  retrofitConverterGsonVer = "2.1.0"
@@ -34,4 +35,5 @@ ext {
  altbeaconAndroidLibVer = "2+"
  timberVer = "4.5.1"
  sugarOrmVer = "1.5"
+ constraintLayoutVer = "1.0.2"
 }
