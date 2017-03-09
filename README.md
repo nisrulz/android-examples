@@ -19,6 +19,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [BroadcastReceiver](/BroadcastReceiver) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BroadcastReceiver)
 + [BuilderPattern](/BuilderPattern) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BuilderPattern)
 + [BuildVariants](/BuildVariants) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BuildVariants)
++ [CallsAndSMS](/CallsAndSMS) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CallsAndSMS)
 + [Camera2](/Camera2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Camera2)
 + [ChangeThemeDuringRuntime](/ChangeThemeDuringRuntime) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ChangeThemeDuringRuntime)
 + [CheckIfScreenLocked](/CheckIfScreenLocked) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfScreenLocked)
