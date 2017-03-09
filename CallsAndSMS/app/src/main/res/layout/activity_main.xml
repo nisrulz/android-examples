@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".MainActivity"
+    >
+
+  <EditText
+      android:id="@+id/et_phone_no"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Enter Phone number"
+      android:inputType="phone"
+      />
+
+  <Button
+      android:id="@+id/btn_dial"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Dial"
+      />
+  <Button
+      android:id="@+id/btn_call"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Call"
+      />
+
+
+  <EditText
+      android:id="@+id/et_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:hint="Enter message"
+      android:inputType="textCapSentences|textMultiLine"
+      android:maxLength="2000"
+      android:maxLines="12"
+      />
+
+  <Button
+      android:id="@+id/btn_send_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Send Message"
+      />
+  <Button
+      android:id="@+id/btn_send_message_directly"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Send Message"
+      />
+</LinearLayout>
