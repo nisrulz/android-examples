@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">UsingOpenNLP</string>
+  <string name="paragraph_text">Hello World! This is some text in a sentence. John was out with Mike in Alaska for some time. They were looking at this text and wondering is this a sentence.</string>
 </resources>

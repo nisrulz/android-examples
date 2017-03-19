@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import nisrulz.github.sample.usingopennlp.opennlp.NamedEntityExtraction;
 import nisrulz.github.sample.usingopennlp.opennlp.SentenceDetector;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,21 +34,47 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         if (!TextUtils.isEmpty(editText.getText().toString())) {
+          button.setEnabled(false);
+          button.setText("Processing...");
+          Activity activity = MainActivity.this;
+          String text = editText.getText().toString();
           StringBuilder stringBuilder = new StringBuilder().append("Sentences:\n")
-              .append(getSentencesFromParagraph(MainActivity.this, editText.getText().toString()));
+              .append(getSentencesFromParagraph(activity, text))
+              .append("\n\nNames:\n")
+              .append(getNamesFromParagraph(activity, text))
+              .append("\n\nLocations:\n")
+              .append(getLocationFromParagraph(activity, text));
           textView.setText(stringBuilder.toString());
+          button.setText("Run Analysis");
+          button.setEnabled(true);
         }
       }
     });
   }
 
-  private String getSentencesFromParagraph(Activity activity, String paragraph) {
-    String[] sentences = new SentenceDetector().findSentences(activity, paragraph);
+  private String generateString(String[] values) {
     String finalData = "";
-    for (int i = 0; i < sentences.length; i++) {
-      finalData += sentences[i] + "\n";
+    for (int i = 0; i < values.length; i++) {
+      finalData += values[i] + "\n";
     }
 
     return finalData;
+  }
+
+  private String getSentencesFromParagraph(Activity activity, String paragraph) {
+    String[] sentences = new SentenceDetector().findSentences(activity, paragraph);
+    return generateString(sentences);
+  }
+
+  private String getNamesFromParagraph(Activity activity, String paragraph) {
+    String[] names =
+        new NamedEntityExtraction().findNames(activity, paragraph, R.raw.en_ner_person);
+    return generateString(names);
+  }
+
+  private String getLocationFromParagraph(Activity activity, String paragraph) {
+    String[] locations =
+        new NamedEntityExtraction().findNames(activity, paragraph, R.raw.en_ner_location);
+    return generateString(locations);
   }
 }
