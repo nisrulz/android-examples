@@ -1,5 +1,6 @@
 package nisrulz.github.sample.usingopennlp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -32,16 +33,21 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         if (!TextUtils.isEmpty(editText.getText().toString())) {
-          String[] sentences = new SentenceDetector().findSentences(MainActivity.this,
-              editText.getText().toString());
-          String finalData = "";
-          for (int i = 0; i < sentences.length; i++) {
-            finalData += sentences[i] + "\n";
-          }
-
-          textView.setText(finalData);
+          StringBuilder stringBuilder = new StringBuilder().append("Sentences:\n")
+              .append(getSentencesFromParagraph(MainActivity.this, editText.getText().toString()));
+          textView.setText(stringBuilder.toString());
         }
       }
     });
+  }
+
+  private String getSentencesFromParagraph(Activity activity, String paragraph) {
+    String[] sentences = new SentenceDetector().findSentences(activity, paragraph);
+    String finalData = "";
+    for (int i = 0; i < sentences.length; i++) {
+      finalData += sentences[i] + "\n";
+    }
+
+    return finalData;
   }
 }

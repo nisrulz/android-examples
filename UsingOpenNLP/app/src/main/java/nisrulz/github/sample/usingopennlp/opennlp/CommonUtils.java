@@ -9,5 +9,4 @@ public class CommonUtils {
 		String[] tokens = whitespaceTokenizer.tokenize(sentence);
 		return tokens;
 	}
-
 }
