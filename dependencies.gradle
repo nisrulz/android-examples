@@ -21,8 +21,8 @@ ext {
  butterknifeVer = "8.5.1"
  daggerVer = "2.10"
  jsr250apiVer = "1.0"
- okhttpVer = "3.6.0"
- okhttpLoggingInterceptorVer = "3.6.0"
+ okhttpVer = "3.7.0"
+ okhttpLoggingInterceptorVer = "3.7.0"
  gsonVer = "2.8.0"
  realmdbVer = "2.3.2"
  retrofitVer = "2.2.0"
@@ -36,6 +36,7 @@ ext {
 
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.2.9"
+
  rxandroid2Ver = "2.0.1"
  rxjava2Ver = "2.0.8"
 }
