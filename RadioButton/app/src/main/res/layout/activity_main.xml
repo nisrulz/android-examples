@@ -7,4 +7,58 @@
     >
 
 
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="How do you like the quality of our tutorials?"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+
+  <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Excellent " />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Satisfactory" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Below Average" />
+  </RadioGroup>
+
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClear"
+        android:text="Clear " />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onSubmit"
+        android:text="Submit" />
+  </LinearLayout>
+
+
 </LinearLayout>
