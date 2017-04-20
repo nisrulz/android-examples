@@ -3,4 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+  <EditText
+      android:id="@+id/editText1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="20dp"
+      android:hint="Enter Text to Add"
+      android:inputType="textPersonName"
+      >
+
+    <requestFocus/>
+  </EditText>
+
+  <Button
+      android:id="@+id/button1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/editText1"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"
+      android:text="Button"
+      />
+
+  <AutoCompleteTextView
+      android:id="@+id/autoCompleteTextView1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/button1"
+      android:layout_marginTop="40dp"
+      android:hint="AutoCompleteTextView"
+      android:textSize="20dp"
+      />
+
 </RelativeLayout>
