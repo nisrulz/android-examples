@@ -12,6 +12,7 @@ Main repository containing all the example apps demonstrating features/functiona
 ## Example apps
 + [ActivityLifecycle](/ActivityLifecycle) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
 + [AudioRecording](/AudioRecording) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AudioRecording)
++ [AutoCompleteTextview](/AutoCompleteTextview) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AutoCompleteTextview)
 + [BasicMVP](/BasicMVP) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BasicMVP)
 + [BoundServices](/BoundServices) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BoundServices)
 + [BottomSheet](/BottomSheet) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BottomSheet)
@@ -54,8 +55,10 @@ Main repository containing all the example apps demonstrating features/functiona
 + [NavigationDrawer](/NavigationDrawer) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/NavigationDrawer)
 + [Notification](/Notification) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Notification)
 + [ParallaxHeaderListview](/ParallaxHeaderListview) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ParallaxHeaderListview)
++ [PopupMenu](/PopupMenu) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/PopupMenu)
 + [ProductFlavors](/ProductFlavors) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ProductFlavors)
 + [QuickSettingsTile](/QuickSettingsTile) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/QuickSettingsTile)
++ [RadioButton](/RadioButton) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/RadioButton)
 + [RatingBar](/RatingBar) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/RatingBar)
 + [ReadJSONFile](/ReadJSONFile) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ReadJSONFile)
 + [RecyclerView](/RecyclerView) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/RecyclerView)
