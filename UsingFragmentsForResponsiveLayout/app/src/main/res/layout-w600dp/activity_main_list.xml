@@ -4,11 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:weightSum="4"
     >
   <FrameLayout
       android:id="@+id/fragment_masterlist_placeholder"
-      android:layout_width="300dp"
+      android:layout_width="match_parent"
       android:layout_height="match_parent"
+      android:layout_weight="2.9"
       />
 
   <!-- A small divider -->
@@ -21,10 +23,11 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
+      android:layout_weight="1"
       >
     <FrameLayout
         android:id="@+id/fragment_detail_placeholder"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
   </LinearLayout>

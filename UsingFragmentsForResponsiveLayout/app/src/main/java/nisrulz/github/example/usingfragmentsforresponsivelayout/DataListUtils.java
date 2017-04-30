@@ -8,6 +8,8 @@ public class DataListUtils {
     add("Apples");
     add("Oranges");
     add("Peaches");
+    add("Strawberry");
+    add("Grapes");
   }};
 
   public static ArrayList<String> getDatalist() {
