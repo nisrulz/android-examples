@@ -10,8 +10,10 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    int position = getIntent().getIntExtra("index", 0);
+
     DetailFragment detailFragment = new DetailFragment();
-    detailFragment.setIndex(0);
+    detailFragment.setIndex(position);
     detailFragment.setDatalist(DataListUtils.getDatalist());
 
     getSupportFragmentManager().beginTransaction()
