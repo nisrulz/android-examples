@@ -84,6 +84,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [UsingDBFlow](/UsingDBFlow) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingDBFlow)
 + [UsingDagger2](/UsingDagger2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingDagger2)
 + [UsingEasyGCMlib](/UsingEasyGCMlib) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingEasyGCMlib)
++ [UsingFragmentsForResponsiveLayout](/UsingFragmentsForResponsiveLayout) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingFragmentsForResponsiveLayout)
 + [UsingFirebaseJobDispatcher](/UsingFirebaseJobDispatcher) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingFirebaseJobDispatcher)
 + [UsingFontAwesomeLib](/UsingFontAwesomeLib) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingFontAwesomeLib)
 + [UsingKotlin](/UsingKotlin) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingKotlin)
