@@ -35,8 +35,8 @@ ext {
  constraintLayoutVer = "1.0.2"
 
  rxandroidVer = "1.2.1"
- rxjavaVer = "1.2.9"
+ rxjavaVer = "1.3.0"
 
  rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.0.8"
+ rxjava2Ver = "2.1.0"
 }
