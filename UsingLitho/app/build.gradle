@@ -5,12 +5,17 @@ android {
   buildToolsVersion buildToolsVer
   defaultConfig {
     applicationId "nisrulz.github.example.usinglitho"
-    minSdkVersion minSdkVer
+    minSdkVersion 15
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
+
+  configurations.all {
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+  }
+
   buildTypes {
     release {
       minifyEnabled false
@@ -28,7 +33,13 @@ dependencies {
   testCompile "junit:junit:$junitVer"
   compile "com.android.support:appcompat-v7:$supportLibVer"
 
-  compile "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
+  // Litho
+  compile "com.facebook.litho:litho-core:$lithoVer"
+  compile "com.facebook.litho:litho-widget:$lithoVer"
+  provided "com.facebook.litho:litho-annotations:$lithoVer"
+  annotationProcessor "com.facebook.litho:litho-processor:$lithoVer"
+  // Optional
+  // For debugging
+  debugCompile "com.facebook.litho:litho-stetho:$lithoVer"
 
-  compile "io.reactivex.rxjava2:rxjava:$rxjava2Ver"
 }
