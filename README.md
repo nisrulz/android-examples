@@ -88,6 +88,7 @@ Main repository containing all the example apps demonstrating features/functiona
 + [UsingFirebaseJobDispatcher](/UsingFirebaseJobDispatcher) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingFirebaseJobDispatcher)
 + [UsingFontAwesomeLib](/UsingFontAwesomeLib) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingFontAwesomeLib)
 + [UsingKotlin](/UsingKotlin) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingKotlin)
++ [UsingLitho](/UsingLitho) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingLitho)
 + [UsingMPChartsLib](/UsingMPChartsLib) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingMPChartsLib)
 + [UsingOpenNLP](/UsingOpenNLP) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingOpenNLP)
 + [UsingParceler](/UsingParceler) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingParceler)
