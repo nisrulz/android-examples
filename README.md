@@ -153,7 +153,7 @@ Since the repo is pretty large now , I am sure a lot of you guys would like to d
 ### Created & Maintained By
 [Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
 
-> If you found these examples helpful or you learned something from their source code and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz) :coffee:
+> If you found these examples helpful or you learned something from their source code and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz/5) :coffee:
 
 
 License
