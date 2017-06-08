@@ -7,14 +7,11 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               checkForPermissionAndMakeACall();
+                checkForPermissionAndMakeACall();
             }
         });
     }
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     }).setPositiveButton("Allow", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
                 }
             }).create().show();
 
@@ -76,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == 1) {
-            if(permissions[0].equals(Manifest.permission.CALL_PHONE) && grantResults[0]==
-                    PackageManager.PERMISSION_GRANTED){
+            if (permissions[0].equals(Manifest.permission.CALL_PHONE) && grantResults[0] ==
+                    PackageManager.PERMISSION_GRANTED) {
                 makeACall();
             } else {
                 Toast.makeText(this, "Permission was Denied!", Toast.LENGTH_SHORT).show();
@@ -89,6 +86,16 @@ public class MainActivity extends AppCompatActivity {
     private void makeACall() {
         Intent i = new Intent(Intent.ACTION_CALL);
         i.setData(Uri.parse("tel:90990990900"));
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         startActivity(i);
     }
 }
