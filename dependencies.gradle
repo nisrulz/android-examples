@@ -4,11 +4,11 @@ ext {
  compileSdkVer = 25
  buildToolsVer = "25.0.3"
 
- minSdkVer = 10
+ minSdkVer = 14
  targetSdkVer = 25
 
  supportLibVer = "25.3.1"
- googlePlayServicesVer = "10.2.0"
+ googlePlayServicesVer = "11.0.0"
 
  junitVer = "4.12"
  espressoCoreVer = "2.2.2"
