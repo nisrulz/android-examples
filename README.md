@@ -11,6 +11,7 @@ Main repository containing all the example apps demonstrating features/functiona
 
 ## Example apps
 + [ActivityLifecycle](/ActivityLifecycle) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
++ [AnimatedGradientBackground](/AnimatedGradientBackground) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AnimatedGradientBackground)
 + [AudioRecording](/AudioRecording) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AudioRecording)
 + [AutoCompleteTextview](/AutoCompleteTextview) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AutoCompleteTextview)
 + [BasicMVP](/BasicMVP) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BasicMVP)
