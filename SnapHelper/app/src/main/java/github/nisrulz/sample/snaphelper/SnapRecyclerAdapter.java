@@ -1,6 +1,7 @@
 package github.nisrulz.sample.snaphelper;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class SnapRecyclerAdapter extends RecyclerView.Adapter<SnapRecyclerAdapte
     TextView textView = holder.nameTextView;
     textView.setText(item.getName());
     ImageView imgview= holder.imageView;
-    imgview.setImageDrawable(mContext.getDrawable(item.getImgRes()));
+    imgview.setImageDrawable(ContextCompat.getDrawable(mContext,item.getImgRes()));
   }
 
   @Override
