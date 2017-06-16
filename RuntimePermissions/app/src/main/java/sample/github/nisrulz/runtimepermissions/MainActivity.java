@@ -16,86 +16,79 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    fab.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        makeACall(true);
+      }
+    });
+  }
+
+  void requestCallPermission() {
+    // Should we show an explanation?
+    if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+        Manifest.permission.CALL_PHONE)) {
+
+      // Show an expanation to the user *asynchronously* -- don't block
+      // this thread waiting for the user's response! After the user
+      // sees the explanation, try again to request the permission.
+      new AlertDialog.Builder(this).setMessage("Permission to make calls is required")
+          .setNegativeButton("Deny", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                checkForPermissionAndMakeACall();
+            public void onClick(DialogInterface dialogInterface, int i) {
+              dialogInterface.dismiss();
             }
-        });
-    }
-
-    void checkForPermissionAndMakeACall() {
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "CALL permission available..making a call", Toast.LENGTH_SHORT).show();
-            makeACall();
-        } else {
-            requestCallPermission();
-        }
-    }
-
-    void requestCallPermission() {
-
-        // Should we show an explanation?
-        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
-                Manifest.permission.CALL_PHONE)) {
-
-            // Show an expanation to the user *asynchronously* -- don't block
-            // this thread waiting for the user's response! After the user
-            // sees the explanation, try again to request the permission.
-            new AlertDialog.Builder(this).setMessage("Permission to make calls is required")
-                    .setNegativeButton("Deny", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    }).setPositiveButton("Allow", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
-                }
-            }).create().show();
-
-
-        } else {
-            // No explanation needed, we can request the permission.
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 1);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == 1) {
-            if (permissions[0].equals(Manifest.permission.CALL_PHONE) && grantResults[0] ==
-                    PackageManager.PERMISSION_GRANTED) {
-                makeACall();
-            } else {
-                Toast.makeText(this, "Permission was Denied!", Toast.LENGTH_SHORT).show();
+          })
+          .setPositiveButton("Allow", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+              ActivityCompat.requestPermissions(MainActivity.this,
+                  new String[] { Manifest.permission.CALL_PHONE }, 1);
             }
-        }
-
+          })
+          .create()
+          .show();
     }
-
-    private void makeACall() {
-        Intent i = new Intent(Intent.ACTION_CALL);
-        i.setData(Uri.parse("tel:90990990900"));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        startActivity(i);
+    else {
+      // No explanation needed, we can request the permission.
+      ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CALL_PHONE }, 1);
     }
+  }
+
+  @Override
+  public void onRequestPermissionsResult(int requestCode, String[] permissions,
+      int[] grantResults) {
+    if (requestCode == 1) {
+      if (permissions[0].equals(Manifest.permission.CALL_PHONE)
+          && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        // Donot request for permission from inside the onRequestPermissionsResult(), only check for permission
+        makeACall(false);
+      }
+      else {
+        Toast.makeText(this, "Permission was Denied!", Toast.LENGTH_SHORT).show();
+      }
+    }
+  }
+
+  private void makeACall(boolean requestPermission) {
+    Intent i = new Intent(Intent.ACTION_CALL);
+    i.setData(Uri.parse("tel:90990990900"));
+
+    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE)
+        == PackageManager.PERMISSION_GRANTED) {
+      Toast.makeText(this, "CALL permission available..making a call", Toast.LENGTH_SHORT).show();
+      startActivity(i);
+    }
+    else if (requestPermission) {
+      requestCallPermission();
+    }
+  }
 }
