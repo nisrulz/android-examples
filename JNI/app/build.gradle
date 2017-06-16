@@ -1,44 +1,80 @@
-apply plugin: 'com.android.model.application'
+apply plugin: 'com.android.application'
 
-model {
-    android {
-        compileSdkVersion compileSdkVer
-        buildToolsVersion buildToolsVer
-
-        defaultConfig {
-            applicationId "github.nisrulz.jni"
-            minSdkVersion.apiLevel minSdkVer
-            targetSdkVersion.apiLevel targetSdkVer
-            versionCode 1
-            versionName "1.0"
-
-            buildConfigFields {
-                create() {
-                    type "int"
-                    name "VALUE"
-                    value "1"
-                }
-            }
-        }
-
-        ndk {
-            moduleName "hello-android-jni"
-        }
-
-        buildTypes {
-            release {
-                minifyEnabled false
-                proguardFiles.add(file("proguard-rules.pro"))
-            }
-        }
+android {
+  compileSdkVersion compileSdkVer
+  buildToolsVersion buildToolsVer
+  defaultConfig {
+    applicationId "github.nisrulz.jni"
+    minSdkVersion minSdkVer
+    targetSdkVersion targetSdkVer
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    externalNativeBuild {
+      cmake {
+        arguments '-DANDROID_TOOLCHAIN=clang'
+      }
     }
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  externalNativeBuild {
+    cmake {
+      path "src/main/cpp/CMakeLists.txt"
+    }
+  }
+  productFlavors {
+    arm7 {
+      // in the future, ndk.abiFilter might also work
+      ndk {
+        abiFilter 'armeabi-v7a'
+      }
+    }
+    arm8 {
+      ndk {
+        abiFilters 'arm64-v8a'
+      }
+    }
+    arm {
+      ndk {
+        abiFilter 'armeabi'
+      }
+    }
+    x86 {
+      ndk {
+        abiFilter 'x86'
+      }
+    }
+    x86_64 {
+      ndk {
+        abiFilter 'x86_64'
+      }
+    }
+    mips {
+      ndk {
+        abiFilters 'mips', 'mips64'
+      }
+    }
+    universal {
+      ndk {
+        abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64', 'x86', 'x86_64'
+      }
+    }
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-   
-   testCompile "junit:junit:$junitVer"
-   
-    compile "com.android.support:appcompat-v7:$supportLibVer"
-    compile "com.android.support:design:$supportLibVer"
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+
+  testCompile "junit:junit:$junitVer"
+  compile "com.android.support:appcompat-v7:$supportLibVer"
 }
+

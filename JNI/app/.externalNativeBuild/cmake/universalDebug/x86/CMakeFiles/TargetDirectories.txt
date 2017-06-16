@@ -1,0 +1,3 @@
+/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/edit_cache.dir
+/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/rebuild_cache.dir
+/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/hello-android-jni.dir

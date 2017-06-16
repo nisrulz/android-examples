@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/nishant/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86_64 --target clean"
+	],
+	"libraries" : 
+	{
+		"hello-android-jni-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "hello-android-jni",
+			"buildCommand" : "/Users/nishant/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86_64 --target hello-android-jni",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=/Users/nishant/android_sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/nishant/android_sdk/ndk-bundle/sysroot -Dhello_android_jni_EXPORTS  -isystem /Users/nishant/android_sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/src/main/cpp/hello-android-jni.c",
+					"workingDirectory" : "/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalDebug/x86_64"
+				}
+			],
+			"output" : "/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/build/intermediates/cmake/universal/debug/obj/x86_64/libhello-android-jni.so",
+			"toolchain" : "11798853890407705644"
+		}
+	},
+	"toolchains" : 
+	{
+		"11798853890407705644" : 
+		{
+			"cCompilerExecutable" : "/Users/nishant/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/nishant/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}
