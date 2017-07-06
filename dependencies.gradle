@@ -2,13 +2,13 @@ ext {
  androidPluginVer = "2.3.3"
  googleServicesPluginVer = "3.1.0"
  compileSdkVer = 26
- buildToolsVer = "25.0.3"
+ buildToolsVer = "26.0.0"
 
  minSdkVer = 14
  targetSdkVer = 26
 
- supportLibVer = "25.4.0"
- googlePlayServicesVer = "11.0.1"
+ supportLibVer = "26.+"
+ googlePlayServicesVer = "11.0.2"
 
  junitVer = "4.12"
  espressoCoreVer = "2.2.2"
@@ -41,4 +41,6 @@ ext {
  rxjava2Ver = "2.1.0"
 
  lithoVer = "0.3.1"
+
+ archComponentVer = "1.0.0-alpha3"
 }
