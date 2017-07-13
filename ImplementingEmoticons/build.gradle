@@ -17,12 +17,8 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
+    google()
     maven { url "https://dl.bintray.com/hani-momanii/maven"}
-
-    maven {
-          url 'https://maven.google.com'
-          // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
-      }
   }
 }
 

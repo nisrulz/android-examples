@@ -15,15 +15,12 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        jcenter()
-
-    maven {
-            url 'https://maven.google.com'
-            // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
-        }
-    }
+  repositories {
+    jcenter()
+    google()
+  }
 }
+
 subprojects {
   apply from: '../../dependencies.gradle'
 }
