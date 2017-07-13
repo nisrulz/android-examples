@@ -18,7 +18,7 @@ ext {
  robolectricVer = "3.3.2"
  appintroVer = "4.1.0"
  bottombarVer = "2.1.1"
- butterknifeVer = "8.6.0"
+ butterknifeVer = "8.7.0"
  daggerVer = "2.11"
  jsr250apiVer = "1.0"
  okhttpVer = "3.8.0"
@@ -38,9 +38,9 @@ ext {
  rxjavaVer = "1.3.0"
 
  rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.1.0"
+ rxjava2Ver = "2.1.1"
 
  lithoVer = "0.3.1"
 
- archComponentVer = "1.0.0-alpha3"
+ archComponentVer = "1.0.0-alpha4"
 }
