@@ -30,5 +30,5 @@ dependencies {
 
   compile "com.android.support:design:$supportLibVer"
 
-  compile 'com.firebase:firebase-jobdispatcher:0.5.0'
+  compile "com.firebase:firebase-jobdispatcher:$firebaseJobdispatcherVer"
 }

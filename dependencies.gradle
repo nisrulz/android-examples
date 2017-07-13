@@ -33,6 +33,7 @@ ext {
  timberVer = "4.5.1"
  sugarOrmVer = "1.5"
  constraintLayoutVer = "1.0.2"
+ firebaseJobdispatcherVer="0.7.0"
 
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.3.0"
