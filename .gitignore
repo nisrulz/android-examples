@@ -83,3 +83,12 @@ hs_err_pid*
 /captures
 **/*.iml
 *.class
+AppShortcuts/.settings/org.eclipse.buildship.core.prefs
+AppShortcuts/app/.classpath
+AppShortcuts/app/.settings/org.eclipse.buildship.core.prefs
+ListViewWithCustomAdapter/.settings/org.eclipse.buildship.core.prefs
+ListViewWithCustomAdapter/app/.classpath
+ListViewWithCustomAdapter/app/.settings/org.eclipse.buildship.core.prefs
+UsingRoomORM/.settings/org.eclipse.buildship.core.prefs
+UsingRoomORM/app/.classpath
+UsingRoomORM/app/.settings/org.eclipse.buildship.core.prefs
