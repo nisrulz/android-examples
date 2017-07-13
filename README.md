@@ -98,6 +98,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingRealmDB](/UsingRealmDB) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRealmDB)
 1. [UsingRetrofit2](/UsingRetrofit2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRetrofit2)
 1. [UsingRobolectric](/UsingRobolectric) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRobolectric)
+1. [UsingRoomORM](/UsingRoomORM) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRoomORM)
 1. [UsingRxJava](/UsingRxJava) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRxJava)
 1. [UsingRxJava2](/UsingRxJava2) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRxJava2)
 1. [UsingStetho](/UsingStetho) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingStetho)
