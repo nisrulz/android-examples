@@ -11,7 +11,8 @@ ext {
  googlePlayServicesVer = "11.0.2"
 
  junitVer = "4.12"
- espressoCoreVer = "2.2.2"
+ espressoCoreVer = "3.0.0"
+ androidTestRunnerVer = "1.0.0"
 
  stethoVer = "1.5.0"
  picassoVer = "2.5.2"
