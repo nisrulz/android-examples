@@ -1,15 +1,18 @@
 package nisrulz.github.sample.usingandroidarchcomponents;
 
+import android.arch.lifecycle.LifecycleActivity;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends LifecycleActivity {
 
   protected TextView clickCountText;
   protected Button button;
+
+  private ClickCounterViewModel viewModel;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +22,21 @@ public class MainActivity extends AppCompatActivity {
     button = findViewById(R.id.increment_button);
     clickCountText = findViewById(R.id.click_count_text);
 
+
+    viewModel= ViewModelProviders.of(this).get(ClickCounterViewModel.class);
+
+    displayClickCount(viewModel.getCount());
+
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        int currentClickCount = Integer.parseInt(clickCountText.getText().toString());
-        clickCountText.setText(String.valueOf(++currentClickCount));
+        viewModel.setCount(viewModel.getCount()+1);
+        displayClickCount(viewModel.getCount());
       }
     });
+  }
+
+  private void displayClickCount(int clickCount) {
+    clickCountText.setText(String.valueOf(clickCount));
   }
 }
