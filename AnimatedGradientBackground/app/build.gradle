@@ -26,7 +26,7 @@ dependencies {
   // Testing-only dependencies
   testCompile "junit:junit:$junitVer"
   androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
   compile "com.android.support:appcompat-v7:$supportLibVer"
   compile "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
