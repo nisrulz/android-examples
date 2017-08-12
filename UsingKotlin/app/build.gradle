@@ -11,7 +11,7 @@ android {
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+   testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -23,11 +23,12 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
 
+  // Testing-only dependencies
   testCompile "junit:junit:$junitVer"
+  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+
   compile "com.android.support:appcompat-v7:$supportLibVer"
 
   compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"

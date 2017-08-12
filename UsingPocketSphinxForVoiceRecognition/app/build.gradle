@@ -10,18 +10,24 @@ android {
         targetSdkVersion targetSdkVer
         versionCode 1
         versionName "1.0"
+testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile "junit:junit:$junitVer"
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+
+  // Testing-only dependencies
+  testCompile "junit:junit:$junitVer"
+  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+
     compile "com.android.support:appcompat-v7:$supportLibVer"
     compile "com.android.support:design:$supportLibVer"
 }

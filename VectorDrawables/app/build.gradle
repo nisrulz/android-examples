@@ -24,10 +24,13 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
+
+  // Testing-only dependencies
+  testCompile "junit:junit:$junitVer"
+  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+
   compile "com.android.support:appcompat-v7:$supportLibVer"
   compile 'com.android.support.constraint:constraint-layout:1.0.1'
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-  androidTestCompile 'com.android.support.test:runner:0.5'
   androidTestCompile "com.android.support:support-annotations:$supportLibVer"
 }
