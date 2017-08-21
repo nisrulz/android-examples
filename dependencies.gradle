@@ -8,7 +8,7 @@ ext {
  targetSdkVer = 26
 
  supportLibVer = "26.0.1"
- googlePlayServicesVer = "11.0.4"
+ googlePlayServicesVer = "11.2.0"
 
  junitVer = "4.12"
  espressoCoreVer = "3.0.0"
@@ -40,9 +40,9 @@ ext {
  rxjavaVer = "1.3.0"
 
  rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.1.2"
+ rxjava2Ver = "2.1.3"
 
  lithoVer = "0.5.0"
 
- archComponentVer = "1.0.0-alpha8"
+ archComponentVer = "1.0.0-alpha9"
 }
