@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
+    defaultConfig {
+        applicationId "me.gurpreetsk.usingsimplesqlprovider"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Testing-only dependencies
+    testCompile "junit:junit:$junitVer"
+    androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile "com.android.support:appcompat-v7:$supportLibVer"
+    compile "com.android.support:design:$supportLibVer"
+
+    compile "com.squareup:javapoet:$javaPoetVer"
+    compile "ckm.simple:simple_sql_provider_annotation:$simpleSqlProviderVer"
+    compile "ckm.simple:simple_sql_provider_processor:$simpleSqlProviderVer"
+
+}

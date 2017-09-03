@@ -1,48 +1,51 @@
 ext {
- androidPluginVer = "3.0.0-beta2"
- googleServicesPluginVer = "3.1.0"
- compileSdkVer = 26
- buildToolsVer = "26.0.1"
+    androidPluginVer = "3.0.0-beta2"
+    googleServicesPluginVer = "3.1.0"
+    compileSdkVer = 26
+    buildToolsVer = "26.0.1"
 
- minSdkVer = 14
- targetSdkVer = 26
+    minSdkVer = 14
+    targetSdkVer = 26
 
- supportLibVer = "26.0.1"
- googlePlayServicesVer = "11.2.0"
+    supportLibVer = "26.0.1"
+    googlePlayServicesVer = "11.2.0"
 
- junitVer = "4.12"
- espressoCoreVer = "3.0.0"
- androidTestRunnerVer = "1.0.0"
+    junitVer = "4.12"
+    espressoCoreVer = "3.0.0"
+    androidTestRunnerVer = "1.0.0"
 
- stethoVer = "1.5.0"
- picassoVer = "2.5.2"
- robolectricVer = "3.4"
- appintroVer = "4.1.0"
- bottombarVer = "2.1.1"
- butterknifeVer = "8.8.1"
- daggerVer = "2.11"
- jsr250apiVer = "1.0"
- okhttpVer = "3.8.1"
- okhttpLoggingInterceptorVer = "3.8.1"
- gsonVer = "2.8.1"
- realmdbVer = "3.5.0"
- retrofitVer = "2.3.0"
- retrofitConverterGsonVer = "2.3.0"
- mpAndroidChartVer = "v3.0.2"
- easygcmVer = "1.6.2@aar"
- altbeaconAndroidLibVer = "2+"
- timberVer = "4.5.1"
- sugarOrmVer = "1.5"
- constraintLayoutVer = "1.0.2"
- firebaseJobdispatcherVer="0.7.0"
+    stethoVer = "1.5.0"
+    picassoVer = "2.5.2"
+    robolectricVer = "3.4"
+    appintroVer = "4.1.0"
+    bottombarVer = "2.1.1"
+    butterknifeVer = "8.8.1"
+    daggerVer = "2.11"
+    jsr250apiVer = "1.0"
+    okhttpVer = "3.8.1"
+    okhttpLoggingInterceptorVer = "3.8.1"
+    gsonVer = "2.8.1"
+    realmdbVer = "3.5.0"
+    retrofitVer = "2.3.0"
+    retrofitConverterGsonVer = "2.3.0"
+    mpAndroidChartVer = "v3.0.2"
+    easygcmVer = "1.6.2@aar"
+    altbeaconAndroidLibVer = "2+"
+    timberVer = "4.5.1"
+    sugarOrmVer = "1.5"
+    constraintLayoutVer = "1.0.2"
+    firebaseJobdispatcherVer = "0.7.0"
 
- rxandroidVer = "1.2.1"
- rxjavaVer = "1.3.0"
+    rxandroidVer = "1.2.1"
+    rxjavaVer = "1.3.0"
 
- rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.1.3"
+    rxandroid2Ver = "2.0.1"
+    rxjava2Ver = "2.1.3"
 
- lithoVer = "0.5.0"
+    lithoVer = "0.5.0"
 
- archComponentVer = "1.0.0-alpha9"
+    archComponentVer = "1.0.0-alpha9"
+
+    javaPoetVer = "1.2.0"
+    simpleSqlProviderVer = "1.0.6"
 }
