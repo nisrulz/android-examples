@@ -1,4 +1,4 @@
-package me.gurpreetsk.usingsimplesqlprovider;
+package me.gurpreetsk.sample.usingsimplesqlprovider;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     // Context of the app under test.
     Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("me.gurpreetsk.usingsimplesqlprovider", appContext.getPackageName());
+    assertEquals("me.gurpreetsk.sample.usingsimplesqlprovider", appContext.getPackageName());
   }
 }

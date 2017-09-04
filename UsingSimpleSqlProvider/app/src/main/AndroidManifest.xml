@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="me.gurpreetsk.usingsimplesqlprovider">
+          package="me.gurpreetsk.sample.usingsimplesqlprovider">
 
     <application
         android:allowBackup="true"
@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="me.gurpreetsk.sample.usingsimplesqlprovider.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <provider
+            android:name=".provider.MyProvider"
+            android:authorities="me.gurpreetsk.sample.usingsimplesqlprovider"
+            android:exported="false"/>
     </application>
 
 </manifest>

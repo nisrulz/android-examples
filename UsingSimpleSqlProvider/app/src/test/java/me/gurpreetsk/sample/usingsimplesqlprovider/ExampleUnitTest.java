@@ -1,4 +1,4 @@
-package me.gurpreetsk.usingsimplesqlprovider;
+package me.gurpreetsk.sample.usingsimplesqlprovider;
 
 import org.junit.Test;
 
