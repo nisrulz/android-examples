@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">OSSLicenseActivity</string>
+  <string name="custom_license_title">CustomTitleForActivity</string>
 </resources>
