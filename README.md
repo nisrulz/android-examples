@@ -14,7 +14,7 @@ Main repository containing all the example apps demonstrating features/functiona
 > 1. Next download and add the [`dependencies.gradle`](/dependencies.gradle) to this `android-examples` folder
 > 1. Now move the example app folder inside the `android-examples` folder
 >
-> The reason this required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `android-examples`.
+> The reason is this required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `android-examples`.
 
 ## Example apps
 1. [ActivityLifecycle](/ActivityLifecycle) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
