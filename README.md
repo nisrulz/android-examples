@@ -9,6 +9,13 @@
 
 Main repository containing all the example apps demonstrating features/functionality/integrations in android application development
 
+> NOTE: If you are going to download just a single example app (using the download link), make sure you follow the below procedure
+> 1. Create a folder `android-examples`
+> 1. Next download and add the [`dependencies.gradle`](/dependencies.gradle) to this `android-examples` folder
+> 1. Now move the example app folder inside the `android-examples` folder
+>
+> The reason this required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `android-examples`.
+
 ## Example apps
 1. [ActivityLifecycle](/ActivityLifecycle) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ActivityLifecycle)
 1. [AnimatedGradientBackground](/AnimatedGradientBackground) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AnimatedGradientBackground)
