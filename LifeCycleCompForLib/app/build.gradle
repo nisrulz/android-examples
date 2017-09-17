@@ -27,10 +27,11 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
+    def supportLibVer = '26.1.0'
     implementation "com.android.support:appcompat-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
-    implementation "android.arch.lifecycle:extensions:$archComponentVer"
+    implementation "android.arch.lifecycle:extensions:1.0.0-alpha9-1"
 
     implementation project(':awesomelib')
 }

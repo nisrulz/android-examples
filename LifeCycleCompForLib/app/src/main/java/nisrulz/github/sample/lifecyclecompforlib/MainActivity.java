@@ -1,10 +1,10 @@
 package nisrulz.github.sample.lifecyclecompforlib;
 
-import android.arch.lifecycle.LifecycleActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import nisrulz.github.sample.awesomelib.AwesomeLibMain;
 
-public class MainActivity extends LifecycleActivity {
+public class MainActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

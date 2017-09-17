@@ -30,6 +30,6 @@ dependencies {
   androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
   androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "android.arch.lifecycle:runtime:$archComponentVer"
-  annotationProcessor "android.arch.lifecycle:compiler:$archComponentVer"
+  implementation "android.arch.lifecycle:runtime:1.0.0"
+  annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
 }
