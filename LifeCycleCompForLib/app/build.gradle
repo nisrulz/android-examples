@@ -31,7 +31,5 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
-    implementation "android.arch.lifecycle:extensions:1.0.0-alpha9-1"
-
     implementation project(':awesomelib')
 }
