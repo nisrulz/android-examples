@@ -27,7 +27,6 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-    def supportLibVer = '26.1.0'
     implementation "com.android.support:appcompat-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
