@@ -1,15 +1,15 @@
 ext {
- androidPluginVer = "3.0.0-beta6"
+ androidPluginVer = "3.0.0-beta7"
  googleServicesPluginVer = "3.1.0"
  compileSdkVer = 26
- buildToolsVer = "26.0.1"
+ buildToolsVer = "26.0.2"
  gmsOssLicenses ="0.9.0"
 
  minSdkVer = 14
  targetSdkVer = 26
 
- supportLibVer = "26.0.2"
- googlePlayServicesVer = "11.2.2"
+ supportLibVer = "26.1.0"
+ googlePlayServicesVer = "11.4.0"
 
  junitVer = "4.12"
  espressoCoreVer = "3.0.0"
@@ -45,5 +45,5 @@ ext {
 
  lithoVer = "0.6.1"
 
- archComponentVer = "1.0.0-alpha9"
+ archComponentVer = "1.0.0-beta2"
 }
