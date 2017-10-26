@@ -6,7 +6,7 @@ ext {
  gmsOssLicenses ="0.9.0"
 
  minSdkVer = 14
- targetSdkVer = 26
+ targetSdkVer = 27
 
  supportLibVer = "27.0.0"
  googlePlayServicesVer = "11.4.2"
