@@ -1,31 +1,31 @@
 ext {
- androidPluginVer = "3.0.0-beta7"
+ androidPluginVer = "3.0.0"
  googleServicesPluginVer = "3.1.0"
- compileSdkVer = 26
- buildToolsVer = "26.0.2"
+ compileSdkVer = 27
+ buildToolsVer = "27.0.0"
  gmsOssLicenses ="0.9.0"
 
  minSdkVer = 14
  targetSdkVer = 26
 
- supportLibVer = "26.1.0"
- googlePlayServicesVer = "11.4.0"
+ supportLibVer = "27.0.0"
+ googlePlayServicesVer = "11.4.2"
 
  junitVer = "4.12"
- espressoCoreVer = "3.0.0"
- androidTestRunnerVer = "1.0.0"
+ espressoCoreVer = "3.0.1"
+ androidTestRunnerVer = "1.0.1"
 
  stethoVer = "1.5.0"
  picassoVer = "2.5.2"
- robolectricVer = "3.4"
+ robolectricVer = "3.5"
  appintroVer = "4.1.0"
  bottombarVer = "2.1.1"
  butterknifeVer = "8.8.1"
- daggerVer = "2.11"
+ daggerVer = "2.12"
  jsr250apiVer = "1.0"
- okhttpVer = "3.8.1"
- okhttpLoggingInterceptorVer = "3.8.1"
- gsonVer = "2.8.1"
+ okhttpVer = "3.9.0"
+ okhttpLoggingInterceptorVer = "3.9.0"
+ gsonVer = "2.8.2"
  realmdbVer = "3.5.0"
  retrofitVer = "2.3.0"
  retrofitConverterGsonVer = "2.3.0"
@@ -35,15 +35,15 @@ ext {
  timberVer = "4.5.1"
  sugarOrmVer = "1.5"
  constraintLayoutVer = "1.0.2"
- firebaseJobdispatcherVer="0.7.0"
+ firebaseJobdispatcherVer="0.8.4"
 
  rxandroidVer = "1.2.1"
- rxjavaVer = "1.3.0"
+ rxjavaVer = "1.3.3"
 
  rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.1.3"
+ rxjava2Ver = "2.1.5"
 
- lithoVer = "0.6.1"
+ lithoVer = "0.7.1"
 
- archComponentVer = "1.0.0-beta2"
+ archComponentVer = "1.0.0-rc1"
 }
