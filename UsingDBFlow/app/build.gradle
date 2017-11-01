@@ -1,7 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-
-def dbflow_version = "3.0.1"
 
 android {
   compileSdkVersion compileSdkVer
@@ -24,19 +21,19 @@ testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Testing-only dependencies
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-  compile "com.android.support:appcompat-v7:$supportLibVer"
+  implementation "com.android.support:appcompat-v7:$supportLibVer"
 
-  apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
-  compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
-  compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+  annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflowVersion}"
+  implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflowVersion}"
+  implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflowVersion}"
 
   // sql-cipher database encryption (optional)
-  compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+  implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflowVersion}"
 }

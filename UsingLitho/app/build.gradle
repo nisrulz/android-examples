@@ -25,18 +25,18 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Testing-only dependencies
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-  compile "com.android.support:appcompat-v7:$supportLibVer"
+  implementation "com.android.support:appcompat-v7:$supportLibVer"
 
   // Litho
-  compile "com.facebook.litho:litho-core:$lithoVer"
-  compile "com.facebook.litho:litho-widget:$lithoVer"
+  implementation "com.facebook.litho:litho-core:$lithoVer"
+  implementation "com.facebook.litho:litho-widget:$lithoVer"
   provided "com.facebook.litho:litho-annotations:$lithoVer"
   annotationProcessor "com.facebook.litho:litho-processor:$lithoVer"
   // SoLoader

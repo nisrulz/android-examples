@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'android-apt'
-
 android {
   compileSdkVersion compileSdkVer
   buildToolsVersion buildToolsVer
@@ -23,15 +21,15 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Testing-only dependencies
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
   
-  compile "com.android.support:appcompat-v7:$supportLibVer"
+  implementation "com.android.support:appcompat-v7:$supportLibVer"
 
-  compile "com.jakewharton:butterknife:$butterknifeVer"
-  apt "com.jakewharton:butterknife-compiler:$butterknifeVer"
+  implementation "com.jakewharton:butterknife:$butterknifeVer"
+  annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
 }

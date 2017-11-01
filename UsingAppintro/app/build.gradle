@@ -21,16 +21,16 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Testing-only dependencies
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
 
-    compile "com.android.support:appcompat-v7:$supportLibVer"
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
 
     // AppIntro | https://github.com/PaoloRotolo/AppIntro
-    compile "com.github.paolorotolo:appintro:$appintroVer"
+    implementation "com.github.paolorotolo:appintro:$appintroVer"
 }

@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 
 android {
     compileSdkVersion compileSdkVer
@@ -22,21 +21,21 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   // Testing-only dependencies
-  testCompile "junit:junit:$junitVer"
-  androidTestCompile "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-    compile "com.android.support:appcompat-v7:$supportLibVer"
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
 
-    compile "com.squareup.okhttp3:okhttp:$okhttpVer"
-    compile "com.google.code.gson:gson:$gsonVer"
-    compile "com.jakewharton:butterknife:$butterknifeVer"
-    apt "com.jakewharton:butterknife-compiler:$butterknifeVer"
-    compile "io.reactivex:rxandroid:$rxandroidVer"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVer"
+    implementation "com.google.code.gson:gson:$gsonVer"
+    implementation "com.jakewharton:butterknife:$butterknifeVer"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
+    implementation "io.reactivex:rxandroid:$rxandroidVer"
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
-    compile "io.reactivex:rxjava:$rxjavaVer"
+    implementation "io.reactivex:rxjava:$rxjavaVer"
 }
