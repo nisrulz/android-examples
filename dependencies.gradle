@@ -47,5 +47,5 @@ ext {
 
  lithoVer = "0.7.1"
 
- archComponentVer = "1.0.0-rc1"
+ archComponentVer = "1.0.0"
 }
