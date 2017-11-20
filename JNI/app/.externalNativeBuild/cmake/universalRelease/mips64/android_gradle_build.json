@@ -7,7 +7,7 @@
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
 	[
-		"/Users/nishant/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalRelease/mips64 --target clean"
+		"/Users/nishant/sdks/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalRelease/mips64 --target clean"
 	],
 	"libraries" : 
 	{
@@ -15,13 +15,13 @@
 		{
 			"abi" : "mips64",
 			"artifactName" : "hello-android-jni",
-			"buildCommand" : "/Users/nishant/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalRelease/mips64 --target hello-android-jni",
+			"buildCommand" : "/Users/nishant/sdks/android_sdk/cmake/3.6.3155560/bin/cmake --build /Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalRelease/mips64 --target hello-android-jni",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/Users/nishant/android_sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/nishant/android_sdk/ndk-bundle/sysroot -Dhello_android_jni_EXPORTS  -isystem /Users/nishant/android_sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"flags" : "  --target=mips64el-none-linux-android --gcc-toolchain=/Users/nishant/sdks/android_sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/nishant/sdks/android_sdk/ndk-bundle/sysroot -Dhello_android_jni_EXPORTS  -isystem /Users/nishant/sdks/android_sdk/ndk-bundle/sysroot/usr/include/mips64el-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fintegrated-as -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
 					"src" : "/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/src/main/cpp/hello-android-jni.c",
 					"workingDirectory" : "/Users/nishant/Documents/Workspaces/workspace_github/android-examples/JNI/app/.externalNativeBuild/cmake/universalRelease/mips64"
 				}
@@ -34,8 +34,8 @@
 	{
 		"11798853890407705644" : 
 		{
-			"cCompilerExecutable" : "/Users/nishant/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
-			"cppCompilerExecutable" : "/Users/nishant/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+			"cCompilerExecutable" : "/Users/nishant/sdks/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/nishant/sdks/android_sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
 		}
 	}
 }
