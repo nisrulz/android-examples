@@ -2,14 +2,14 @@ ext {
  androidPluginVer = "3.0.0"
  googleServicesPluginVer = "3.1.2"
  compileSdkVer = 27
- buildToolsVer = "27.0.0"
+ buildToolsVer = "27.0.1"
  gmsOssLicenses ="0.9.0"
 
  minSdkVer = 14
  targetSdkVer = 27
 
- supportLibVer = "27.0.0"
- googlePlayServicesVer = "11.4.2"
+ supportLibVer = "27.0.1"
+ googlePlayServicesVer = "11.6.0"
 
  junitVer = "4.12"
  espressoCoreVer = "3.0.1"
