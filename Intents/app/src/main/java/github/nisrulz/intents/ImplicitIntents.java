@@ -1,6 +1,7 @@
 package github.nisrulz.intents;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,7 +9,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
-
+import android.support.v4.app.ShareCompat;
 import java.io.File;
 
 
@@ -16,12 +17,16 @@ public class ImplicitIntents {
 
     void openAppPageInPlaystore(Context context) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + context.getPackageName()));
-        context.startActivity(intent);
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     void openUrlInBrowser(Context context, String url) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        context.startActivity(browserIntent);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     void sendEmail(Context context, String[] sendTo, String subject, String body) {
@@ -30,12 +35,15 @@ public class ImplicitIntents {
         intent.putExtra(Intent.EXTRA_EMAIL, sendTo);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, body);
-        context.startActivity(Intent.createChooser(intent, ""));
+
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(Intent.createChooser(intent, ""));
+        }
     }
 
     void call(Context context, String number) {
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:" + number));
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + number));
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) !=
                 PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -47,7 +55,10 @@ public class ImplicitIntents {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        context.startActivity(callIntent);
+
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     void sendSMS(Context context, String sendToNumber, String message) {
@@ -56,7 +67,10 @@ public class ImplicitIntents {
         intent.putExtra("address", sendToNumber);
         intent.putExtra("sms_body", message);
         intent.setType("vnd.android-dir/mms-sms");
-        context.startActivity(intent);
+
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     void showLocationInMap(Context context, String latitude, String longitude, String zoomLevel) {
@@ -67,7 +81,17 @@ public class ImplicitIntents {
             data = String.format("%s?z=%s", data, zoomLevel);
         }
         intent.setData(Uri.parse(data));
-        context.startActivity(intent);
+
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
+    }
+
+    void showLocationInMap(Context context, String locationName) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + locationName));
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
 
@@ -75,16 +99,26 @@ public class ImplicitIntents {
         Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory().toString() + "/" + dir, fileName));
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-        context.startActivity(intent);
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     void shareData(Context context, String dir, String fileName, String type, String data) {
-        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-        sharingIntent.setType(type);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType(type);
         Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory().toString() + "/" + dir, fileName));
-        sharingIntent.putExtra(Intent.EXTRA_STREAM, uri.toString());
-        sharingIntent.putExtra("data", data);
-        context.startActivity(Intent.createChooser(sharingIntent, "Share using"));
+        intent.putExtra(Intent.EXTRA_STREAM, uri.toString());
+        intent.putExtra("data", data);
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(Intent.createChooser(intent, "Share using"));
+        }
+    }
+
+
+    void shareText(Activity activity, String title, String textData) {
+        ShareCompat.IntentBuilder.from(activity).setType("text/plain").setChooserTitle(title)
+                .setText(textData).startChooser();
     }
 }
 

@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 
@@ -19,21 +18,12 @@ import java.util.ArrayList;
  */
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * The Text view 1.
-     */
     TextView textView_1;
-    /**
-     * The Lv.
-     */
+
     ListView lv;
-    /**
-     * The Adapter.
-     */
+
     ArrayAdapter<String> adapter;
-    /**
-     * The Data.
-     */
+
     ArrayList<String> data;
 
 
@@ -41,20 +31,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        textView_1 = (TextView) findViewById(R.id.textView_1);
-
+        textView_1 = findViewById(R.id.textView_1);
 
         data = new ArrayList<>();
         data.add("Explicit Intent with Parceable Object");
         data.add("Explicit Intent for Result");
 
-
-        lv = (ListView) findViewById(R.id.listView);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        lv = findViewById(R.id.listView);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
