@@ -30,5 +30,5 @@ dependencies {
     
   implementation "com.android.support:appcompat-v7:$supportLibVer"
 
-  compile 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+  implementation 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
 }

@@ -40,5 +40,5 @@ dependencies {
   implementation "com.android.support:appcompat-v7:$supportLibVer"
   implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
-  compile 'org.apache.opennlp:opennlp-tools:1.6.0'
+  implementation 'org.apache.opennlp:opennlp-tools:1.6.0'
 }

@@ -37,12 +37,11 @@ dependencies {
   // Litho
   implementation "com.facebook.litho:litho-core:$lithoVer"
   implementation "com.facebook.litho:litho-widget:$lithoVer"
-  provided "com.facebook.litho:litho-annotations:$lithoVer"
+  compileOnly "com.facebook.litho:litho-annotations:$lithoVer"
   annotationProcessor "com.facebook.litho:litho-processor:$lithoVer"
   // SoLoader
-  compile 'com.facebook.soloader:soloader:0.2.0'
+  implementation 'com.facebook.soloader:soloader:0.2.0'
   // Optional
   // For debugging
-  debugCompile "com.facebook.litho:litho-stetho:$lithoVer"
-
+  debugImplementation "com.facebook.litho:litho-stetho:$lithoVer"
 }

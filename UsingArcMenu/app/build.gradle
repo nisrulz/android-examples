@@ -30,5 +30,5 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:$supportLibVer"
     implementation "com.android.support:design:$supportLibVer"
-    compile project(':library')
+    implementation project(':library')
 }
