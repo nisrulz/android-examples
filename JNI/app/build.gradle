@@ -1,82 +1,82 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion compileSdkVer
-  buildToolsVersion buildToolsVer
-  flavorDimensions "default"
-  defaultConfig {
-    applicationId "github.nisrulz.jni"
-    minSdkVersion minSdkVer
-    targetSdkVersion targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    externalNativeBuild {
-      cmake {
-        arguments '-DANDROID_TOOLCHAIN=clang'
-      }
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId "github.nisrulz.jni"
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_TOOLCHAIN=clang'
+            }
+        }
     }
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
-  }
 
-  externalNativeBuild {
-    cmake {
-      path "src/main/cpp/CMakeLists.txt"
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
     }
-  }
-  productFlavors {
-    arm7 {
-      // in the future, ndk.abiFilter might also work
-      ndk {
-        abiFilter 'armeabi-v7a'
-      }
+    productFlavors {
+        arm7 {
+            // in the future, ndk.abiFilter might also work
+            ndk {
+                abiFilter 'armeabi-v7a'
+            }
+        }
+        arm8 {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+        arm {
+            ndk {
+                abiFilter 'armeabi'
+            }
+        }
+        x86 {
+            ndk {
+                abiFilter 'x86'
+            }
+        }
+        x86_64 {
+            ndk {
+                abiFilter 'x86_64'
+            }
+        }
+        mips {
+            ndk {
+                abiFilters 'mips', 'mips64'
+            }
+        }
+        universal {
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64', 'x86', 'x86_64'
+            }
+        }
     }
-    arm8 {
-      ndk {
-        abiFilters 'arm64-v8a'
-      }
-    }
-    arm {
-      ndk {
-        abiFilter 'armeabi'
-      }
-    }
-    x86 {
-      ndk {
-        abiFilter 'x86'
-      }
-    }
-    x86_64 {
-      ndk {
-        abiFilter 'x86_64'
-      }
-    }
-    mips {
-      ndk {
-        abiFilters 'mips', 'mips64'
-      }
-    }
-    universal {
-      ndk {
-        abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64', 'x86', 'x86_64'
-      }
-    }
-  }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "com.android.support:appcompat-v7:$supportLibVer"
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
 }
 
