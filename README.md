@@ -31,6 +31,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CallsAndSMS](/CallsAndSMS) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CallsAndSMS)
 1. [Camera2](/Camera2) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Camera2)
 1. [ChangeThemeDuringRuntime](/ChangeThemeDuringRuntime) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ChangeThemeDuringRuntime)
+1. [CheckIfPhoneOrTablet](/CheckIfPhoneOrTablet) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfPhoneOrTablet)
 1. [CheckIfScreenLocked](/CheckIfScreenLocked) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfScreenLocked)
 1. [ChromeCustomTabs](/ChromeCustomTabs) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ChromeCustomTabs)
 1. [CollapsibleToolbar](/CollapsibleToolbar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CollapsibleToolbar)
