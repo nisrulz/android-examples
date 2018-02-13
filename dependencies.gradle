@@ -2,14 +2,14 @@ ext {
  androidPluginVer = "3.0.1"
  googleServicesPluginVer = "3.1.2"
  compileSdkVer = 27
- buildToolsVer = "27.0.2"
+ buildToolsVer = "27.0.3"
  gmsOssLicenses ="0.9.1"
 
  minSdkVer = 14
  targetSdkVer = 27
 
  supportLibVer = "27.0.2"
- googlePlayServicesVer = "11.6.0"
+ googlePlayServicesVer = "11.8.0"
 
  junitVer = "4.12"
  espressoCoreVer = "3.0.1"
@@ -21,7 +21,7 @@ ext {
  appintroVer = "4.1.0"
  bottombarVer = "2.1.1"
  butterknifeVer = "8.8.1"
- daggerVer = "2.13"
+ daggerVer = "2.14.1"
  jsr250apiVer = "1.0"
  okhttpVer = "3.9.1"
  okhttpLoggingInterceptorVer = "3.9.1"
