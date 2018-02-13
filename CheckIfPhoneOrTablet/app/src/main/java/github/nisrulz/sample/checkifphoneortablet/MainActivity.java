@@ -14,5 +14,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
+
+        boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
+        if (tabletSize) {
+            // Is Tablet
+            textView.setText("TABLET");
+        } else {
+            // Is Phone
+            textView.setText("PHONE");
+        }
     }
 }
