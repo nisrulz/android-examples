@@ -1,51 +1,64 @@
 apply plugin: 'com.android.application'
 
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def fabricDebugKey = properties.getProperty('FABRIC_DEBUG_KEY')
+def fabricProductionKey = properties.getProperty('FABRIC_PRODUCTION_KEY')
+
 android {
-  compileSdkVersion compileSdkVer
-  buildToolsVersion buildToolsVer
-  flavorDimensions "default"
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
+    flavorDimensions "default"
 
-  defaultConfig {
-    applicationId "github.nisrulz.sample.buildvariants"
-    minSdkVersion minSdkVer
-    targetSdkVersion targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    debug {
-      applicationIdSuffix ".debug"
+    defaultConfig {
+        applicationId "github.nisrulz.sample.buildvariants"
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            manifestPlaceholders = [
+                    fabricKey: fabricDebugKey
+            ]
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-  productFlavors {
-    free {
-      applicationIdSuffix ".free"
-      manifestPlaceholders = [
-          appName : "Free App"
-      ]
+            manifestPlaceholders = [
+                    fabricKey: fabricProductionKey
+            ]
+        }
     }
-    pro {
-      applicationIdSuffix ".pro"
-      manifestPlaceholders = [
-          appName : "Pro App"
-      ]
+
+    productFlavors {
+        free {
+            applicationIdSuffix ".free"
+            manifestPlaceholders = [
+                    appName: "Free App"
+            ]
+        }
+        pro {
+            applicationIdSuffix ".pro"
+            manifestPlaceholders = [
+                    appName: "Pro App"
+            ]
+        }
     }
-  }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
-  
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  implementation "com.android.support:appcompat-v7:$supportLibVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
 }
