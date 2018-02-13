@@ -1,22 +1,22 @@
 package github.nisrulz.sample.usingprocesslifecycleownerforlibs;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        findViewById(R.id.txt_1).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.txt_2).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                startActivity(new Intent(Main2Activity.this, MainActivity.class));
             }
         });
     }

@@ -32,4 +32,7 @@ dependencies {
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
 
     implementation "com.android.support:appcompat-v7:$supportLibVer"
+
+    // For DefaultLifecycleObserver
+    implementation 'android.arch.lifecycle:common-java8:1.0.0'
 }
