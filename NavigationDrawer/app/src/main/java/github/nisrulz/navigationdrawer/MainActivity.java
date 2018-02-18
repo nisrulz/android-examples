@@ -13,8 +13,11 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout androidDrawerLayout;
+
     ActionBarDrawerToggle actionBarDrawerToggle;
+
     NavigationView navigationView;
+
     Toolbar toolbar;
 
     @Override
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initNavDrawerToggel();
+
+        navigationView.setCheckedItem(R.id.nav_menu_item1);
     }
 
     private void initNavDrawerToggel() {
@@ -31,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         androidDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_design_support_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, androidDrawerLayout, R.string.app_name, R.string.app_name);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, androidDrawerLayout, R.string.app_name,
+                R.string.app_name);
         androidDrawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -39,11 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
 
-                //Checking if the item is in checked state or not, if not make it in checked state
-                if (item.isChecked())
-                    item.setChecked(false);
-                else
-                    item.setChecked(true);
+                navigationView.setCheckedItem(item.getItemId());
 
                 //Closing drawer on item click
                 androidDrawerLayout.closeDrawers();
@@ -66,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
