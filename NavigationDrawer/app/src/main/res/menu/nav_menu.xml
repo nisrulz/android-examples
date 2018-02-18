@@ -3,18 +3,18 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_menu_item1"
-            android:icon="@android:drawable/ic_dialog_map"
-            android:title="Navigation Item 1" />
+            android:id="@+id/nav_menu_home"
+            android:icon="@android:drawable/ic_popup_reminder"
+            android:title="@string/str_home" />
         <item
-            android:id="@+id/nav_menu_item2"
-            android:icon="@android:drawable/ic_dialog_info"
-            android:title="Navigation Item 2" />
+            android:id="@+id/nav_menu_settings"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/str_settings" />
 
         <item
-            android:id="@+id/nav_menu_item3"
-            android:icon="@android:drawable/ic_menu_share"
-            android:title="Navigation Item 3" />
+            android:id="@+id/nav_menu_aboutus"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/str_aboutus" />
     </group>
 
 </menu>

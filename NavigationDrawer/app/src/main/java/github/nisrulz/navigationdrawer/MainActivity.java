@@ -3,14 +3,17 @@ package github.nisrulz.navigationdrawer;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    final FragmentManager fragmentManager = getSupportFragmentManager();
 
     DrawerLayout androidDrawerLayout;
 
@@ -27,20 +30,28 @@ public class MainActivity extends AppCompatActivity {
 
         initNavDrawerToggel();
 
-        navigationView.setCheckedItem(R.id.nav_menu_item1);
+        navigateToFragment(getString(R.string.str_home));
+        navigationView.setCheckedItem(R.id.nav_menu_home);
     }
 
     private void initNavDrawerToggel() {
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
-        androidDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_design_support_layout);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        androidDrawerLayout = findViewById(R.id.drawer_design_support_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, androidDrawerLayout, R.string.app_name,
                 R.string.app_name);
         androidDrawerLayout.addDrawerListener(actionBarDrawerToggle);
 
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -51,16 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 androidDrawerLayout.closeDrawers();
 
                 switch (item.getItemId()) {
-                    case R.id.nav_menu_item1:
-                        Toast.makeText(MainActivity.this, "Item 1 Clicked", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_menu_home:
+                        navigateToFragment(getResources().getString(R.string.str_home));
                         break;
-                    case R.id.nav_menu_item2:
-                        Toast.makeText(MainActivity.this, "Item 2 Clicked", Toast.LENGTH_SHORT)
-                                .show();
+                    case R.id.nav_menu_settings:
+                        navigateToFragment(getResources().getString(R.string.str_settings));
                         break;
-                    case R.id.nav_menu_item3:
-                        Toast.makeText(MainActivity.this, "Item 3 Clicked", Toast.LENGTH_SHORT)
-                                .show();
+                    case R.id.nav_menu_aboutus:
+                        navigateToFragment(getResources().getString(R.string.str_aboutus));
                         break;
                     default:
                         break;
@@ -68,9 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -98,5 +104,41 @@ public class MainActivity extends AppCompatActivity {
          * handle them here and return true
          */
         return super.onOptionsItemSelected(item);
+    }
+
+    private void navigateToFragment(String title) {
+        // Update the toolbar title
+        updateToolbarTitle(title);
+
+        // Get the fragment by tag
+        Fragment fragment = fragmentManager.findFragmentByTag(title);
+
+        if (fragment == null) {
+            // Initialize the fragment based on tag
+            if (title.equals(getResources().getString(R.string.str_home))) {
+                fragment = new HomeScreenFragment();
+            } else if (title.equals(getResources().getString(R.string.str_settings))) {
+                fragment = new SettingsScreenFragment();
+            } else if (title.equals(getResources().getString(R.string.str_aboutus))) {
+                fragment = new AboutUsSceenFragment();
+            }
+
+            // Add fragment with tag
+            fragmentManager.beginTransaction().add(R.id.fragment_container, fragment, title).commit();
+        } else {
+            fragmentManager.beginTransaction()
+                    // detach the fragment that is currently visible
+                    .detach(fragmentManager.findFragmentById(R.id.fragment_container))
+                    // attach the fragment found as per the tag
+                    .attach(fragment)
+                    // commit fragment transaction
+                    .commit();
+        }
+    }
+
+    private void updateToolbarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
     }
 }
