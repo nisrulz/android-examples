@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- Nav Drawer -->
+    <style name="ThemeOverlay.AppCompat.navTheme">
+
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">@color/colorAccent</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">@android:color/transparent</item>
+
+    </style>
+
 </resources>

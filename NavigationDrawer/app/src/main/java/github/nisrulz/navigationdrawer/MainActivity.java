@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
+    private String lastFragmentTitleSelected = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
         navigateToFragment(getString(R.string.str_home));
         navigationView.setCheckedItem(R.id.nav_menu_home);
     }
+
+
+    @Override
+    public void onBackPressed() {
+        // If drawer is open
+        if (androidDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            // close the drawer
+            androidDrawerLayout.closeDrawer(Gravity.LEFT);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 
     private void initNavDrawerToggel() {
 
@@ -107,6 +124,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void navigateToFragment(String title) {
+
+        if (title == lastFragmentTitleSelected) {
+            // Fragment currently selected, no action.
+            return;
+        }
+
         // Update the toolbar title
         updateToolbarTitle(title);
 
@@ -134,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
                     // commit fragment transaction
                     .commit();
         }
+
+        lastFragmentTitleSelected = title;
     }
 
     private void updateToolbarTitle(String title) {

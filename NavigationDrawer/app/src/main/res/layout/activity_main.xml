@@ -41,8 +41,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@color/navItemColor"
-        app:itemTextColor="@color/navItemColor"
+        app:theme="@style/ThemeOverlay.AppCompat.navTheme"
         app:menu="@menu/nav_menu" />
 
 </android.support.v4.widget.DrawerLayout>
