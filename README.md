@@ -41,6 +41,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CustomView](/CustomView) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CustomView)
 1. [DataBinding](/DataBinding) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/DataBinding)
 1. [DebuggingWebViews](/DebuggingWebViews) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/DebuggingWebViews)
+1. [DepsManagementViaBuildSrc](/DepsManagementViaBuildSrc) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/DepsManagementViaBuildSrc)
 1. [Encryption](/Encryption) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/Encryption)
 1. [ExtractingColorFromBitmap](/ExtractingColorFromBitmap) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ExtractingColorFromBitmap)
 1. [FingerprintAPI](/FingerprintAPI) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/FingerprintAPI)
