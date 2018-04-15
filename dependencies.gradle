@@ -1,15 +1,15 @@
 ext {
- androidPluginVer = "3.1.0"
+ androidPluginVer = "3.1.1"
  googleServicesPluginVer = "3.2.1"
  compileSdkVer = 27
  buildToolsVer = "27.0.3"
- gmsOssLicenses ="0.9.1"
+ gmsOssLicenses ="0.9.2"
 
  minSdkVer = 14
  targetSdkVer = 27
 
  supportLibVer = "27.1.1"
- googlePlayServicesVer = "12.0.1"
+ googlePlayServicesVer = "15.0.0"
 
  junitVer = "4.12"
  espressoCoreVer = "3.0.1"
@@ -32,7 +32,7 @@ ext {
  mpAndroidChartVer = "v3.0.2"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"
- timberVer = "4.6.0"
+ timberVer = "4.7.0"
  sugarOrmVer = "1.5"
  constraintLayoutVer = "1.0.2"
  firebaseJobdispatcherVer="0.8.5"
@@ -48,7 +48,7 @@ ext {
  lithoVer = "0.7.1"
 
  archComponentVer = "1.0.0"
- lifecycleVer = "1.1.0"
+ lifecycleVer = "1.1.1"
  roomVer = "1.0.0"
  pagingVer = "1.0.0"
  viewModelVer = "1.0.0"
