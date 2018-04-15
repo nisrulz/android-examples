@@ -32,7 +32,6 @@ public class NotificationUtils extends ContextWrapper {
     }
 
     public void createChannel(String CHANNEL_ID, String CHANNEL_NAME) {
-        CHANNEL_ID = pkgName + "." + CHANNEL_ID;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // create android channel
             NotificationChannel newChannel = new NotificationChannel(CHANNEL_ID,
@@ -86,7 +85,7 @@ public class NotificationUtils extends ContextWrapper {
             channelId) {
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),
+        return new NotificationCompat.Builder(getApplicationContext(),
                 channelId)
                 // set title
                 .setContentTitle(title)
@@ -100,7 +99,6 @@ public class NotificationUtils extends ContextWrapper {
                 .setSmallIcon(android.R.drawable.stat_notify_more)
                 // set auto cancel behaviour
                 .setAutoCancel(true);
-        return builder;
     }
 
 
@@ -109,19 +107,19 @@ public class NotificationUtils extends ContextWrapper {
         NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
 
         String[] events = new String[6];
-        events[0] = new String("This is 1st line...");
-        events[1] = new String("This is 2nd line...");
-        events[2] = new String("This is 3rd line...");
-        events[3] = new String("This is 4th line...");
-        events[4] = new String("This is 5th line...");
-        events[5] = new String("This is 6th line...");
+        events[0] = "This is 1st line...";
+        events[1] = "This is 2nd line...";
+        events[2] = "This is 3rd line...";
+        events[3] = "This is 4th line...";
+        events[4] = "This is 5th line...";
+        events[5] = "This is 6th line...";
 
         // Sets a title for the Inbox style big view
         inboxStyle.setBigContentTitle("Big Title Details:");
 
         // Moves events into the big view
-        for (int i = 0; i < events.length; i++) {
-            inboxStyle.addLine(events[i]);
+        for (final String event : events) {
+            inboxStyle.addLine(event);
         }
 
         builder.setStyle(inboxStyle);
