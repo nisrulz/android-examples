@@ -31,5 +31,5 @@ dependencies {
 
 
   // Below is available only during the compilation time
-  provided "com.squareup.retrofit2:retrofit:$retrofitVer"
+  compileOnly "com.squareup.retrofit2:retrofit:$retrofitVer"
 }

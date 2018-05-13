@@ -9,54 +9,61 @@ import static org.junit.Assert.assertNotNull;
 public class CoffeeOrderTest {
 
     private final static float PRICE_TEST = 5.0f;
-    private CoffeeOrder mCoffeeOrder;
+    private CoffeeOrder coffeeOrder;
 
     @Before
     public void setUp() throws Exception {
-        mCoffeeOrder = new CoffeeOrder(PRICE_TEST);
+        coffeeOrder = new CoffeeOrder(PRICE_TEST);
 
+    }
+
+
+    @Test
+    public void newTest(){
+        // Do nothing
+        assertEquals(1,8);
     }
 
     @Test
     public void orderIsNotNull() {
-        assertNotNull(mCoffeeOrder);
+        assertNotNull(coffeeOrder);
     }
 
     @Test
     public void orderDecrement() {
-        mCoffeeOrder.decrementCoffeeCount();
-        assertEquals(0, mCoffeeOrder.getCoffeeCount());
+        coffeeOrder.decrementCoffeeCount();
+        assertEquals(0, coffeeOrder.getCoffeeCount());
 
-        mCoffeeOrder.setCoffeeCount(25);
-        mCoffeeOrder.decrementCoffeeCount();
-        assertEquals(24, mCoffeeOrder.getCoffeeCount());
+        coffeeOrder.setCoffeeCount(25);
+        coffeeOrder.decrementCoffeeCount();
+        assertEquals(24, coffeeOrder.getCoffeeCount());
     }
 
 
     @Test
     public void orderIncrement() {
-        mCoffeeOrder.incrementCoffeeCount();
-        assertEquals(1, mCoffeeOrder.getCoffeeCount());
+        coffeeOrder.incrementCoffeeCount();
+        assertEquals(1, coffeeOrder.getCoffeeCount());
 
-        mCoffeeOrder.setCoffeeCount(25);
-        mCoffeeOrder.incrementCoffeeCount();
-        assertEquals(26, mCoffeeOrder.getCoffeeCount());
+        coffeeOrder.setCoffeeCount(25);
+        coffeeOrder.incrementCoffeeCount();
+        assertEquals(26, coffeeOrder.getCoffeeCount());
     }
 
     @Test
     public void orderTotalPrice() {
-        assertEquals(0.0, mCoffeeOrder.getTotalPrice(),0.0f);
+        assertEquals(0.0, coffeeOrder.getTotalPrice(),0.0f);
 
-        mCoffeeOrder.setCoffeeCount(25);
-        assertEquals(PRICE_TEST * 25, mCoffeeOrder.getTotalPrice(),0.0f);
+        coffeeOrder.setCoffeeCount(25);
+        assertEquals(PRICE_TEST * 25, coffeeOrder.getTotalPrice(),0.0f);
     }
 
     @Test
     public void orderSetCoffeeCount() {
-        mCoffeeOrder.setCoffeeCount(-1);
-        assertEquals(0, mCoffeeOrder.getCoffeeCount());
-        mCoffeeOrder.setCoffeeCount(25);
-        assertEquals(25, mCoffeeOrder.getCoffeeCount());
+        coffeeOrder.setCoffeeCount(-1);
+        assertEquals(0, coffeeOrder.getCoffeeCount());
+        coffeeOrder.setCoffeeCount(25);
+        assertEquals(25, coffeeOrder.getCoffeeCount());
     }
 
 }

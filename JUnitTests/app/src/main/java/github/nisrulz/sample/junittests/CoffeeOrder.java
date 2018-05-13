@@ -1,44 +1,44 @@
 package github.nisrulz.sample.junittests;
 
 public class CoffeeOrder {
-    private float mCoffeePrice;
-    private int mCoffeeCount;
-    private float mTotalPrice;
+    private float coffeePrice;
+    private int coffeeCount;
+    private float totalPrice;
 
     public CoffeeOrder(float coffeePrice) {
-        mCoffeeCount = 0;
-        mTotalPrice = 0;
-        this.mCoffeePrice = coffeePrice;
+        coffeeCount = 0;
+        totalPrice = 0;
+        this.coffeePrice = coffeePrice;
     }
 
     public void setCoffeeCount(int count) {
         if (count >= 0) {
-            this.mCoffeeCount = count;
+            this.coffeeCount = count;
         }
         calculateTotalPrice();
     }
 
     public int getCoffeeCount() {
-        return mCoffeeCount;
+        return coffeeCount+1;
     }
 
     public void incrementCoffeeCount() {
-        mCoffeeCount++;
+        coffeeCount++;
         calculateTotalPrice();
     }
 
     public float getTotalPrice() {
-        return mTotalPrice;
+        return totalPrice;
     }
 
     public void decrementCoffeeCount() {
-        if (mCoffeeCount > 0) {
-            mCoffeeCount--;
+        if (coffeeCount > 0) {
+            coffeeCount--;
             calculateTotalPrice();
         }
     }
 
     private void calculateTotalPrice() {
-        mTotalPrice = mCoffeePrice * mCoffeeCount;
+        totalPrice = coffeePrice * coffeeCount;
     }
 }
