@@ -5,26 +5,26 @@ object Versions {
 
     // Build Config
     const val minSDK = 14
-    const val compileSDK = 27
-    const val targetSDK = 27
-    const val buildTools = "27.0.3"
+    const val compileSDK = 28
+    const val targetSDK = 28
+    const val buildTools = "28.0.0"
 
     // App version
     const val appVersionCode = 1
     const val appVersionName = "1.0.0"
 
     // Plugins
-    const val androidGradlePlugin = "3.0.1"
+    const val androidGradlePlugin = "3.1.3"
 
     // Dependencies
-    const val kotlin = "1.2.31"
-    const val support = "27.1.0"
-    const val constraintLayout = "1.0.2"
+    const val kotlin = "1.2.41"
+    const val support = "27.1.1"
+    const val constraintLayout = "1.1.1"
 
     // Testing
     const val junit = "4.12"
-    const val espresso = "3.0.1"
-    const val testRunner = "1.0.1"
+    const val espresso = "3.0.2"
+    const val testRunner = "1.0.2"
 
 }
 
