@@ -18,12 +18,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Testing-only dependencies
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
@@ -34,5 +38,5 @@ dependencies {
     implementation project(':lib')
 
     // For ProcessLifecycleOwner
-    implementation "android.arch.lifecycle:extensions:1.0.0"
+    implementation "android.arch.lifecycle:extensions:$lifecycleVer"
 }
