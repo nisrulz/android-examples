@@ -31,6 +31,6 @@ dependencies {
   implementation "com.android.support:appcompat-v7:$supportLibVer"
   implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
-  implementation "android.arch.persistence.room:runtime:$archComponentVer"
-  annotationProcessor "android.arch.persistence.room:compiler:$archComponentVer"
+  implementation "android.arch.persistence.room:runtime:$roomVer"
+  annotationProcessor "android.arch.persistence.room:compiler:$roomVer"
 }

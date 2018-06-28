@@ -31,7 +31,7 @@ dependencies {
   implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
 
   // Arch Components
-  implementation "android.arch.lifecycle:runtime:$archComponentVer"
-  implementation "android.arch.lifecycle:extensions:$archComponentVer"
-  annotationProcessor "android.arch.lifecycle:compiler:$archComponentVer"
+  implementation "android.arch.lifecycle:runtime:$lifecycleVer"
+  implementation "android.arch.lifecycle:extensions:$lifecycleVer"
+  annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVer"
 }
