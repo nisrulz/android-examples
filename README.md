@@ -21,6 +21,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [AnimatedGradientBackground](/AnimatedGradientBackground) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AnimatedGradientBackground)
 1. [AudioRecording](/AudioRecording) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AudioRecording)
 1. [AutoCompleteTextview](/AutoCompleteTextview) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AutoCompleteTextview)
+1. [AutoInitLibrary](/AutoInitLibrary) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/AutoInitLibrary)
 1. [BasicMVP](/BasicMVP) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BasicMVP)
 1. [BoundServices](/BoundServices) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BoundServices)
 1. [BottomSheet](/BottomSheet) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/BottomSheet)
