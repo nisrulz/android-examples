@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
         // Get Instance
         val awesomeLib = AwesomeLib.getInstance()
 
-        // Init the Library
-        awesomeLib.init(this)
+        // No need to init the Library anymore, as it is being done so on app start
 
         // Set the textview
         textView.text = awesomeLib.stringData

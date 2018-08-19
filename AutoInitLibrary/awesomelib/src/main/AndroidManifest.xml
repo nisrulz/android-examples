@@ -1,2 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.sample.awesomelib" />
+    package="github.nisrulz.sample.awesomelib">
+
+    <application>
+        <provider
+            android:name=".AwesomeLibInitProvider"
+            android:authorities="${applicationId}.awesomelibinitprovider"
+            android:enabled="true"
+            android:exported="false"></provider>
+    </application>
+
+</manifest>
