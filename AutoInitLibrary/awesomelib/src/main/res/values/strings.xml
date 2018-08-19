@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AwesomeLib</string>
+    <string name="string_from_init">String returned from AwesomeLibrary init method</string>
 </resources>
