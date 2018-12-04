@@ -90,6 +90,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [TabLayout](/TabLayout) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TabLayout)
 1. [TextToSpeech](/TextToSpeech) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TextToSpeech)
 1. [TranslucentStatusBar](/TranslucentStatusBar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TranslucentStatusBar)
+1. [Types of Views](https://github.com/infiniteoverflow/beginners/blob/master/Android/Android%20Examples/Types%20of%20Views%20in%20Android/Types%20of%20Views.apk)
 1. [UnitTestingWithRoboelectric](/UnitTestingWithRoboelectric) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UnitTestingWithRoboelectric)
 1. [UsingAppintro](/UsingAppintro) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingAppintro)
 1. [UsingArcMenu](/UsingArcMenu) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingArcMenu)
