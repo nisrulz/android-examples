@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
   compileSdkVersion compileSdkVer
-  buildToolsVersion buildToolsVer
+  
   defaultConfig {
     applicationId "nisrulz.github.sample.usingkotlin"
     minSdkVersion minSdkVer
@@ -19,6 +19,15 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
 }
 
 dependencies {
@@ -31,7 +40,7 @@ dependencies {
 
   implementation "com.android.support:appcompat-v7:$supportLibVer"
 
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
 repositories {

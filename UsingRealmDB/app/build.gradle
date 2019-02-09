@@ -3,7 +3,7 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion compileSdkVer
-    buildToolsVersion buildToolsVer
+    
 
     defaultConfig {
         applicationId "sample.github.nisrulz.usingrealmdb"

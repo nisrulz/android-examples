@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
   compileSdkVersion compileSdkVer
-  buildToolsVersion buildToolsVer
+  
 
   defaultConfig {
     applicationId "github.nisrulz.usingstetho"

@@ -8,7 +8,7 @@ def fabricProductionKey = properties.getProperty('FABRIC_PRODUCTION_KEY')
 
 android {
     compileSdkVersion compileSdkVer
-    buildToolsVersion buildToolsVer
+    
     flavorDimensions "default"
 
     defaultConfig {

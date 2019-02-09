@@ -1,5 +1,5 @@
 ext {
- androidPluginVer = "3.1.3"
+ androidPluginVer = "3.3.1"
  googleServicesPluginVer = "3.2.1"
  compileSdkVer = 28
  buildToolsVer = "28.0.0"
@@ -8,7 +8,7 @@ ext {
  minSdkVer = 14
  targetSdkVer = 28
 
- supportLibVer = "27.1.1"
+ supportLibVer = "28.0.0"
  googlePlayServicesVer = "15.0.1"
 
  junitVer = "4.12"
@@ -34,7 +34,7 @@ ext {
  altbeaconAndroidLibVer = "2+"
  timberVer = "4.7.1"
  sugarOrmVer = "1.5"
- constraintLayoutVer = "1.1.2"
+ constraintLayoutVer = "1.1.3"
  firebaseJobdispatcherVer="0.8.5"
  dbflowVersion = "3.0.1"
  parcelerVer = '1.1.9'
@@ -47,7 +47,7 @@ ext {
 
  lithoVer = "0.7.1"
 
- lifecycleVer = "1.1.0"
+ lifecycleVer = "1.1.1"
  roomVer = "1.1.1"
  pagingVer = "1.0.0"
 }

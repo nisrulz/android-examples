@@ -7,19 +7,18 @@ object Versions {
     const val minSDK = 14
     const val compileSDK = 28
     const val targetSDK = 28
-    const val buildTools = "28.0.0"
 
     // App version
     const val appVersionCode = 1
     const val appVersionName = "1.0.0"
 
     // Plugins
-    const val androidGradlePlugin = "3.1.3"
+    const val androidGradlePlugin = "3.3.1"
 
     // Dependencies
-    const val kotlin = "1.2.41"
-    const val support = "27.1.1"
-    const val constraintLayout = "1.1.1"
+    const val kotlin = "1.3.21"
+    const val support = "28.0.0"
+    const val constraintLayout = "1.1.3"
 
     // Testing
     const val junit = "4.12"
@@ -37,7 +36,7 @@ object Deps {
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
 
     // Kotlin
-    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 
     // Support Library
