@@ -1,7 +1,7 @@
 package nisrulz.github.sample.usingandroidarchcomponents;
 
-import android.arch.lifecycle.LifecycleActivity;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.LifecycleActivity;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;

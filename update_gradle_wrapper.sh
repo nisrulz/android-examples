@@ -10,7 +10,7 @@ read version
 # Iterate over each child directory inside the current directory
 echo "# Updating to Gradle Wrapper Version: $version"
 echo ""
-for dir in ./*;
+for dir in */;
 do
 	echo ""
 	echo ">>>> Updating directory : " $dir

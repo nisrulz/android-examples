@@ -9,7 +9,7 @@ android {
         targetSdkVersion targetSdkVer
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -25,6 +25,6 @@ dependencies {
 
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
-    androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 }

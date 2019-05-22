@@ -1,7 +1,7 @@
 package nisrulz.github.sample.usingrxjava2;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

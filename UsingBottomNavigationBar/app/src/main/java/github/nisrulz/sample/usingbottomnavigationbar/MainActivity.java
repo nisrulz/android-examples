@@ -1,8 +1,8 @@
 package github.nisrulz.sample.usingbottomnavigationbar;
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 import com.roughike.bottombar.BottomBar;

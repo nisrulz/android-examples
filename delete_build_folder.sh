@@ -9,7 +9,7 @@
 
 # Iterate over each child directory inside the current directory
 echo ""
-for dir in ./*;
+for dir in */;
 do
 	echo ""
 	echo ">>>> Deleting build directory inside " $dir

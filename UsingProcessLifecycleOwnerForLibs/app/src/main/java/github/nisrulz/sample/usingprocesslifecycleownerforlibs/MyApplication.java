@@ -1,7 +1,7 @@
 package github.nisrulz.sample.usingprocesslifecycleownerforlibs;
 
 import android.app.Application;
-import android.arch.lifecycle.ProcessLifecycleOwner;
+import androidx.lifecycle.ProcessLifecycleOwner;
 import github.nisrulz.sample.lib.MyLib;
 
 

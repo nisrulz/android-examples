@@ -7,12 +7,22 @@ ext {
  minSdkVer = 14
  targetSdkVer = 28
 
- supportLibVer = "28.0.0"
- googlePlayServicesVer = "15.0.1"
+ supportLibVer = "1.0.0"
+ appCompat = "1.0.2"
+ recyclerview = "1.0.0"
+
+ gpsMobileVision= "17.0.2"
+ gpsGCM = "16.1.0"
+ gpsOssLicense = "0.9.5"
+ gpsDrive = "16.1.0"
+
+ firebaseCore = "16.0.9"
+ firebaseDatabase = "17.0.0"
+ firebaseMessaging = "18.0.0"
 
  junitVer = "4.12"
- espressoCoreVer = "3.0.2"
- androidTestRunnerVer = "1.0.2"
+ espressoCoreVer = "3.1.1"
+ androidTestRunnerVer = "1.1.1"
 
  stethoVer = "1.7.0"
  picassoVer = "2.5.2"
@@ -24,10 +34,10 @@ ext {
  jsr250apiVer = "1.0"
  okhttpVer = "3.11.0"
  okhttpLoggingInterceptorVer = "3.9.1"
- gsonVer = "2.8.2"
+ gsonVer = "2.8.5"
  realmdbVer = "3.5.0"
- retrofitVer = "2.3.0"
- retrofitConverterGsonVer = "2.3.0"
+ retrofitVer = "2.5.0"
+ retrofitConverterGsonVer = "2.5.0"
  mpAndroidChartVer = "v3.0.2"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"

@@ -8,8 +8,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ShareCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ShareCompat;
 import java.io.File;
 
 

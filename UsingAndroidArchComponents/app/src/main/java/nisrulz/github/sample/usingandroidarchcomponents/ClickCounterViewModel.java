@@ -1,6 +1,6 @@
 package nisrulz.github.sample.usingandroidarchcomponents;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 public class ClickCounterViewModel extends ViewModel {
   private int count;

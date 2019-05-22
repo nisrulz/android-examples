@@ -1,7 +1,7 @@
 package nisrulz.github.sample.compileonly;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 import nisrulz.github.sample.awesomelib.AwesomeLibMain;
 

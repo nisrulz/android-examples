@@ -10,7 +10,7 @@ android {
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
-  testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -25,14 +25,14 @@ dependencies {
 
   // Testing-only dependencies
   testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
 
   annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
   provided "javax.annotation:jsr250-api:$jsr250apiVer"
   implementation "com.google.dagger:dagger:$daggerVer"
 
-  implementation "com.android.support:appcompat-v7:$supportLibVer"
-  implementation "com.android.support:support-v4:$supportLibVer"
+  implementation "androidx.appcompat:appcompat:$appCompat"
+  implementation "androidx.legacy:legacy-support-v4:$supportLibVer"
 }

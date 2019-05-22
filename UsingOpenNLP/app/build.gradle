@@ -9,7 +9,7 @@ android {
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -28,13 +28,13 @@ dependencies {
 
   // Testing-only dependencies
   testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
 
   testImplementation "junit:junit:$junitVer"
-  implementation "com.android.support:appcompat-v7:$supportLibVer"
-  implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
+  implementation "androidx.appcompat:appcompat:$appCompat"
+  implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
   implementation 'org.apache.opennlp:opennlp-tools:1.6.0'
 }

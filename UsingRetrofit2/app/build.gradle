@@ -10,7 +10,7 @@ android {
     targetSdkVersion targetSdkVer
     versionCode 1
     versionName "1.0"
- testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+ testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -25,10 +25,10 @@ dependencies {
 
   // Testing-only dependencies
   testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "com.android.support:appcompat-v7:$supportLibVer"
+  implementation "androidx.appcompat:appcompat:$appCompat"
 
   // retrofit, gson
   implementation "com.google.code.gson:gson:$gsonVer"
@@ -38,5 +38,5 @@ dependencies {
   implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVer"
 
   // recycler view
-  implementation "com.android.support:recyclerview-v7:$supportLibVer"
+  implementation "androidx.recyclerview:recyclerview:$recyclerview"
 }

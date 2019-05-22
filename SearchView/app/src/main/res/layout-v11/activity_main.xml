@@ -10,13 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="github.nisrulz.searchview.MainActivity">
 
-    <android.support.v7.widget.SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
         android:elevation="2dp">
-    </android.support.v7.widget.SearchView>
+    </androidx.appcompat.widget.SearchView>
 
 
 </RelativeLayout>

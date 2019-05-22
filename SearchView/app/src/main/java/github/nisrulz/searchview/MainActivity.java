@@ -1,8 +1,8 @@
 package github.nisrulz.searchview;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -2,7 +2,7 @@ package github.nisrulz.sample.usingltbeaconlib;
 
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import java.util.Collection;
 import org.altbeacon.beacon.Beacon;

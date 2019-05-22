@@ -1,8 +1,8 @@
 package nisrulz.github.sample.usingroomorm;
 
-import android.arch.persistence.room.Room;
+import androidx.room.Room;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
