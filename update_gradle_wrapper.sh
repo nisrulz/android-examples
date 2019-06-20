@@ -26,6 +26,4 @@ do
 done
 
 # Delete all generated build folders, because they will eat up a lot of space on the disc
-echo "# Deleting all build folders"
-echo ""
 ./delete_build_folder.sh 
