@@ -7,13 +7,17 @@
 # Copy the migration python script to each subfolder first
 for d in */; do cp androidx_migration.py "$d"; done
 
-# Iterate over each child directory inside the current directory
-echo ""
-for dir in */;
+# Iterate over each sub-directory inside the current directory
+for DIR in ./*;
 do
-	echo ""
-	echo ">>>> Migrating to AndroidX - " $dir
-	(cd $dir && ./gradlew clean && python androidx_migration.py && rm androidx_migration.py)
-	echo ""
-	echo ">>>> Migration done for - " $dir
+	# Check if build directory exists inside the $DIR directory
+	# If it does then it is an Gradle project
+	if [ -d "$DIR/build/" ]; then
+		echo ""
+		echo ">>>> Migrating to AndroidX - " "$DIR"
+		# Run command inside the sub-directory i.e Gradle project
+		(cd $dir && ./gradlew clean && python androidx_migration.py && rm androidx_migration.py)
+		echo ""
+		echo ">>>> Done."
+	fi
 done

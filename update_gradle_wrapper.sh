@@ -7,16 +7,22 @@
 echo "Update gradle wrapper to which version?"
 read version
 
-# Iterate over each child directory inside the current directory
 echo "# Updating to Gradle Wrapper Version: $version"
 echo ""
-for dir in */;
+
+# Iterate over each sub-directory inside the current directory
+for DIR in ./*;
 do
-	echo ""
-	echo ">>>> Updating directory : " $dir
-	(cd "$dir" && ./gradlew clean && ./gradlew wrapper --gradle-version $version --distribution-type all && ./gradlew);
-	echo ""
-	echo ">>>> Done."
+	# Check if build directory exists inside the $DIR directory
+	# If it does then it is an Gradle project
+	if [ -d "$DIR/build/" ]; then
+		echo ""
+		echo ">>>> Updating directory : " "$DIR"
+		# Run command inside the sub-directory i.e Gradle project
+		(cd "$dir" && ./gradlew clean && ./gradlew wrapper --gradle-version $version --distribution-type all && ./gradlew);
+		echo ""
+		echo ">>>> Done."
+	fi
 done
 
 # Delete all generated build folders, because they will eat up a lot of space on the disc
