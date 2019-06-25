@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         data = new ArrayList<>(2);
         data.add("Load a HTML File from assets");
         data.add("Load an HTML from a string");
+        data.add("Load a URL");
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
         lv.setAdapter(adapter);
 
@@ -45,20 +46,24 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                switch (position) {
-                    case 0:
-                        fm.beginTransaction().replace(R.id.container_fragment, HTMLFileFragment
-                                .newInstance()).commit();
-                        break;
-                    case 1:
-                        fm.beginTransaction().replace(R.id.container_fragment, HTMLStringFragment
-                                .newInstance()).commit();
-                        break;
-                    default:
-                        fm.beginTransaction().replace(R.id.container_fragment, HTMLFileFragment
-                                .newInstance()).commit();
-                        break;
-                }
+              switch (position) {
+                case 0:
+                  fm.beginTransaction().replace(R.id.container_fragment, HTMLFileFragment
+                      .newInstance()).commit();
+                  break;
+                case 1:
+                  fm.beginTransaction().replace(R.id.container_fragment, HTMLStringFragment
+                      .newInstance()).commit();
+                  break;
+                case 2:
+                  fm.beginTransaction().replace(R.id.container_fragment, HTMLUrlFragment
+                      .newInstance()).commit();
+                  break;
+                default:
+                  fm.beginTransaction().replace(R.id.container_fragment, HTMLFileFragment
+                      .newInstance()).commit();
+                  break;
+              }
             }
         });
 
