@@ -2,9 +2,9 @@ ext {
  androidPluginVer = "3.4.1"
  googleServicesPluginVer = "4.2.0"
  compileSdkVer = 28
- gmsOssLicenses ="0.9.2"
+ gmsOssLicenses ="0.9.5"
 
- minSdkVer = 14
+ minSdkVer = 18
  targetSdkVer = 28
 
  supportLibVer = "1.0.0"
@@ -16,9 +16,9 @@ ext {
  gpsOssLicense = "0.9.5"
  gpsDrive = "16.1.0"
 
- firebaseCore = "16.0.9"
- firebaseDatabase = "17.0.0"
- firebaseMessaging = "18.0.0"
+ firebaseCore = "17.0.0"
+ firebaseDatabase = "18.0.0"
+ firebaseMessaging = "19.0.1"
 
  junitVer = "4.12"
  espressoCoreVer = "3.1.1"

@@ -30,7 +30,7 @@ dependencies {
 
 
   annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
-  provided "javax.annotation:jsr250-api:$jsr250apiVer"
+  compileOnly "javax.annotation:jsr250-api:$jsr250apiVer"
   implementation "com.google.dagger:dagger:$daggerVer"
 
   implementation "androidx.appcompat:appcompat:$appCompat"

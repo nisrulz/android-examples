@@ -2,41 +2,39 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
 android {
-  compileSdkVersion compileSdkVer
-  
-  defaultConfig {
-    applicationId "nisrulz.github.sample.osslicenseactivity"
-    minSdkVersion minSdkVer
-    targetSdkVersion targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    compileSdkVersion compileSdkVer
+
+    defaultConfig {
+        applicationId "nisrulz.github.sample.osslicenseactivity"
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
-  implementation "com.google.android.gms:oss-licenses-plugin:$gpsOssLicense"
+    implementation "com.google.android.gms:oss-licenses-plugin:$gpsOssLicense"
 
-  // Adding some dummy dependencies so that their licenses show up
-  implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-  implementation 'com.github.bumptech.glide:glide:4.1.1'
-  implementation 'com.squareup.picasso:picasso:2.5.2'
-  implementation 'com.jakewharton:butterknife:8.8.1'
-  implementation 'com.google.dagger:dagger:2.11'
+    // Adding some dummy dependencies so that their licenses show up
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
