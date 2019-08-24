@@ -1,11 +1,11 @@
 ext {
- androidPluginVer = "3.4.1"
+ androidPluginVer = "3.5.0"
  googleServicesPluginVer = "4.2.0"
- compileSdkVer = 28
+ compileSdkVer = 29
  gmsOssLicenses ="0.9.5"
 
  minSdkVer = 18
- targetSdkVer = 28
+ targetSdkVer = compileSdkVer
 
  supportLibVer = "1.0.0"
  appCompat = "1.0.2"
