@@ -7,8 +7,9 @@
 # Install trash cli
 # brew install trash
 
-echo "# Deleting build directories..."
-
+echo ""
+echo "Deleting build directories..."
+echo ""
 # Iterate over each sub-directory inside the current directory
 for DIR in ./*;
 do

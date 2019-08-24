@@ -7,7 +7,8 @@
 echo "Update gradle wrapper to which version?"
 read version
 
-echo "# Updating to Gradle Wrapper Version: $version"
+echo ""
+echo "Updating to Gradle Wrapper Version: $version"
 echo ""
 
 echo "> Updating apps:" 
@@ -17,9 +18,18 @@ do
 	# Check if gradlew exists inside the $DIR directory
 	# If it does then it is an Gradle project
 	if [ -f "$DIR/gradlew" ]; then
-		echo "$DIR"
+		# Navigate into the sub directory
+		cd "$DIR"
+
+		# Print the name of the sub directory
+		echo "$DIR" | awk -F'/' '{print $2}'
+
 		# Run command inside the sub-directory i.e Gradle project
-		(cd "$DIR" && ./gradlew clean | egrep 'FAILED|WARNING' && ./gradlew wrapper --gradle-version $version --distribution-type all | grep "FAILED");
+		./gradlew clean | egrep 'FAILED|WARNING' 
+		./gradlew wrapper --gradle-version $version --distribution-type all | grep "FAILED"
+
+		# Go back to parent directory
+		cd ../
 	fi
 done
 

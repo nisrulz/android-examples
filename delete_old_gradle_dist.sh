@@ -7,7 +7,8 @@
 echo "Keep which version of gradle distribution?"
 read version
 
-echo "# Deleting all other gradle dist except $version"
+echo ""
+echo "Deleting all other gradle dist except $version"
 echo ""
 find */.gradle/* -type d -not -path "*/$version/*" -not -name "$version" -not -name "buildOutputCleanup" | xargs rm -rf
 echo ""
