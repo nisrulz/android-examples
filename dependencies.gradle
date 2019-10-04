@@ -8,7 +8,7 @@ ext {
  targetSdkVer = compileSdkVer
 
  supportLibVer = "1.0.0"
- appCompat = "1.0.2"
+ appCompat = "1.1.0"
  recyclerview = "1.0.0"
 
  gpsMobileVision= "17.0.2"
