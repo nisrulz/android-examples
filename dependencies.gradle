@@ -1,6 +1,6 @@
 ext {
- androidPluginVer = "3.5.0"
- googleServicesPluginVer = "4.2.0"
+ androidPluginVer = "3.5.1"
+ googleServicesPluginVer = "4.3.2"
  compileSdkVer = 29
  gmsOssLicenses ="0.9.5"
 
@@ -21,23 +21,23 @@ ext {
  firebaseMessaging = "19.0.1"
 
  junitVer = "4.12"
- espressoCoreVer = "3.1.1"
- androidTestRunnerVer = "1.1.1"
+ espressoCoreVer = "3.2.0"
+ androidTestRunnerVer = "1.2.0"
 
  stethoVer = "1.7.0"
- picassoVer = "2.5.2"
+ picassoVer = "2.71828"
  robolectricVer = "3.5"
  appintroVer = "4.1.0"
  bottombarVer = "2.1.1"
  butterknifeVer = "8.8.1"
- daggerVer = "2.14.1"
+ daggerVer = "2.24"
  jsr250apiVer = "1.0"
- okhttpVer = "3.11.0"
- okhttpLoggingInterceptorVer = "3.9.1"
- gsonVer = "2.8.5"
+ okhttpVer = "4.2.1"
+ okhttpLoggingInterceptorVer = "4.2.1"
+ gsonVer = "2.8.6"
  realmdbVer = "3.5.0"
- retrofitVer = "2.5.0"
- retrofitConverterGsonVer = "2.5.0"
+ retrofitVer = "2.6.1"
+ retrofitConverterGsonVer = "2.6.1"
  mpAndroidChartVer = "v3.0.2"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"
@@ -51,12 +51,12 @@ ext {
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.3.4"
 
- rxandroid2Ver = "2.0.1"
- rxjava2Ver = "2.1.9"
+ rxandroid2Ver = "2.1.1"
+ rxjava2Ver = "2.2.13"
 
- lithoVer = "0.7.1"
+ lithoVer = "0.31.0"
 
- lifecycleVer = "1.1.1"
- roomVer = "1.1.1"
- pagingVer = "1.0.0"
+ lifecycleVer = "2.1.0"
+ roomVer = "2.1.0"
+ pagingVer = "2.1.0"
 }
