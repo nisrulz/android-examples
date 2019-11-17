@@ -1,6 +1,6 @@
 ext {
  androidPluginVer = "3.6.0-beta02"
- googleServicesPluginVer = "4.3.2"
+ googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
  gmsOssLicenses ="0.9.5"
 
@@ -13,18 +13,16 @@ ext {
 
  gpsMobileVision= "17.0.2"
  gpsGCM = "16.1.0"
- gpsOssLicense = "0.9.5"
  gpsDrive = "16.1.0"
 
- firebaseCore = "17.0.0"
- firebaseDatabase = "18.0.0"
- firebaseMessaging = "19.0.1"
+ firebaseDatabase = "19.2.0"
+ firebaseMessaging = "20.0.1"
 
  junitVer = "4.12"
  espressoCoreVer = "3.2.0"
  androidTestRunnerVer = "1.2.0"
 
- stethoVer = "1.7.0"
+ stethoVer = "1.5.1"
  picassoVer = "2.71828"
  robolectricVer = "3.5"
  appintroVer = "4.1.0"

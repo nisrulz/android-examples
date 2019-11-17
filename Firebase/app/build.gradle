@@ -36,7 +36,6 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "com.google.android.material:material:$supportLibVer"
 
-    implementation "com.google.firebase:firebase-core:$firebaseCore"
     implementation "com.google.firebase:firebase-database:$firebaseDatabase"
 }
 
