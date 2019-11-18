@@ -19,15 +19,15 @@
     },
     {
       "level": "INFO",
-      "message": "NDK side-by-side folder from sdkFolder /home/nishant/Android/Sdk/ndk does not exist"
-    },
-    {
-      "level": "INFO",
       "message": "Considering /home/nishant/Android/Sdk/ndk-bundle by ndk.dir"
     },
     {
       "level": "INFO",
       "message": "Considering /home/nishant/Android/Sdk/ndk-bundle in SDK ndk-bundle folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/nishant/Android/Sdk/ndk/21.0.5935234 in SDK ndk folder"
     },
     {
       "level": "INFO",
