@@ -1,5 +1,5 @@
 ext {
- androidPluginVer = "3.6.0-beta02"
+ androidPluginVer = "3.6.0-beta04"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
  gmsOssLicenses ="0.9.5"
