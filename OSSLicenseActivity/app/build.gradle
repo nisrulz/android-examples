@@ -31,10 +31,10 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
-    implementation "com.google.android.gms:oss-licenses-plugin:$gpsOssLicense"
+    implementation "com.google.android.gms:play-services-oss-licenses:$googleOssLicense"
 
     // Adding some dummy dependencies so that their licenses show up
-    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.github.bumptech.glide:glide:4.1.1'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 }

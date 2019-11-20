@@ -2,7 +2,9 @@ ext {
  androidPluginVer = "3.6.0-beta04"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
- gmsOssLicenses ="0.9.5"
+
+ googleOssLicensePlugin ="0.10.0"
+ googleOssLicense ="17.0.0"
 
  minSdkVer = 18
  targetSdkVer = compileSdkVer
@@ -34,7 +36,7 @@ ext {
  okhttpLoggingInterceptorVer = "4.2.1"
  gsonVer = "2.8.6"
  realmdbVer = "3.5.0"
- retrofitVer = "2.6.1"
+ retrofitVer = "2.6.2"
  retrofitConverterGsonVer = "2.6.1"
  mpAndroidChartVer = "v3.0.2"
  easygcmVer = "1.6.2@aar"
