@@ -36,6 +36,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CheckIfScreenLocked](/CheckIfScreenLocked) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfScreenLocked)
 1. [ChromeCustomTabs](/ChromeCustomTabs) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ChromeCustomTabs)
 1. [CollapsibleToolbar](/CollapsibleToolbar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CollapsibleToolbar)
+1. [CommonConfigForModules](/CommonConfigForModules) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CommonConfigForModules)
 1. [CompileOnly](/CompileOnly) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CompileOnly)
 1. [CustomBroadcastPermissions](/CustomBroadcastPermissions) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CustomBroadcastPermissions)
 1. [CustomOnboardingIntro](/CustomOnboardingIntro) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CustomOnboardingIntro)
