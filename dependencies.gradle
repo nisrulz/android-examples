@@ -2,6 +2,7 @@ ext {
  androidPluginVer = "3.6.0-beta04"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
+ kotlinVersion = "1.3.60"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
@@ -21,6 +22,7 @@ ext {
  firebaseMessaging = "20.0.1"
 
  junitVer = "4.12"
+ junitExtVer = "1.1.1"
  espressoCoreVer = "3.2.0"
  androidTestRunnerVer = "1.2.0"
 
