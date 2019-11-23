@@ -2,6 +2,8 @@ package github.nisrulz.modulecommonconfig
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import github.nisrulz.androidlib.AndroidLib
+import github.nisrulz.androidlib2.AndroidLib2
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val displayStr = ""
+        val displayStr = "String loaded from ${AndroidLib.nameOfModule}\nString loaded from ${AndroidLib2.nameOfModule}\n"
         txt.text = displayStr
     }
 }

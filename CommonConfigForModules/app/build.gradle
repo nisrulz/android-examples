@@ -10,3 +10,8 @@ android {
         versionName "1.0"
     }
 }
+
+dependencies {
+    implementation project(':androidlib')
+    implementation project(':androidlib2')
+}
