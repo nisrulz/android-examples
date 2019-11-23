@@ -1,2 +1,3 @@
 rootProject.name='CommonConfigForModules'
 include ':app'
+include ':androidlib'
