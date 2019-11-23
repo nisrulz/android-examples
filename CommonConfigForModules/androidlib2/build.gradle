@@ -1,3 +1,5 @@
+apply plugin: 'com.android.library'
+
 // Configs
 apply from: "$rootProject.projectDir/configs/common.gradle"
 
@@ -5,5 +7,7 @@ android {
     defaultConfig {
         versionCode 1
         versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
     }
 }
