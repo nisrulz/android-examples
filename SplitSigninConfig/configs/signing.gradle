@@ -1,0 +1,31 @@
+def keystorePropertiesFile = rootProject.file("keystore/keystore.properties")
+
+if (keystorePropertiesFile.exists()) {
+	// Load the properties
+	def keystoreProperties = new Properties()
+	keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+	android {
+		signingConfigs {
+			if (keystorePropertiesFile.exists()) {
+				release {
+					keyAlias keystoreProperties['keyAlias']
+					keyPassword keystoreProperties['keyPassword']
+					storeFile file(keystoreProperties['storeFile'])
+					storePassword keystoreProperties['storePassword']
+				}
+			}
+		}
+
+		buildTypes {
+			release {
+				if (keystorePropertiesFile.exists()) {
+					signingConfig signingConfigs.release
+				}
+			}
+		}
+	}
+} else {
+	println("Filename: keystore.properties")
+	println("Error: File does not exists")
+	println("Solution: Create a keystore.properties file with valid details under keystore directory at the root of your project")
+}
