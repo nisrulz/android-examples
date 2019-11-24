@@ -88,6 +88,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [SnapHelper](/SnapHelper) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SnapHelper)
 1. [SpeechRecognition](/SpeechRecognition) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SpeechRecognition)
 1. [SplashScreen](/SplashScreen) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SplashScreen)
+1. [SplitSigninConfig](/SplitSigninConfig) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/SplitSigninConfig)
 1. [TabLayout](/TabLayout) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TabLayout)
 1. [TextToSpeech](/TextToSpeech) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TextToSpeech)
 1. [TranslucentStatusBar](/TranslucentStatusBar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/TranslucentStatusBar)
