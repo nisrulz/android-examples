@@ -1,0 +1,12 @@
+{
+    "example_name": "Android Example",
+    "repo_name": "{{ cookiecutter.example_name | title | replace(' ', '') }}",
+    "full_package_namespace": "github.nisrulz.{{ cookiecutter.example_name | lower | replace(' ', '') }}",
+    "package_path": "{{ cookiecutter.repo_name | lower }}",
+
+    "_copy_without_render": [
+        "gradlew",
+        "gradlew.bat",
+        "gradle/wrapper/gradle-wrapper.jar"
+    ]
+}
