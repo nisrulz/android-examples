@@ -35,6 +35,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CheckIfPhoneOrTablet](/CheckIfPhoneOrTablet) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfPhoneOrTablet)
 1. [CheckIfScreenLocked](/CheckIfScreenLocked) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CheckIfScreenLocked)
 1. [ChromeCustomTabs](/ChromeCustomTabs) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/ChromeCustomTabs)
+1. [CleanProject](/CleanProject) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CleanProject)
 1. [CollapsibleToolbar](/CollapsibleToolbar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CollapsibleToolbar)
 1. [CommonConfigForModules](/CommonConfigForModules) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CommonConfigForModules)
 1. [CompileOnly](/CompileOnly) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/CompileOnly)
