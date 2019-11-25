@@ -159,7 +159,7 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
       + Use the package name of the format `github.nisrulz.sample.*` where `*` is the example you are adding to the repo. I am trying to follow a set standard in the repo, please adhere to that.
   7. Have fun!
 
-  > NOTE: There is a quick bootstrapping cookiecutter template to create an Android example project that adheres to all wiring up and standards for this repo. [Read how to use use it here](/cookiecutter-android-example/README.md)
+  > NOTE: There is a quick bootstrapping cookiecutter template to create an Android example project that adheres to all wiring up and standards for this repo. [Read how to use use it here](/cookiecutter-android-example)
 
 ## Extra
 Since the repo is pretty large now , I am sure a lot of you guys would like to download only some of the projects. To tackle that I came across this cool tool - [Gitzip](https://github.com/KinoLien/gitzip) (All credits to the [author](https://github.com/KinoLien), really cool work). To download a specific project
