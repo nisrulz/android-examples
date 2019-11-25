@@ -10,7 +10,13 @@ Install cookiecutter (via homebrew on mac/linux):
 brew install cookiecutter
 ```
 
-Run:
+Navigate to `android-examples` directory:
+
+```bash
+cd android-examples
+```
+
+Run cookiecutter tool by passing in the template directory as argument:
 
 ```bash
 cookiecutter cookiecutter-android-example/
@@ -19,3 +25,5 @@ cookiecutter cookiecutter-android-example/
 You'll be prompted for various configuration options - see [`cookiecutter.json`](/cookiecutter.json) for the full list. 
 
 To accept the configuration option you see in brackets, simply hit Enter
+
+> Note: Make sure you have the `dependencies.gradle` file at the root of **android-examples** directory, since the template creates an android project that references that file for dependency versioning.
