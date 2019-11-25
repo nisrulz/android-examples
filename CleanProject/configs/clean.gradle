@@ -1,0 +1,15 @@
+allprojects {
+    // Task to iterate over each module and delete the build directory
+    // Defining it under `allprojects` makes this task available in each module.
+    task cleanBuildDir { task ->
+        delete "$task.project.name/${buildDir}"
+    }
+}
+
+// Task to delete the build directory at the root of the project
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Before cleaning the build directory of the main project, delete build directories of each module
+clean.doFirst { cleanBuildDir }
