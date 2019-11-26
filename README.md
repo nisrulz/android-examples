@@ -109,6 +109,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingMPChartsLib](/UsingMPChartsLib) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingMPChartsLib)
 1. [UsingOpenNLP](/UsingOpenNLP) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingOpenNLP)
 1. [UsingParceler](/UsingParceler) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingParceler)
+1. [UsingParcelize](/UsingParcelize) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingParcelize)
 1. [UsingPercentSupportLib](/UsingPercentSupportLib) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingPercentSupportLib)
 1. [UsingPocketSphinxForVoiceRecognition](/UsingPocketSphinxForVoiceRecognition) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingPocketSphinxForVoiceRecognition)
 1. [UsingRealmDB](/UsingRealmDB) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/android-examples/tree/master/UsingRealmDB)
