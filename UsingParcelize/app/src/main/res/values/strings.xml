@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Using Parcelize</string>
+    <string name="person_detail_key">person_detail</string>
 </resources>

@@ -33,6 +33,7 @@ dependencies {
     // App
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+    implementation 'com.google.android.material:material:1.0.0'
 
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
