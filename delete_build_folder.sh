@@ -1,26 +1,37 @@
-#!/bin/bash
-# Written by Nishant Srivastava
+#!/usr/bin/env bash
 
+# Copyright 2018 Nishant Srivastava
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#    http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ______________________________________________________________________
+#  Dependency: trash cli tool
+# 	>> Install: brew install trash
+# 
 #  Call as
 #  ./delete_build_folder.sh
+# ______________________________________________________________________
 
-# Install trash cli
-# brew install trash
+echo "  🗑  Deleting build directories..."
 
-echo ""
-echo "Deleting build directories..."
-echo ""
 # Iterate over each sub-directory inside the current directory
 for DIR in ./*;
 do
 	# Check if build directory exists inside the $DIR directory
-	# If it does then it is an Gradle project
 	if [ -d "$DIR/build/" ]; then
-		echo ""
-		echo ">>>> Deleting build directory inside " "$DIR"
-		# Run command inside the sub-directory i.e Gradle project
-		(cd "$DIR" && trash build);
-		echo ""
-		echo ">>>> Done."
+		echo "	> Deleting build directory inside " "$DIR"
+		# Run the trash command on build directory
+		trash "$DIR"/build
 	fi
 done
+
+echo "  ✔️  Done."

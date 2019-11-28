@@ -1,15 +1,24 @@
-#!/bin/bash
-# Written by Nishant Srivastava
+#!/usr/bin/env bash
 
+# Copyright 2018 Nishant Srivastava
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#    http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ______________________________________________________________________
 #  Call as
 #  ./delete_old_gradle_dist.sh
+# ______________________________________________________________________
 
-echo "Keep which version of gradle distribution?"
-read version
-
-echo ""
-echo "Deleting all other gradle dist except $version"
-echo ""
+read -p "  ❓  Keep which version of gradle distribution?   " version
+echo "  🗑  Deleting all other Gradle wrapper distribution except $version"
 find */.gradle/* -type d -not -path "*/$version/*" -not -name "$version" -not -name "buildOutputCleanup" | xargs rm -rf
-echo ""
-echo ">>>> Done."
+echo "  ✔️  Done."
