@@ -23,7 +23,7 @@
 
 echo "  🗑  Deleting build directories..."
 
-# Iterate over each sub-directory inside the current directory
+# Find all directories with name "build" inside the current directory, recursively
 for FOUND_BUILD_DIR in $(find . -type d -name "build");
 do
 	# Run the trash command on found build directory
