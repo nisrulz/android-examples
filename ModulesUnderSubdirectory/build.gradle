@@ -26,7 +26,11 @@ allprojects {
 }
 
 subprojects {
-    apply from: '../../dependencies.gradle'
+    if (projectDir.name in ["module1", "module2"]) {
+        apply from: '../../../dependencies.gradle'
+    } else{
+        apply from: '../../dependencies.gradle'
+    }
 }
 
 task clean(type: Delete) {
