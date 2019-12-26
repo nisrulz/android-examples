@@ -67,6 +67,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [LoadHtmlIntoWebview](/LoadHtmlIntoWebview)
 1. [LocalBroadcastManager](/LocalBroadcastManager)
 1. [MobileVisionAPI2ReadBarCodes](/MobileVisionAPI2ReadBarCodes)
+1. [ModulesUnderSubdirectory](/ModulesUnderSubdirectory)
 1. [NavigationDrawer](/NavigationDrawer)
 1. [Notification](/Notification)
 1. [OSSLicenseActivity](/OSSLicenseActivity)
