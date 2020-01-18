@@ -27,11 +27,15 @@
     },
     {
       "level": "INFO",
+      "message": "Considering /home/nishant/Android/Sdk/ndk/21.0.6011959 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
       "message": "Considering /home/nishant/Android/Sdk/ndk/21.0.5935234 in SDK ndk folder"
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (/home/nishant/Android/Sdk/ndk-bundle) which has version 21.0.5935234"
+      "message": "Found requested ndk.dir (/home/nishant/Android/Sdk/ndk-bundle) which has version 21.0.6011959-rc2"
     }
   ]
 }
