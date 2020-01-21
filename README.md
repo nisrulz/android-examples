@@ -35,6 +35,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CheckIfPhoneOrTablet](/CheckIfPhoneOrTablet)
 1. [CheckIfScreenLocked](/CheckIfScreenLocked)
 1. [ChromeCustomTabs](/ChromeCustomTabs)
+1. [CircularImage](/CircularImage)
 1. [CleanProject](/CleanProject)
 1. [CollapsibleToolbar](/CollapsibleToolbar)
 1. [CommonConfigForModules](/CommonConfigForModules)
