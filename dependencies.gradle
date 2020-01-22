@@ -58,7 +58,7 @@ ext {
 
  lithoVer = "0.31.0"
 
- lifecycleVer = "2.1.0"
- roomVer = "2.1.0"
- pagingVer = "2.1.0"
+ lifecycleVer = "2.2.0"
+ roomVer = "2.2.3"
+ pagingVer = "2.1.1"
 }
