@@ -1,5 +1,5 @@
 ext {
- androidPluginVer = "3.6.0-rc01"
+ androidPluginVer = "3.6.0-rc03"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
  kotlinVersion = "1.3.61"
