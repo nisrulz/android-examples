@@ -1,9 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
   compileSdkVersion compileSdkVer
-  
-
 
   defaultConfig {
     minSdkVersion minSdkVer
@@ -20,6 +20,15 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  compileOptions {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
 }
 
 dependencies {
@@ -30,6 +39,8 @@ dependencies {
   androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
   androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "android.arch.lifecycle:runtime:$lifecycleVer"
-  annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVer"
+  implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVer"
+  implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVer"
+  implementation "androidx.core:core-ktx:+"
+  compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }

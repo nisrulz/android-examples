@@ -1,34 +1,48 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion compileSdkVer
-    
-    defaultConfig {
-        applicationId "nisrulz.github.sample.lifecyclecompforlib"
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  compileSdkVersion compileSdkVer
+
+  defaultConfig {
+    applicationId "nisrulz.github.sample.lifecyclecompforlib"
+    minSdkVersion minSdkVer
+    targetSdkVersion targetSdkVer
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
+  compileOptions {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    // Testing-only dependencies
-    testImplementation "junit:junit:$junitVer"
-    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+  // Testing-only dependencies
+  testImplementation "junit:junit:$junitVer"
+  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-    implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+  implementation "androidx.appcompat:appcompat:$appCompat"
+  implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
-    implementation project(':awesomelib')
+  implementation "androidx.core:core-ktx:+"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+  implementation project(':awesomelib')
+
 }
