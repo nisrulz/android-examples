@@ -1,4 +1,4 @@
-package github.nisrulz.circularimage
+package github.nisrulz.circularimage.utils
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -7,11 +7,10 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 
-
-fun Drawable?.circular(context: Context): Drawable? {
-    val bmp = this?.convertDrawableToBitmap()
+fun Drawable?.clipCircular(context: Context): Drawable? {
+    val bmp = this?.convertToBitmap()
     bmp?.let {
-        val drawable = RoundedBitmapDrawableFactory.create(context.resources, it)
+        val drawable = RoundedBitmapDrawableFactory.create(context.resources, it.centerCrop())
         drawable.setAntiAlias(true)
         drawable.isCircular = true
         return drawable
@@ -19,19 +18,35 @@ fun Drawable?.circular(context: Context): Drawable? {
     return null
 }
 
-fun Drawable.convertDrawableToBitmap(): Bitmap {
+fun Drawable.convertToBitmap(): Bitmap {
     if (this is BitmapDrawable)
         return this.bitmap
-    val bounds = this.bounds
-    val width = if (!bounds.isEmpty) bounds.width() else this.intrinsicWidth
-    val height = if (!bounds.isEmpty) bounds.height() else this.intrinsicHeight
-    // Now we check we are > 0
-    val bitmap = Bitmap.createBitmap(
-        if (width <= 0) 1 else width, if (height <= 0) 1 else height,
-        Bitmap.Config.ARGB_8888
-    )
+
+    val w = if (this.intrinsicWidth <= 0) 1 else this.intrinsicWidth
+    val h = if (this.intrinsicHeight <= 0) 1 else this.intrinsicHeight
+    val bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bitmap)
     this.setBounds(0, 0, canvas.width, canvas.height)
     this.draw(canvas)
     return bitmap
+}
+
+fun Bitmap.centerCrop(): Bitmap {
+    return if (width >= height) {
+        Bitmap.createBitmap(
+            this,
+            width / 2 - height / 2,
+            0,
+            height,
+            height
+        )
+    } else {
+        Bitmap.createBitmap(
+            this,
+            0,
+            height / 2 - width / 2,
+            width,
+            width
+        )
+    }
 }

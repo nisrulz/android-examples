@@ -38,4 +38,13 @@ dependencies {
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test.ext:junit:$junitExtVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
 }

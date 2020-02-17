@@ -1,9 +1,8 @@
 package github.nisrulz.circularimage
 
-import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import github.nisrulz.circularimage.utils.setDrawableAsCircular
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,13 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val imageDrawable = ContextCompat.getDrawable(this, R.drawable.puppy)
+        // 1: No Library
+        imageView.setDrawableAsCircular(this, R.drawable.puppy)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imageView.setImageDrawable(imageDrawable)
-            imageView.clipToCircle()
-        } else {
-            imageView.setImageDrawable(imageDrawable.circular(this))
-        }
+        // 2: Picasso
+        //Picasso.get().load(R.drawable.puppy).transform(CropCircleTransformation()).into(imageView);
+
+        // 3: Glide
+        //Glide.with(this).load(R.drawable.puppy).transform(CircleCrop()).into(imageView);
+
+
     }
 }
