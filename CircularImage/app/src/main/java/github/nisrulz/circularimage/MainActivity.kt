@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 1: No Library
-        imageView.setDrawableAsCircular(this, R.drawable.puppy)
+        imageView.setDrawableAsCircular(R.drawable.puppy)
 
         // 2: Picasso
         //Picasso.get().load(R.drawable.puppy).transform(CropCircleTransformation()).into(imageView);
