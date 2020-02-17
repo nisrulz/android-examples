@@ -3,9 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ModulesUnderSubdirectory.iml" filepath="$PROJECT_DIR$/ModulesUnderSubdirectory.iml" group="ModulesUnderSubdirectory" />
+      <module fileurl="file://$PROJECT_DIR$/app/ModulesUnderSubdirectory-app.iml" filepath="$PROJECT_DIR$/app/ModulesUnderSubdirectory-app.iml" group="ModulesUnderSubdirectory/app" />
+      <module fileurl="file://$PROJECT_DIR$/group1/ModulesUnderSubdirectory-group1.iml" filepath="$PROJECT_DIR$/group1/ModulesUnderSubdirectory-group1.iml" group="ModulesUnderSubdirectory/group1" />
+      <module fileurl="file://$PROJECT_DIR$/group2/ModulesUnderSubdirectory-group2.iml" filepath="$PROJECT_DIR$/group2/ModulesUnderSubdirectory-group2.iml" group="ModulesUnderSubdirectory/group2" />
+      <module fileurl="file://$PROJECT_DIR$/module3/ModulesUnderSubdirectory-module3.iml" filepath="$PROJECT_DIR$/module3/ModulesUnderSubdirectory-module3.iml" group="ModulesUnderSubdirectory/module3" />
+      <module fileurl="file://$PROJECT_DIR$/android-examples-ModulesUnderSubdirectory.iml" filepath="$PROJECT_DIR$/android-examples-ModulesUnderSubdirectory.iml" group="ModulesUnderSubdirectory" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ModulesUnderSubdirectory/app" />
       <module fileurl="file://$PROJECT_DIR$/group1/group1.iml" filepath="$PROJECT_DIR$/group1/group1.iml" group="ModulesUnderSubdirectory/group1" />
+      <module fileurl="file://$PROJECT_DIR$/group1/module1/group1-module1.iml" filepath="$PROJECT_DIR$/group1/module1/group1-module1.iml" group="ModulesUnderSubdirectory/group1/module1" />
       <module fileurl="file://$PROJECT_DIR$/group2/group2.iml" filepath="$PROJECT_DIR$/group2/group2.iml" group="ModulesUnderSubdirectory/group2" />
+      <module fileurl="file://$PROJECT_DIR$/group2/module2/group2-module2.iml" filepath="$PROJECT_DIR$/group2/module2/group2-module2.iml" group="ModulesUnderSubdirectory/group2/module2" />
       <module fileurl="file://$PROJECT_DIR$/group1/module1/module1.iml" filepath="$PROJECT_DIR$/group1/module1/module1.iml" group="ModulesUnderSubdirectory/group1/module1" />
       <module fileurl="file://$PROJECT_DIR$/group2/module2/module2.iml" filepath="$PROJECT_DIR$/group2/module2/module2.iml" group="ModulesUnderSubdirectory/group2/module2" />
       <module fileurl="file://$PROJECT_DIR$/module3/module3.iml" filepath="$PROJECT_DIR$/module3/module3.iml" group="ModulesUnderSubdirectory/module3" />

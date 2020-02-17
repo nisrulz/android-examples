@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion compileSdkVer
-    
 
     defaultConfig {
         applicationId "github.nisrulz.sample.junittests"
@@ -23,11 +22,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:$appCompat"
     
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
+    testImplementation "androidx.annotation:annotation:$supportLibVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-    testImplementation "androidx.annotation:annotation:$supportLibVer"
-    implementation "androidx.appcompat:appcompat:$appCompat"
 }
