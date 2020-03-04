@@ -27,6 +27,10 @@
     },
     {
       "level": "INFO",
+      "message": "Considering /home/nishant/Android/Sdk/ndk/21.0.6113669 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
       "message": "Considering /home/nishant/Android/Sdk/ndk/21.0.6011959 in SDK ndk folder"
     },
     {

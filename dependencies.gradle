@@ -1,8 +1,8 @@
 ext {
- androidPluginVer = "3.6.0"
+ androidPluginVer = "3.6.1"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 29
- kotlinVersion = "1.3.61"
+ kotlinVersion = "1.3.70"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
