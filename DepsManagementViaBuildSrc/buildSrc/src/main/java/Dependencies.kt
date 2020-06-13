@@ -16,7 +16,7 @@ object Versions {
     const val androidGradlePlugin = "3.4.1"
 
     // Dependencies
-    const val kotlin = "1.3.71"
+    const val kotlin = "1.3.72"
     const val support = "1.0.0"
     const val appCompat = "1.1.0"
     const val constraintLayout = "1.1.3"
