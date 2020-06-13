@@ -13,7 +13,7 @@ object Versions {
     const val appVersionName = "1.0.0"
 
     // Plugins
-    const val androidGradlePlugin = "3.4.1"
+    const val androidGradlePlugin = "4.0.0"
 
     // Dependencies
     const val kotlin = "1.3.72"

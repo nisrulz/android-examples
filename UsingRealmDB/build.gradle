@@ -8,7 +8,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$androidPluginVer"
+        classpath "com.android.tools.build:gradle:$androidGradlePlugin"
         classpath "io.realm:realm-gradle-plugin:$realmdbVer"
 
         // NOTE: Do not place your application dependencies here; they belong

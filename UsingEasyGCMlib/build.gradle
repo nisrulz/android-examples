@@ -8,7 +8,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$androidPluginVer"
+        classpath "com.android.tools.build:gradle:$androidGradlePlugin"
         classpath "com.google.gms:google-services:$googleServicesPluginVer"
 
         // To send push

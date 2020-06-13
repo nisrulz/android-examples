@@ -9,7 +9,7 @@ buildscript {
     google()
   }
   dependencies {
-    classpath "com.android.tools.build:gradle:${androidPluginVer}"
+    classpath "com.android.tools.build:gradle:${androidGradlePlugin}"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
     // NOTE: Do not place your application dependencies here; they belong
