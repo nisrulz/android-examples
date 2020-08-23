@@ -41,7 +41,7 @@ dependencies {
   implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
   implementation "androidx.core:core-ktx:+"
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
   implementation project(':awesomelib')
 

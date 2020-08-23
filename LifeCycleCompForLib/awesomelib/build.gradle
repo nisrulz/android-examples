@@ -41,5 +41,5 @@ dependencies {
   implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVer"
   implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVer"
   implementation "androidx.core:core-ktx:+"
-  compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 }

@@ -40,7 +40,7 @@ dependencies {
 
   implementation "androidx.appcompat:appcompat:$appCompat"
 
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 }
 
 repositories {

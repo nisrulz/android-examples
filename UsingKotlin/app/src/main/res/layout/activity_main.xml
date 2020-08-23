@@ -7,6 +7,20 @@
     android:padding="16dp"
     >
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--region My Views-->
   <TextView
       android:id="@+id/txt_helloworld"
       android:layout_width="wrap_content"
@@ -22,4 +36,28 @@
       android:layout_centerHorizontal="true"
       android:text="Click to show toast"
       />
+  <!--endregion-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </RelativeLayout>
