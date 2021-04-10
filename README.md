@@ -114,7 +114,6 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingParcelize](/UsingParcelize)
 1. [UsingPercentSupportLib](/UsingPercentSupportLib)
 1. [UsingPocketSphinxForVoiceRecognition](/UsingPocketSphinxForVoiceRecognition)
-1. [UsingRealmDB](/UsingRealmDB)
 1. [UsingRetrofit2](/UsingRetrofit2)
 1. [UsingRobolectric](/UsingRobolectric) 
 1. [UsingRoomORM](/UsingRoomORM)
