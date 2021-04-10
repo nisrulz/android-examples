@@ -1,13 +1,13 @@
 ext {
- androidGradlePlugin = "4.0.1"
+ androidGradlePlugin = "4.1.3"
  googleServicesPluginVer = "4.3.3"
- compileSdkVer = 29
- kotlinVersion = "1.4.0"
+ compileSdkVer = 30
+ kotlinVersion = "1.4.32"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
 
- minSdkVer = 18
+ minSdkVer = 21
  targetSdkVer = compileSdkVer
 
  supportLibVer = "1.1.0"
