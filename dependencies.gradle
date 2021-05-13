@@ -1,8 +1,8 @@
 ext {
- androidGradlePlugin = "4.1.3"
+ androidGradlePlugin = "4.2.0"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 30
- kotlinVersion = "1.4.32"
+ kotlinVersion = "1.5.0"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
