@@ -1,8 +1,8 @@
 ext {
- androidGradlePlugin = "4.2.0"
+ androidGradlePlugin = "4.2.2"
  googleServicesPluginVer = "4.3.3"
  compileSdkVer = 30
- kotlinVersion = "1.5.0"
+ kotlinVersion = "1.5.21"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
@@ -57,7 +57,7 @@ ext {
 
  lithoVer = "0.31.0"
 
- lifecycleVer = "2.2.0"
+ lifecycleVer = "2.3.1"
  roomVer = "2.2.3"
  pagingVer = "2.1.1"
 }
