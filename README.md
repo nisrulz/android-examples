@@ -40,6 +40,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CollapsibleToolbar](/CollapsibleToolbar)
 1. [CommonConfigForModules](/CommonConfigForModules)
 1. [CompileOnly](/CompileOnly)
+1. [ComposeTheme](/ComposeTheme)
 1. [CustomBroadcastPermissions](/CustomBroadcastPermissions)
 1. [CustomOnboardingIntro](/CustomOnboardingIntro)
 1. [CustomView](/CustomView)
