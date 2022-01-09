@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion compileSdkVer
+  compileSdk compileSdkVer
   
   defaultConfig {
     applicationId "sample.github.nisrulz.animatedgradientbackground"
-    minSdkVersion minSdkVer
-    targetSdkVersion targetSdkVer
+    minSdk minSdkVer
+    targetSdk targetSdkVer
     versionCode 1
     versionName "1.0"
     

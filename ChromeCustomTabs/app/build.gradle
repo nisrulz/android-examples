@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion compileSdkVer
+  compileSdk compileSdkVer
   
   defaultConfig {
     applicationId "github.nisrulz.sample.chromecustomtabs"
@@ -11,9 +11,9 @@ android {
     // you can add <uses-sdk tools:overrideLibrary="android.support.customtabs"/> to your
     // manifest to force its use and check the API version at runtime and just use Chrome
     // Custom tabs if its >= 16
-    minSdkVersion 15
+    minSdk 15
 
-    targetSdkVersion targetSdkVer
+    targetSdk targetSdkVer
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -22,9 +22,11 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {

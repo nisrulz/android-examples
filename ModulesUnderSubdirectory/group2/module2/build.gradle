@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdk 29
 
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 29
+        minSdk 14
+        targetSdk 29
         versionCode 1
         versionName "1.0"
 

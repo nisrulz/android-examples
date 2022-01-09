@@ -7,7 +7,7 @@ import android.util.Log;
 import java.io.IOException;
 
 public class RecordAudio {
-    private final String LOGTAG = getClass().getSimpleName().toString();
+    private final String LOGTAG = getClass().getSimpleName();
     MediaRecorder mRecorder = null;
     private boolean isRecording = false;
 

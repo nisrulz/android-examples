@@ -17,8 +17,7 @@
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
 
         
-        <activity
-            android:name=".MainActivity"
+       <activity android:name=".MainActivity" android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

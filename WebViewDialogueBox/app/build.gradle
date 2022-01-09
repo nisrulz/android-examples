@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion compileSdkVer
+    compileSdk compileSdkVer
     
 
     defaultConfig {
         applicationId "github.nisrulz.webviewdialoguebox"
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
+        minSdk minSdkVer
+        targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

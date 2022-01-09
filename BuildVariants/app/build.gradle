@@ -7,14 +7,14 @@ def fabricDebugKey = properties.getProperty('FABRIC_DEBUG_KEY')
 def fabricProductionKey = properties.getProperty('FABRIC_PRODUCTION_KEY')
 
 android {
-    compileSdkVersion compileSdkVer
+    compileSdk compileSdkVer
     
     flavorDimensions "default"
 
     defaultConfig {
         applicationId "github.nisrulz.sample.buildvariants"
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
+        minSdk minSdkVer
+        targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

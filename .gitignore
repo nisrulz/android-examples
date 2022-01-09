@@ -302,3 +302,6 @@ $RECYCLE.BIN/
 
 ### Firebase Google Services file ###
 google-services.json
+
+*.lst
+*.md5

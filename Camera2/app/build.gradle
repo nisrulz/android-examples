@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion compileSdkVer
+  compileSdk compileSdkVer
   
 
   defaultConfig {
     applicationId "github.nisrulz.example.camera2"
-    minSdkVersion 21
-    targetSdkVersion targetSdkVer
+    minSdk minSdkVer
+    targetSdk targetSdkVer
     versionCode 1
     versionName "1.0"
       testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -16,9 +16,11 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
@@ -31,6 +33,6 @@ dependencies {
     
     implementation "androidx.legacy:legacy-support-v4:$supportLibVer"
     implementation "androidx.legacy:legacy-support-v13:$supportLibVer"
-    implementation "androidx.cardview:cardview:$supportLibVer"
+    implementation "androidx.cardview:cardview:$cardView"
     implementation "androidx.appcompat:appcompat:$appCompat"
 }

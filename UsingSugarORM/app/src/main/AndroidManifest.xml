@@ -15,7 +15,7 @@
     <meta-data android:name="QUERY_LOG" android:value="true" />
     <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="github.nisrulz.sample.usingsugarorm" />
 
-    <activity android:name=".MainActivity">
+    <activity android:name=".MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

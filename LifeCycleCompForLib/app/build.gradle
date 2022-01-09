@@ -3,12 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion compileSdkVer
+  compileSdk compileSdkVer
 
   defaultConfig {
     applicationId "nisrulz.github.sample.lifecyclecompforlib"
-    minSdkVersion minSdkVer
-    targetSdkVersion targetSdkVer
+    minSdk minSdkVer
+    targetSdk targetSdkVer
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

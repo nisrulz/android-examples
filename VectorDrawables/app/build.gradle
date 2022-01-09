@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion compileSdkVer
+  compileSdk compileSdkVer
   
 
   defaultConfig {
     applicationId "github.nisrulz.sample.vectordrawables"
-    minSdkVersion 15
-    targetSdkVersion targetSdkVer
+    minSdk 15
+    targetSdk targetSdkVer
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

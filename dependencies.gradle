@@ -18,9 +18,10 @@ ext {
  minSdkVer = 21
  targetSdkVer = compileSdkVer
 
- supportLibVer = "1.1.0"
+ supportLibVer = "1.0.0"
  appCompat = "1.4.0"
  recyclerview = "1.1.0"
+ cardView = "1.0.0"
 
  gpsMobileVision= "17.0.2"
  gpsGCM = "16.1.0"

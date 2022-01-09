@@ -24,7 +24,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <activity android:name=".MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -32,7 +32,7 @@
       </intent-filter>
     </activity>
 
-    <receiver android:name=".PhoneCallStateReceiver">
+    <receiver android:name=".PhoneCallStateReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.PHONE_STATE"/>
 
@@ -41,7 +41,7 @@
       </intent-filter>
     </receiver>
 
-    <receiver android:name=".SMSReceiver">
+    <receiver android:name=".SMSReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.provider.Telephony.SMS_RECEIVED" />
       </intent-filter>

@@ -7,12 +7,12 @@ apply plugin: 'kotlin-android-extensions'
 apply from: "$rootProject.projectDir/configs/signing.gradle"
 
 android {
-    compileSdkVersion compileSdkVer
+    compileSdk compileSdkVer
 
     defaultConfig {
         applicationId "github.nisrulz.splitsigninconfig"
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
+        minSdk minSdkVer
+        targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
