@@ -21,6 +21,7 @@
 #  ./delete_build_folder.sh
 # ______________________________________________________________________
 
+# Delete all generated build folders, because they will eat up a lot of space on the disc
 echo "  🗑  Deleting build directories..."
 
 # Find all directories with name "build" inside the current directory, recursively
