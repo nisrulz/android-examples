@@ -24,7 +24,7 @@
 echo "  🗑  Deleting build directories..."
 
 # Find all directories with name "build" inside the current directory, recursively
-for FOUND_BUILD_DIR in $(find . -type d -name "build");
+for FOUND_BUILD_DIR in $(find . -type d -name "build" | grep -v "cookiecutter");
 do
 	# Run the trash command on found build directory
 	trash $FOUND_BUILD_DIR
