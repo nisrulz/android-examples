@@ -26,4 +26,6 @@ You'll be prompted for various configuration options - see [`cookiecutter.json`]
 
 To accept the configuration option you see in brackets, simply hit Enter
 
+![screenshot](scr.png)
+
 > Note: Make sure you have the `dependencies.gradle` file at the root of **android-examples** directory, since the template creates an android project that references that file for dependency versioning.

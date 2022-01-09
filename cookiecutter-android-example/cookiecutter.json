@@ -1,9 +1,8 @@
 {
     "example_name": "Android Example",
     "repo_name": "{{ cookiecutter.example_name | title | replace(' ', '') }}",
-    "full_package_namespace": "github.nisrulz.{{ cookiecutter.example_name | lower | replace(' ', '') }}",
-    "package_path": "{{ cookiecutter.repo_name | lower }}",
-
+    "full_package_namespace": "github.nisrulz.example.{{ cookiecutter.example_name | lower | replace(' ', '_') }}",
+    "package_path": "{{ cookiecutter.example_name | lower | replace(' ', '_') }}",
     "_copy_without_render": [
         "gradlew",
         "gradlew.bat",

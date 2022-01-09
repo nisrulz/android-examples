@@ -1,2 +1,10 @@
-rootProject.name='{{ cookiecutter.repo_name }}'
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name='{{ cookiecutter.example_name }}'
 include ':app'

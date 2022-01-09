@@ -1,19 +1,22 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
 
 android {
-    compileSdkVersion compileSdkVer
+    compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "{{ cookiecutter.full_package_namespace }}"
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
+        applicationId "github.nisrulz.example.androidexample"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
     buildTypes {
         release {
@@ -21,14 +24,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+     buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
     // Other JAR dependencies
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     // App
     implementation "androidx.appcompat:appcompat:$appCompat"
