@@ -162,10 +162,15 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
       + Use the package name of the format `github.nisrulz.*` where `*` is the example you are adding to the repo. I am trying to follow a set standard in the repo, please adhere to that.
   7. Have fun!
 
-  > NOTE: There is a quick bootstrapping **cookiecutter** template to create an Android example project that adheres to all wiring up and standards for this repo. [Read how to use use it here](/cookiecutter-android-example)
+  > NOTE: There is a quick bootstrapping **cookiecutter** template to create an Android example project that adheres to all wiring up and standards for this repo. Read how to use use it from links below:
+  >
+  > - [Standard Example](/cookiecutter-android-example)
+  > - [Compose Example](/cookiecutter-android-compose-example)
 
 ## Extra
+
 Since the repo is pretty large now , I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
+
   - Install `svn` using homebrew (mac/linux)
     ```bash
     brew install svn
@@ -187,19 +192,4 @@ This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisr
 
 If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of :coffee: to keep me recharged :metal: [[PayPal](https://www.paypal.me/nisrulz/5usd)]
 
-License
-=======
-
-    Copyright 2016 Nishant Srivastava
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+[Apache Version 2.0 | Copyright 2016 Nishant Srivastava](LICENSE)
