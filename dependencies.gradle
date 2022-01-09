@@ -1,17 +1,25 @@
 ext {
- androidGradlePlugin = "4.2.0"
+ androidGradlePlugin = "7.0.4"
  googleServicesPluginVer = "4.3.3"
- compileSdkVer = 30
- kotlinVersion = "1.5.0"
+
+ kotlinVersion = "1.6.10"
+
+ compose_compiler_version = "1.1.0-rc02"
+ compose_version = "1.1.0-rc01"
+ coreKTX = "1.7.0"
+ material = "1.4.0"
+ lifecycleRuntimeKTX = "2.4.0"
+ activityCompose = "1.4.0"
 
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
 
+ compileSdkVer = 32
  minSdkVer = 21
  targetSdkVer = compileSdkVer
 
  supportLibVer = "1.1.0"
- appCompat = "1.1.0"
+ appCompat = "1.4.0"
  recyclerview = "1.1.0"
 
  gpsMobileVision= "17.0.2"
@@ -21,9 +29,9 @@ ext {
  firebaseDatabase = "19.2.1"
  firebaseMessaging = "20.1.0"
 
- junitVer = "4.12"
- junitExtVer = "1.1.1"
- espressoCoreVer = "3.2.0"
+ junitVer = "4.13.2"
+ junitExtVer = "1.1.3"
+ espressoCoreVer = "3.4.0"
  androidTestRunnerVer = "1.2.0"
 
  stethoVer = "1.5.1"
