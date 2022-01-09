@@ -1,4 +1,4 @@
-# Android Examples Bootstrapping Template
+# Android Examples (with Compose) Bootstrapping Template
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) :cookie: template for bootstrapping new Android Example with Jetpack Compose projects for this repo!
 
@@ -24,6 +24,8 @@ cookiecutter cookiecutter-android-compose-example/
 
 You'll be prompted for various configuration options - see [`cookiecutter.json`](/cookiecutter.json) for the full list. 
 
-To accept the configuration option you see in brackets, simply hit Enter
+To accept the configuration option you see in brackets, simply hit Enter.
+
+![screenshot](scr.png)
 
 > Note: Make sure you have the `dependencies.gradle` file at the root of **android-examples** directory, since the template creates an android project that references that file for dependency versioning.
