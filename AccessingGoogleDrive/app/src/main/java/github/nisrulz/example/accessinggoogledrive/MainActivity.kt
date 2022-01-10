@@ -1,8 +1,8 @@
-package github.nisrulz.sample.accessinggoogledrive
+package github.nisrulz.example.accessinggoogledrive
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import github.nisrulz.sample.accessinggoogledrive.databinding.ActivityMainBinding
+import github.nisrulz.example.accessinggoogledrive.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

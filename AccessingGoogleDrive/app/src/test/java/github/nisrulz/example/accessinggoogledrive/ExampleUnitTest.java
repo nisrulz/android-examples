@@ -1,4 +1,4 @@
-package github.nisrulz.sample.accessinggoogledrive;
+package github.nisrulz.example.accessinggoogledrive;
 
 import org.junit.Test;
 

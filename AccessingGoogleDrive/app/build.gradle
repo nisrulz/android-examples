@@ -5,7 +5,7 @@ android {
   compileSdk compileSdkVer
 
   defaultConfig {
-    applicationId "github.nisrulz.sample.accessinggoogledrive"
+    applicationId "github.nisrulz.example.accessinggoogledrive"
     minSdk minSdkVer
     targetSdk targetSdkVer
     versionCode 1
