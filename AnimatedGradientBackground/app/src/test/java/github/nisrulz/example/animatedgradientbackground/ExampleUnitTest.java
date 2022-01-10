@@ -1,4 +1,4 @@
-package sample.github.nisrulz.animatedgradientbackground;
+package github.nisrulz.example.animatedgradientbackground;
 
 import org.junit.Test;
 
