@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
   compileSdk compileSdkVer
-  
 
   defaultConfig {
     applicationId "github.nisrulz.sample.accessinggoogledrive"
@@ -19,17 +19,20 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  buildFeatures { viewBinding true }
 }
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation "androidx.core:core-ktx:$coreKTX"
+  implementation "androidx.appcompat:appcompat:$appCompat"
   
   // Testing-only dependencies
   testImplementation "junit:junit:$junitVer"
   androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
   androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-
-  implementation "androidx.appcompat:appcompat:$appCompat"
 
   // Add Google Play Services Drive api
   implementation "com.google.android.gms:play-services-drive:$gpsDrive"
