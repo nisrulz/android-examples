@@ -1,4 +1,4 @@
-package github.nisrulz.activitylifecycle;
+package github.nisrulz.example.activitylifecycle;
 
 import org.junit.Test;
 

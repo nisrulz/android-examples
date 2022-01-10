@@ -5,7 +5,7 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "github.nisrulz.activitylifecycle"
+        applicationId "github.nisrulz.example.activitylifecycle"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1

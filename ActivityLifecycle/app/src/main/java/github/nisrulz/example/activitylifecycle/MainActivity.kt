@@ -1,10 +1,10 @@
-package github.nisrulz.activitylifecycle
+package github.nisrulz.example.activitylifecycle
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import github.nisrulz.activitylifecycle.databinding.ActivityMainBinding
+import github.nisrulz.example.activitylifecycle.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         binding.apply {
             setContentView(root)
-            setSupportActionBar(toolbar)
         }
 
         LogData("onCreate Called")
