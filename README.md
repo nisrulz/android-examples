@@ -189,8 +189,11 @@ Since the repo is pretty large now , I am sure many folks would like to download
   - Done! You should have the specific example all checked out!
 
 ## Author & support
+
 This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/android-examples/graphs/contributors).
 
 If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of :coffee: to keep me recharged :metal: [[PayPal](https://www.paypal.me/nisrulz/5usd)]
+
+## License
 
 [Apache Version 2.0 | Copyright 2016 Nishant Srivastava](LICENSE)
