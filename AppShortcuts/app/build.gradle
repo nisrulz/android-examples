@@ -1,16 +1,19 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
+
     defaultConfig {
-        applicationId "github.nisrulz.sample.appshortcuts"
+        applicationId "github.nisrulz.example.appshortcuts"
         minSdk 25
         targetSdk 25
         versionCode 1
         versionName "1.0"
 
-       testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'APPLICATION_ID', "\"${applicationId}\""
     }
     buildTypes {
         release {
@@ -24,12 +27,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
+    implementation "androidx.core:core-ktx:$coreKTX"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "com.google.android.material:material:$material"
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-
-    implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "com.google.android.material:material:$supportLibVer"
 }

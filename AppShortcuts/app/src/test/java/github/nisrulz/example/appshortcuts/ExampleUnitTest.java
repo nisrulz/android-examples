@@ -1,4 +1,4 @@
-package github.nisrulz.sample.appshortcuts;
+package github.nisrulz.example.appshortcuts;
 
 import org.junit.Test;
 

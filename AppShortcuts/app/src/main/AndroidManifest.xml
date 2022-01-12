@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.sample.appshortcuts">
+    package="github.nisrulz.example.appshortcuts">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +30,7 @@
             android:label="Dynamic Shortcut Activity">
 
             <intent-filter>
-                <action android:name="github.nisrulz.sample.appshortcuts.OPEN_DYNAMIC_SHORTCUT" />
+                <action android:name="github.nisrulz.example.appshortcuts.OPEN_DYNAMIC_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

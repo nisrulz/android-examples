@@ -11,12 +11,12 @@
         android:shortcutShortLabel="@string/static_shortcut_short_label">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="github.nisrulz.sample.appshortcuts.MainActivity"
-            android:targetPackage="github.nisrulz.sample.appshortcuts" />
+            android:targetClass="github.nisrulz.example.appshortcuts.MainActivity"
+            android:targetPackage="github.nisrulz.example.appshortcuts" />
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="github.nisrulz.sample.appshortcuts.StaticShortcutActivity"
-            android:targetPackage="github.nisrulz.sample.appshortcuts"/>
+            android:targetClass="github.nisrulz.example.appshortcuts.StaticShortcutActivity"
+            android:targetPackage="github.nisrulz.example.appshortcuts"/>
     </shortcut>
 </shortcuts>
