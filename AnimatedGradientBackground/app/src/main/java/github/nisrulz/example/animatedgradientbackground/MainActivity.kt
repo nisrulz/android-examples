@@ -6,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import github.nisrulz.example.animatedgradientbackground.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    
+    private lateinit var binding: ActivityMainBinding
 
     private var animationDrawable: AnimationDrawable? = null
 
