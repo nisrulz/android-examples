@@ -1,4 +1,4 @@
-package github.nisrulz.audiorecording;
+package github.nisrulz.example.audiorecording;
 
 import org.junit.Test;
 

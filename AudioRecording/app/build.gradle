@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
-        applicationId "github.nisrulz.audiorecording"
+        applicationId "github.nisrulz.example.audiorecording"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
@@ -25,12 +25,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "androidx.core:core-ktx:$coreKTX"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "com.google.android.material:material:$material"
     
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-
-    implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "com.google.android.material:material:$supportLibVer"
 }
