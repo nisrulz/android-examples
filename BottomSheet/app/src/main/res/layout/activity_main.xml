@@ -1,5 +1,4 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
@@ -18,55 +17,54 @@
             android:paddingTop="24dp">
 
             <Button
-                android:id="@+id/button_1"
+                android:id="@+id/btnOpenBtmSheet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp"
                 android:text="Open Bottom Sheet"
-                android:padding="16dp"
-                android:layout_margin="8dp"
-                android:textColor="@android:color/white"
-                android:background="@color/colorAccent"/>
+                android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button_2"
+                android:id="@+id/btnCollapseBtmSheet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
                 android:layout_margin="8dp"
-                android:text="Close Bottom Sheet"
-                android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"/>
+                android:background="@color/colorPrimary"
+                android:padding="16dp"
+                android:text="Collapse Bottom Sheet"
+                android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button_3"
+                android:id="@+id/btnPeekBtmSheet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
                 android:layout_margin="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="16dp"
                 android:text="Make Bottom Sheet Peek"
-                android:textColor="@android:color/white"
-                android:background="@color/colorPrimaryDark"/>
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
     </ScrollView>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/bottom_sheet"
+        android:id="@+id/bottomSheet"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:clipToPadding="true"
         android:background="@android:color/darker_gray"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        >
+        android:clipToPadding="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Bottom Sheet Data Here"
             android:padding="16dp"
+            android:text="Bottom Sheet Data Here"
             android:textColor="@android:color/white"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </androidx.core.widget.NestedScrollView>
 
