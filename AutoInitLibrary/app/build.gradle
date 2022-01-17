@@ -1,15 +1,11 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
-        applicationId "github.nisrulz.sample.autoinitlibrary"
+        applicationId "github.nisrulz.example.autoinitlibrary"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
@@ -24,15 +20,6 @@ android {
     }
 
     buildFeatures { viewBinding true }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
@@ -45,9 +32,6 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
-
-    // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     implementation project(':awesomelib')
 }
