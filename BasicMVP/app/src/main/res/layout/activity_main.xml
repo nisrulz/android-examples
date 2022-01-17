@@ -1,43 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context="nisrulz.github.example.android_mvp_example.MainActivity"
-    >
-  <EditText
-      android:id="@+id/edtx_name"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:hint="Name"
-      android:inputType="text"
-      />
+    tools:context=".MainActivity">
 
-  <EditText
-      android:id="@+id/edtx_email"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:hint="Email"
-      android:inputType="textEmailAddress"
-      />
+    <EditText
+        android:id="@+id/edtxName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text" />
 
-  <Button
-      android:id="@+id/btn_submit"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/submit"
-      />
+    <EditText
+        android:id="@+id/edtxEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
 
-  <TextView
-      android:id="@+id/txt_userinfo"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="30dp"
-      android:gravity="right"
-      android:text="@string/user_info"
-      android:textSize="20sp"
-      />
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/txtUserinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="right"
+        android:text="@string/user_info"
+        android:textSize="20sp" />
 </LinearLayout>
