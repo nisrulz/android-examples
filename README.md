@@ -71,6 +71,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [MobileVisionAPI2ReadBarCodes](/MobileVisionAPI2ReadBarCodes)
 1. [ModulesUnderSubdirectory](/ModulesUnderSubdirectory)
 1. [NavigationDrawer](/NavigationDrawer)
+1. [NestedModules](/NestedModules)
 1. [Notification](/Notification)
 1. [OSSLicenseActivity](/OSSLicenseActivity)
 1. [ParallaxHeaderListview](/ParallaxHeaderListview)
