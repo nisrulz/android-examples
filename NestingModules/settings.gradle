@@ -10,3 +10,7 @@ rootProject.name = "Nesting Modules"
 rootProject.name = "Audio Recording"
 
 include ':app'
+include ':feature_1'
+include ':feature_2'
+include ':util_1'
+include ':util_2'
