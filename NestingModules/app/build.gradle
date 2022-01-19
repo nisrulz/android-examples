@@ -3,13 +3,15 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "../../dependencies.gradle"
+
 android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "github.nisrulz.example.nesting_modules"
         minSdk minSdkVer
         targetSdk targetSdkVer
+        applicationId "github.nisrulz.example.nesting_modules"
         versionCode 1
         versionName "1.0"
 

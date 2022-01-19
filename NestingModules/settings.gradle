@@ -7,10 +7,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Nesting Modules"
-rootProject.name = "Audio Recording"
 
 include ':app'
-include ':feature_1'
-include ':feature_2'
-include ':util_1'
-include ':util_2'
+include 'features:feature_1'
+include 'features:feature_2'
+include 'utils:util_1'
+include 'utils:util_2'
