@@ -8,10 +8,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="github.nisrulz.broadcastreceiver.MainActivity">
+    tools:context="github.nisrulz.example.broadcastreceiver.MainActivity">
 
     <EditText
-        android:id="@+id/edit_msg"
+        android:id="@+id/editTxtMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_msg"
+        android:layout_below="@+id/editTxtMsg"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="Broadcast Message"/>

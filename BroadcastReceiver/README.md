@@ -5,7 +5,6 @@ Android component which allows you to register for system or application events.
 ### Reference
 
 + [Docs](https://developer.android.com/reference/android/content/BroadcastReceiver.html)
-+ [Vogella](http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html)
 
 License
 =======

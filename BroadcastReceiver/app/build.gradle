@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
-        applicationId "github.nisrulz.broadcastreceiver"
+        applicationId "github.nisrulz.example.broadcastreceiver"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
