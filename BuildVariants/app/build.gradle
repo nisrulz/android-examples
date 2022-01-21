@@ -1,18 +1,19 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 
 Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+properties.load(project.rootProject.file('gradle.properties').newDataInputStream())
 def fabricDebugKey = properties.getProperty('FABRIC_DEBUG_KEY')
 def fabricProductionKey = properties.getProperty('FABRIC_PRODUCTION_KEY')
 
 android {
     compileSdk compileSdkVer
-    
+
     flavorDimensions "default"
 
     defaultConfig {
-        applicationId "github.nisrulz.sample.buildvariants"
+        applicationId "github.nisrulz.example.buildvariants"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
@@ -35,6 +36,8 @@ android {
             ]
         }
     }
+
+    buildFeatures { viewBinding true }
 
     productFlavors {
         free {
