@@ -1,4 +1,4 @@
-package github.nisrulz.builderpattern;
+package github.nisrulz.example.builderpattern;
 
 import org.junit.Test;
 

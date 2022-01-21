@@ -1,4 +1,4 @@
-package github.nisrulz.builderpattern;
+package github.nisrulz.example.builderpattern;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
