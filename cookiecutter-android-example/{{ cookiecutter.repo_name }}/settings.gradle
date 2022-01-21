@@ -7,4 +7,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name='{{ cookiecutter.example_name }}'
+
 include ':app'
