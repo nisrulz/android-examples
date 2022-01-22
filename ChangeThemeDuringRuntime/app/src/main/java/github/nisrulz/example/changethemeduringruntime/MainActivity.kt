@@ -1,10 +1,10 @@
-package nisrulz.github.example.changethemeduringruntime
+package github.nisrulz.example.changethemeduringruntime
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-import nisrulz.github.example.changethemeduringruntime.databinding.ActivityMainBinding
+import github.nisrulz.example.changethemeduringruntime.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

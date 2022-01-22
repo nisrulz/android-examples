@@ -5,7 +5,7 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "nisrulz.github.example.changethemeduringruntime"
+        applicationId "github.nisrulz.example.changethemeduringruntime"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
