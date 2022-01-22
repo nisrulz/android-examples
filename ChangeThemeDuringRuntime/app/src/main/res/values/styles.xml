@@ -1,27 +1,28 @@
 <resources>
 
-  <style name="AppThemeLight" parent="Theme.AppCompat.Light">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <!-- Customize your theme here. -->
-    <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
-  </style>
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
 
-  <style name="AppThemeDark" parent="Theme.AppCompat">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary2</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
-    <item name="colorAccent">@color/colorAccent2</item>
-    <!-- Customize your theme here. -->
-    <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
-  </style>
-  <!-- This will set the fade in animation on all your activities by default -->
-  <style name="WindowAnimationTransition">
+    <style name="AppThemeDark" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
+        <item name="colorAccent">@color/colorAccent2</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
 
-    <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
-    <item name="android:windowExitAnimation">@android:anim/fade_out</item>
-  </style>
+    <!-- This will set the fade in animation on all your activities by default -->
+    <style name="WindowAnimationTransition">
+
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 
 </resources>
