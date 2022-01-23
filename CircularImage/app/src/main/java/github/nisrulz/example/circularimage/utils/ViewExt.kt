@@ -1,4 +1,4 @@
-package github.nisrulz.circularimage.utils
+package github.nisrulz.example.circularimage.utils
 
 import android.graphics.Outline
 import android.os.Build
