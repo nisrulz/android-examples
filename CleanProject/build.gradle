@@ -18,13 +18,6 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 subprojects {
     apply from: '../../dependencies.gradle'
 }
