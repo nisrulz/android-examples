@@ -1,4 +1,4 @@
-package github.nisrulz.androidlib2
+package github.nisrulz.example.modulecommonconfig
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

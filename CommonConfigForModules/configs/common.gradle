@@ -1,12 +1,11 @@
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion compileSdkVer
+    compileSdk compileSdkVer
 
     defaultConfig {
-        minSdkVersion minSdkVer
-        targetSdkVersion targetSdkVer
+        minSdk minSdkVer
+        targetSdk targetSdkVer
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -17,17 +16,11 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     // App
     implementation "androidx.appcompat:appcompat:$appCompat"

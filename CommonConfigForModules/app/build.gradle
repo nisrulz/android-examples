@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 // Configs
 apply from: "$rootProject.projectDir/configs/common.gradle"
 
 android {
     defaultConfig {
-        applicationId "github.nisrulz.modulecommonconfig"
+        applicationId "github.nisrulz.example.modulecommonconfig"
         versionCode 1
         versionName "1.0"
     }
