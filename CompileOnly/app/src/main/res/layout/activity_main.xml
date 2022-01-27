@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nisrulz.github.sample.compileonly.MainActivity"
+    tools:context="github.nisrulz.example.compileonly.MainActivity"
     >
 
   <TextView
