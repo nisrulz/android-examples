@@ -159,6 +159,7 @@ class Camera2Fragment : Fragment(), View.OnClickListener,
             }
         }
 
+        @JvmStatic
         fun newInstance(): Camera2Fragment {
             return Camera2Fragment()
         }

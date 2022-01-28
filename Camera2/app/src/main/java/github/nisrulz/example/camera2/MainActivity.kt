@@ -10,6 +10,7 @@ import android.view.WindowManager
 import android.view.Window
 
 class MainActivity : AppCompatActivity() {
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         goFullScreen(this)
         hideActionBar(this)
