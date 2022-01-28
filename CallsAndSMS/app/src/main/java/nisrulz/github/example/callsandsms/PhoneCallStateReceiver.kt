@@ -2,15 +2,15 @@ package nisrulz.github.example.callsandsms
 
 import android.content.BroadcastReceiver
 import android.content.Context
-import android.telephony.TelephonyManager
 import android.content.Intent
 import android.telephony.PhoneStateListener
+import android.telephony.TelephonyManager
 import android.widget.Toast
-import nisrulz.github.example.callsandsms.PhoneCallStateReceiver
 
 // Listen for call states when in background
 class PhoneCallStateReceiver : BroadcastReceiver() {
     private var telephonyManager: TelephonyManager? = null
+
     override fun onReceive(context: Context, intent: Intent) {
         telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
         val phoneStateListener: PhoneStateListener = object : PhoneStateListener() {
@@ -36,7 +36,7 @@ class PhoneCallStateReceiver : BroadcastReceiver() {
             }
         }
         if (!isListening) {
-            telephonyManager!!.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
+            telephonyManager?.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
             isListening = true
         }
     }

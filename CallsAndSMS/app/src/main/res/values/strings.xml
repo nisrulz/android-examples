@@ -1,3 +1,9 @@
 <resources>
-  <string name="app_name">CallsAndSMS</string>
+    <string name="app_name">CallsAndSMS</string>
+    <string name="send_message">Send Message</string>
+    <string name="send_message_directly">Send Message Directly</string>
+    <string name="enter_message">Enter message</string>
+    <string name="call">Call</string>
+    <string name="dial">Dial</string>
+    <string name="enter_phone_number">Enter Phone number</string>
 </resources>

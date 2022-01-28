@@ -1,45 +1,43 @@
 package nisrulz.github.example.callsandsms
 
 import android.Manifest
-import androidx.appcompat.app.AppCompatActivity
-import android.widget.EditText
-import android.widget.Button
-import android.telephony.TelephonyManager
-import android.os.Bundle
-import nisrulz.github.example.callsandsms.R
-import androidx.core.content.ContextCompat
-import android.content.pm.PackageManager
-import androidx.core.app.ActivityCompat
-import android.view.View
-import android.text.TextUtils
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
-import android.widget.Toast
+import android.os.Bundle
 import android.telephony.PhoneStateListener
 import android.telephony.SmsManager
+import android.telephony.TelephonyManager
+import android.text.TextUtils
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import nisrulz.github.example.callsandsms.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private var etPhoneNo: EditText? = null
-    private var btnDial: Button? = null
-    private var btnCall: Button? = null
-    private var telephonyManager: TelephonyManager? = null
-    private var etMessage: EditText? = null
-    private var btnSendMessage: Button? = null
-    private var btnSendMessageDirectly: Button? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        checkIfPermissionGranted()
-        initView()
-        telephonyManager = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+
+    private lateinit var binding: ActivityMainBinding
+
+    private val telephonyManager: TelephonyManager by lazy {
+        getSystemService(TELEPHONY_SERVICE) as TelephonyManager
     }
 
-    fun isPermissionGranted(permission: String?): Boolean {
-        return (ContextCompat.checkSelfPermission(this@MainActivity, permission!!)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding.apply {
+            setContentView(root)
+            checkIfPermissionGranted()
+            initView(this)
+        }
+    }
+
+    private fun isPermissionGranted(permission: String): Boolean {
+        return (ContextCompat.checkSelfPermission(this@MainActivity, permission)
                 == PackageManager.PERMISSION_GRANTED)
     }
 
-    fun checkIfPermissionGranted() {
+    private fun checkIfPermissionGranted() {
         if (isPermissionGranted(Manifest.permission.CALL_PHONE)
             || isPermissionGranted(Manifest.permission.SEND_SMS)
             || isPermissionGranted(Manifest.permission.RECEIVE_SMS)
@@ -62,68 +60,67 @@ class MainActivity : AppCompatActivity() {
         requestCode: Int, permissions: Array<String>,
         grantResults: IntArray
     ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    private fun initView() {
-        etPhoneNo = findViewById<View>(R.id.et_phone_no) as EditText
-        btnDial = findViewById<View>(R.id.btn_dial) as Button
-        btnCall = findViewById<View>(R.id.btn_call) as Button
-        btnDial!!.setOnClickListener {
-            val phoneNo = etPhoneNo!!.text.toString()
-            if (!TextUtils.isEmpty(phoneNo)) {
-                val dial = "tel:$phoneNo"
-                startActivity(Intent(Intent.ACTION_DIAL, Uri.parse(dial)))
-            } else {
-                Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT).show()
-            }
-        }
-        btnCall!!.setOnClickListener {
-            val phoneNo = etPhoneNo!!.text.toString()
-            if (!TextUtils.isEmpty(phoneNo)) {
-                val dial = "tel:$phoneNo"
-
-                // Requires Permission to be declared in manifest
-                // <uses-permission android:name="android.permission.CALL_PHONE"/>
-                // Then check and request for permission during runtime
-                if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
-                    startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dial)))
+    private fun initView(binding: ActivityMainBinding) {
+        binding.apply {
+            btnDial.setOnClickListener {
+                val phoneNo = etPhoneNo.text.toString()
+                if (!TextUtils.isEmpty(phoneNo)) {
+                    val dial = "tel:$phoneNo"
+                    startActivity(Intent(Intent.ACTION_DIAL, Uri.parse(dial)))
                 } else {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Permission not granted yet!",
-                        Toast.LENGTH_SHORT
-                    )
+                    Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT)
                         .show()
                 }
-            } else {
-                Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT).show()
             }
-        }
-        etMessage = findViewById<View>(R.id.et_message) as EditText
-        btnSendMessage = findViewById<View>(R.id.btn_send_message) as Button
-        btnSendMessage!!.setOnClickListener {
-            val message = etMessage!!.text.toString()
-            val phoneNo = etPhoneNo!!.text.toString()
-            if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
-                val smsIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$phoneNo"))
-                smsIntent.putExtra("sms_body", message)
-                startActivity(smsIntent)
-            }
-        }
-        btnSendMessageDirectly = findViewById<View>(R.id.btn_send_message_directly) as Button
-        btnSendMessageDirectly!!.setOnClickListener {
-            val message = etMessage!!.text.toString()
-            val phoneNo = etPhoneNo!!.text.toString()
-            if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
-                // Requires Permission to be declared in manifest
-                // <uses-permission android:name="android.permission.SEND_SMS"/>
-                // Then check and request for permission during runtime
-                if (isPermissionGranted(Manifest.permission.SEND_SMS)) {
-                    val smsManager = SmsManager.getDefault()
-                    smsManager.sendTextMessage(phoneNo, null, message, null, null)
+            btnCall.setOnClickListener {
+                val phoneNo = etPhoneNo.text.toString()
+                if (!TextUtils.isEmpty(phoneNo)) {
+                    val dial = "tel:$phoneNo"
+
+                    // Requires Permission to be declared in manifest
+                    // <uses-permission android:name="android.permission.CALL_PHONE"/>
+                    // Then check and request for permission during runtime
+                    if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
+                        startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dial)))
+                    } else {
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Permission not granted yet!",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
                 } else {
-                    Toast.makeText(this@MainActivity, "Permission denied", Toast.LENGTH_SHORT)
+                    Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT)
                         .show()
+                }
+            }
+            btnSendMessage.setOnClickListener {
+                val message = etMessage.text.toString()
+                val phoneNo = etPhoneNo.text.toString()
+                if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
+                    val smsIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$phoneNo"))
+                    smsIntent.putExtra("sms_body", message)
+                    startActivity(smsIntent)
+                }
+            }
+            btnSendMessageDirectly.setOnClickListener {
+                val message = etMessage.text.toString()
+                val phoneNo = etPhoneNo.text.toString()
+                if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
+                    // Requires Permission to be declared in manifest
+                    // <uses-permission android:name="android.permission.SEND_SMS"/>
+                    // Then check and request for permission during runtime
+                    if (isPermissionGranted(Manifest.permission.SEND_SMS)) {
+                        val smsManager = SmsManager.getDefault()
+                        smsManager.sendTextMessage(phoneNo, null, message, null, null)
+                    } else {
+                        Toast.makeText(this@MainActivity, "Permission denied", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
             }
         }
@@ -131,12 +128,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        telephonyManager!!.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
+        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
     }
 
     override fun onStop() {
         super.onStop()
-        telephonyManager!!.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE)
+        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE)
     }
 
     // This listener only works when the app is in foreground
