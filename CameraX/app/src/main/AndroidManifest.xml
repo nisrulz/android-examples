@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.example.camera2">
+    package="github.nisrulz.example.cameraX">
 
+    <!--
+        If we use `android.hardware.camera` without `.any`, it will not work,
+        if we have a device without a back camera, such as most Chromebooks.
+     -->
+    <uses-feature android:name="android.hardware.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera" />
-
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <application
+      android:name=".CameraXApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="github.nisrulz.example.cameraX.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

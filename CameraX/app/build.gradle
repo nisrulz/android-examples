@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 
 android {
   compileSdk compileSdkVer
-  
 
   defaultConfig {
     applicationId "github.nisrulz.example.camera2"
@@ -22,18 +21,28 @@ android {
     }
 
     buildFeatures { viewBinding true }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
+    implementation "androidx.core:core-ktx:$coreKTX"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+
+    // CameraX dependencies
+    implementation "androidx.camera:camera-camera2:$cameraCamera2Ver"
+    implementation "androidx.camera:camera-lifecycle:$cameraLifecycleVer"
+    implementation "androidx.camera:camera-view:$cameraViewVer"
+
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-    
-    implementation "androidx.legacy:legacy-support-v4:$supportLibVer"
-    implementation "androidx.legacy:legacy-support-v13:$supportLibVer"
-    implementation "androidx.cardview:cardview:$cardView"
-    implementation "androidx.appcompat:appcompat:$appCompat"
 }
