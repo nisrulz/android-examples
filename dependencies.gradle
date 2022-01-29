@@ -72,8 +72,6 @@ ext {
  pagingVer = "2.1.1"
 
  cameraCamera2Ver = "1.1.0-beta01"
- cameraCoreVer = "1.1.0-beta01"
  cameraLifecycleVer = "1.1.0-beta01"
  cameraViewVer = "1.1.0-beta01"
- cameraLifecycleVer = "1.1.0-beta01"
 }
