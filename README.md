@@ -30,7 +30,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [BuilderPattern](/BuilderPattern)
 1. [BuildVariants](/BuildVariants)
 1. [CallsAndSMS](/CallsAndSMS)
-1. [Camera2](/Camera2)
+1. [CameraX](/CameraX)
 1. [ChangeThemeDuringRuntime](/ChangeThemeDuringRuntime)
 1. [CheckIfPhoneOrTablet](/CheckIfPhoneOrTablet)
 1. [CheckIfScreenLocked](/CheckIfScreenLocked)
