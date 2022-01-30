@@ -227,6 +227,11 @@ class MainActivity : AppCompatActivity() {
             permissions.entries.forEach { map ->
                 if (map.key == REQUIRED_PERMISSIONS[0] && map.value) {
                     startCamera()
+                } else if (map.key == REQUIRED_PERMISSIONS[0] && !map.value) {
+                    showToast(
+                        "Camera access is required to display camera preview",
+                        Toast.LENGTH_SHORT
+                    )
                 } else {
                     showToast(
                         "Permissions are not granted by the user.",

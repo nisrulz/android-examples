@@ -20,7 +20,6 @@ ext {
 
  supportLibVer = "1.0.0"
  appCompat = "1.4.1"
- activityKTX = "1.4.0"
  recyclerview = "1.1.0"
  cardView = "1.0.0"
  preferenceKtx = "1.1.1"
