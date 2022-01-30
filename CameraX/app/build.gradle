@@ -33,6 +33,7 @@ dependencies {
 
     implementation "androidx.core:core-ktx:$coreKTX"
     implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.activity:activity-ktx:$activityKTX"
 
     // CameraX dependencies
     implementation "androidx.camera:camera-camera2:$cameraCamera2Ver"

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
@@ -34,8 +35,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
 
-        private const val REQUEST_CODE_PERMISSIONS = 10
-
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
     }
 
@@ -46,16 +45,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(root)
         }
 
-        if (allPermissionsGranted()) {
-            startCamera()
-        } else {
-            // Request for permissions mentioned in [REQUIRED_PERMISSIONS].
-            // This will invoke the [onRequestPermissionsResult]
-            ActivityCompat.requestPermissions(
-                this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
-            )
-        }
-
+        checkForPermissions()
         binding.imageCaptureButton.setOnClickListener { captureImage() }
     }
 
@@ -67,24 +57,6 @@ class MainActivity : AppCompatActivity() {
         binding.container.postDelayed({
             hideSystemUI()
         }, IMMERSIVE_FLAG_TIMEOUT)
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int, permissions: Array<String>, grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == REQUEST_CODE_PERMISSIONS) {
-            if (allPermissionsGranted()) {
-                startCamera()
-            } else {
-                Toast.makeText(
-                    this,
-                    "Permissions are not granted by the user.",
-                    Toast.LENGTH_SHORT
-                ).show()
-                finish()
-            }
-        }
     }
 
     /**
@@ -225,5 +197,64 @@ class MainActivity : AppCompatActivity() {
             controller.systemBarsBehavior =
                 WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
+    }
+
+    private fun checkForPermissions() {
+        when {
+            allPermissionsGranted() -> {
+                startCamera()
+            }
+            ActivityCompat.shouldShowRequestPermissionRationale(
+                this,
+                REQUIRED_PERMISSIONS[0]
+            ) -> {
+                showToast(
+                    "Camera access is required to display camera preview",
+                    Toast.LENGTH_SHORT
+                )
+                askForPermission()
+            }
+            else -> {
+                askForPermission()
+            }
+        }
+    }
+
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { permissions ->
+            permissions.entries.forEach { map ->
+                if (map.key == REQUIRED_PERMISSIONS[0] && map.value) {
+                    startCamera()
+                } else {
+                    showToast(
+                        "Permissions are not granted by the user.",
+                        Toast.LENGTH_SHORT
+                    )
+                    finish()
+                }
+            }
+        }
+
+    /**
+     * Request for permissions mentioned in [REQUIRED_PERMISSIONS].
+     * This will invoke the [ActivityResultContract]
+     */
+    private fun askForPermission() {
+        requestPermissionLauncher.launch(
+            REQUIRED_PERMISSIONS
+        )
+    }
+
+    /**
+     * Display the [Toast] UI.
+     */
+    private fun showToast(message: String, duration: Int) {
+        Toast.makeText(
+            this,
+            message,
+            duration
+        ).show()
     }
 }
