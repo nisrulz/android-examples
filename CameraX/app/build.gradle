@@ -2,17 +2,17 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
+    compileSdk compileSdkVer
 
-  defaultConfig {
-    applicationId "github.nisrulz.example.camera2"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-      testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    defaultConfig {
+        applicationId "github.nisrulz.example.camera2"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,11 +21,6 @@ android {
     }
 
     buildFeatures { viewBinding true }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
@@ -33,13 +28,12 @@ dependencies {
 
     implementation "androidx.core:core-ktx:$coreKTX"
     implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
     // CameraX dependencies
     implementation "androidx.camera:camera-camera2:$cameraCamera2Ver"
     implementation "androidx.camera:camera-lifecycle:$cameraLifecycleVer"
     implementation "androidx.camera:camera-view:$cameraViewVer"
-
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"

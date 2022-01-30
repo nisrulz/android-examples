@@ -11,7 +11,8 @@ class CameraXApplication : Application(), CameraXConfig.Provider {
      * Configure CameraX.
      */
     override fun getCameraXConfig(): CameraXConfig {
-        return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
+        return CameraXConfig.Builder
+            .fromConfig(Camera2Config.defaultConfig())
             .setMinimumLoggingLevel(Log.ERROR).build()
     }
 }

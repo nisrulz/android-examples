@@ -209,8 +209,7 @@ class MainActivity : AppCompatActivity() {
                 REQUIRED_PERMISSIONS[0]
             ) -> {
                 showToast(
-                    "Camera access is required to display camera preview",
-                    Toast.LENGTH_SHORT
+                    "Camera access is required to display camera preview"
                 )
                 askForPermission()
             }
@@ -230,12 +229,10 @@ class MainActivity : AppCompatActivity() {
                 } else if (map.key == REQUIRED_PERMISSIONS[0] && !map.value) {
                     showToast(
                         "Camera access is required to display camera preview",
-                        Toast.LENGTH_SHORT
                     )
                 } else {
                     showToast(
                         "Permissions are not granted by the user.",
-                        Toast.LENGTH_SHORT
                     )
                     finish()
                 }
@@ -255,7 +252,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Display the [Toast] UI.
      */
-    private fun showToast(message: String, duration: Int) {
+    private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(
             this,
             message,
