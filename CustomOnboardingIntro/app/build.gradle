@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
   compileSdk compileSdkVer
-  
 
   defaultConfig {
-    applicationId "nisrulz.github.example.customonboardingintro"
+    applicationId "github.nisrulz.example.customonboardingintro"
     minSdk minSdkVer
     targetSdk targetSdkVer
     versionCode 1
