@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_view_2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,5 +39,10 @@
     <github.nisrulz.example.customview.CustomView2XmlLayoutInflation
         android:id="@+id/myCustomView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        custom_view_2:bgColor="@android:color/holo_red_dark"
+        custom_view_2:subtitle="SubTitle From XML"
+        custom_view_2:title="Title From XML"
+        custom_view_2:txtColor="@android:color/black"
+        custom_view_2:txtSize="8sp" />
 </LinearLayout>

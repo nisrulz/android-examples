@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         binding.apply {
             setContentView(root)
-
             myCustomView1.setText("Hello World!")
             myCustomView2.apply {
                 setTitle("Android")
@@ -20,8 +19,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             myCustomView3.apply {
-                setTitle("Android")
-                setSubTitle("Kitkat")
+                // setTitle("Android")
+                // setSubTitle("Kitkat")
             }
         }
     }
