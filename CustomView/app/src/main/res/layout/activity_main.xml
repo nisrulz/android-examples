@@ -7,8 +7,25 @@
     android:padding="@dimen/activity_horizontal_margin"
     tools:context=".MainActivity">
 
-    <github.nisrulz.example.customview.CustomView
-        android:id="@+id/myCustomView"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Custom View 1: Dynamic View" />
+
+    <github.nisrulz.example.customview.CustomView1DynamicView
+        android:id="@+id/myCustomView1"
         android:layout_width="wrap_content"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Custom View 2: View Binding" />
+
+    <github.nisrulz.example.customview.CustomView2ViewBinding
+        android:id="@+id/myCustomView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
