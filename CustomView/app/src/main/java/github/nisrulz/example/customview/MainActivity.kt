@@ -15,8 +15,13 @@ class MainActivity : AppCompatActivity() {
 
             myCustomView1.setText("Hello World!")
             myCustomView2.apply {
-                setTitle("This is a Title")
-                setSubTitle("This is a Subtitle")
+                setTitle("Android")
+                setSubTitle("Oreo")
+            }
+
+            myCustomView3.apply {
+                setTitle("Android")
+                setSubTitle("Kitkat")
             }
         }
     }

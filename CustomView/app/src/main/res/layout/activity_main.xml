@@ -28,4 +28,15 @@
         android:id="@+id/myCustomView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Custom View 3: XML Layout Inflation" />
+
+    <github.nisrulz.example.customview.CustomView2XmlLayoutInflation
+        android:id="@+id/myCustomView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
