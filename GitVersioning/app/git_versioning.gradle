@@ -1,0 +1,47 @@
+// Get Version Code from Git tags
+def getVersionCode = { ->
+    try {
+        def code = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'tag', '--list'
+            standardOutput = code
+        }
+        return code.toString().split("\n").size() + 100000
+    }
+    catch (ignored) {
+        return -1;
+    }
+}
+
+// Get Version Name from Git tags
+def getVersionName = { ->
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'describe', '--tags', '--dirty'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+    catch (ignored) {
+        return "0.0.1";
+    }
+}
+
+android {
+    defaultConfig {
+        versionCode getVersionCode()
+        versionName getVersionName()
+
+        buildConfigField 'int', 'VERSION_CODE', "${versionCode}"
+        buildConfigField 'String', 'VERSION_NAME', "\"${versionName}\""
+    }
+}
+
+// Generate release apk with a specified name
+task generateReleaseApk(type: Copy) {
+    dependsOn "assembleRelease"
+    from 'build/outputs/apk/release/app-release.apk'
+    into 'signedApk/'
+    rename "app-release.apk", "Git_Versioning_App_${getVersionName()}.apk"
+}
