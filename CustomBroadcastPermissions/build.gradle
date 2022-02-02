@@ -4,28 +4,21 @@ buildscript {
     apply from: '../dependencies.gradle'
 
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePlugin"
-
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-allprojects {
-  repositories {
-    mavenCentral()
-    google()
-  }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
 
 subprojects {
     apply from: '../../dependencies.gradle'
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
