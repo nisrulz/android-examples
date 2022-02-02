@@ -2,18 +2,17 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
+    compileSdk compileSdkVer
 
-  defaultConfig {
-    applicationId "nisrulz.github.example.callsandsms"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    defaultConfig {
+        applicationId "nisrulz.github.example.callsandsms"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,12 +25,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
+    implementation "androidx.core:core-ktx:$coreKTX"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-    
-    implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 }

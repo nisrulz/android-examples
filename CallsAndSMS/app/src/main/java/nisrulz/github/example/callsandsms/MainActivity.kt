@@ -5,157 +5,134 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.telephony.PhoneStateListener
-import android.telephony.SmsManager
-import android.telephony.TelephonyManager
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import nisrulz.github.example.callsandsms.databinding.ActivityMainBinding
 
+private const val TELEPHONE_PROTOCOL = "tel"
+private const val SMS_PROTOCOL = "smsto"
+
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        private val REQUIRED_PERMISSIONS = arrayOf(
+            Manifest.permission.CALL_PHONE,
+            Manifest.permission.SEND_SMS,
+            Manifest.permission.RECEIVE_SMS,
+            Manifest.permission.READ_PHONE_STATE
+        )
+    }
 
     private lateinit var binding: ActivityMainBinding
 
-    private val telephonyManager: TelephonyManager by lazy {
-        getSystemService(TELEPHONY_SERVICE) as TelephonyManager
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         binding.apply {
             setContentView(root)
-            checkIfPermissionGranted()
-            initView(this)
+            checkForPermissions()
+            setOnClickListeners()
         }
     }
 
-    private fun isPermissionGranted(permission: String): Boolean {
-        return (ContextCompat.checkSelfPermission(this@MainActivity, permission)
-                == PackageManager.PERMISSION_GRANTED)
-    }
-
-    private fun checkIfPermissionGranted() {
-        if (isPermissionGranted(Manifest.permission.CALL_PHONE)
-            || isPermissionGranted(Manifest.permission.SEND_SMS)
-            || isPermissionGranted(Manifest.permission.RECEIVE_SMS)
-            || isPermissionGranted(Manifest.permission.READ_PHONE_STATE)
-            || isPermissionGranted(Manifest.permission.PROCESS_OUTGOING_CALLS)
-        ) {
-
-            // Request runtime permission
-            ActivityCompat.requestPermissions(
-                this, arrayOf(
-                    Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS,
-                    Manifest.permission.RECEIVE_SMS, Manifest.permission.READ_PHONE_STATE,
-                    Manifest.permission.PROCESS_OUTGOING_CALLS
-                ), 100
-            )
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int, permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
-
-    private fun initView(binding: ActivityMainBinding) {
+    private fun setOnClickListeners() {
         binding.apply {
             btnDial.setOnClickListener {
                 val phoneNo = etPhoneNo.text.toString()
                 if (!TextUtils.isEmpty(phoneNo)) {
-                    val dial = "tel:$phoneNo"
-                    startActivity(Intent(Intent.ACTION_DIAL, Uri.parse(dial)))
+                    val dialUri = createUriForProtocol(TELEPHONE_PROTOCOL, phoneNo)
+                    startActivity(Intent(Intent.ACTION_DIAL, Uri.parse(dialUri)))
                 } else {
-                    Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT)
-                        .show()
+                    showToast("Enter a phone number")
                 }
             }
             btnCall.setOnClickListener {
                 val phoneNo = etPhoneNo.text.toString()
                 if (!TextUtils.isEmpty(phoneNo)) {
-                    val dial = "tel:$phoneNo"
-
+                    val dialUri = createUriForProtocol(TELEPHONE_PROTOCOL, phoneNo)
                     // Requires Permission to be declared in manifest
                     // <uses-permission android:name="android.permission.CALL_PHONE"/>
                     // Then check and request for permission during runtime
-                    if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
-                        startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dial)))
+                    if (isPermissionGranted(REQUIRED_PERMISSIONS[0])) {
+                        startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dialUri)))
                     } else {
-                        Toast.makeText(
-                            this@MainActivity,
-                            "Permission not granted yet!",
-                            Toast.LENGTH_SHORT
-                        )
-                            .show()
+                        showToast("Permission not granted yet!")
                     }
                 } else {
-                    Toast.makeText(this@MainActivity, "Enter a phone number", Toast.LENGTH_SHORT)
-                        .show()
+                    showToast("Enter a phone number")
                 }
             }
             btnSendMessage.setOnClickListener {
                 val message = etMessage.text.toString()
                 val phoneNo = etPhoneNo.text.toString()
                 if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
-                    val smsIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$phoneNo"))
+                    val smsIntent = Intent(
+                        Intent.ACTION_SENDTO, Uri.parse(
+                            createUriForProtocol(
+                                SMS_PROTOCOL, phoneNo
+                            )
+                        )
+                    )
                     smsIntent.putExtra("sms_body", message)
                     startActivity(smsIntent)
                 }
             }
-            btnSendMessageDirectly.setOnClickListener {
-                val message = etMessage.text.toString()
-                val phoneNo = etPhoneNo.text.toString()
-                if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(phoneNo)) {
-                    // Requires Permission to be declared in manifest
-                    // <uses-permission android:name="android.permission.SEND_SMS"/>
-                    // Then check and request for permission during runtime
-                    if (isPermissionGranted(Manifest.permission.SEND_SMS)) {
-                        val smsManager = SmsManager.getDefault()
-                        smsManager.sendTextMessage(phoneNo, null, message, null, null)
-                    } else {
-                        Toast.makeText(this@MainActivity, "Permission denied", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                }
-            }
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
-    }
+    private fun createUriForProtocol(protocol: String, data: String) = "$protocol:$data"
 
-    override fun onStop() {
-        super.onStop()
-        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE)
-    }
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { }
 
-    // This listener only works when the app is in foreground
-    var phoneStateListener: PhoneStateListener = object : PhoneStateListener() {
-        override fun onCallStateChanged(state: Int, incomingNumber: String) {
-            super.onCallStateChanged(state, incomingNumber)
-            when (state) {
-                TelephonyManager.CALL_STATE_IDLE -> Toast.makeText(
-                    this@MainActivity,
-                    "CALL_STATE_IDLE : Detected in FG",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
-                TelephonyManager.CALL_STATE_RINGING -> Toast.makeText(
-                    this@MainActivity, "CALL_STATE_RINGING : Detected in FG",
-                    Toast.LENGTH_SHORT
-                ).show()
-                TelephonyManager.CALL_STATE_OFFHOOK -> Toast.makeText(
-                    this@MainActivity, "CALL_STATE_OFFHOOK : Detected in FG",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+    private fun checkForPermissions() {
+        if (!allPermissionsGranted()) {
+            askForPermission()
         }
+    }
+
+    /**
+     * Checks if all the permissions mentioned in [REQUIRED_PERMISSIONS]
+     * are granted or not.
+     */
+    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all { permission ->
+        ContextCompat.checkSelfPermission(
+            this, permission
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    /**
+     * Checks if the [permission] are granted or not.
+     */
+    private fun isPermissionGranted(permission: String): Boolean {
+        return ContextCompat.checkSelfPermission(
+            this, permission
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    /**
+     * Request for permissions mentioned in [REQUIRED_PERMISSIONS].
+     * This will invoke the [ActivityResultContracts]
+     */
+    private fun askForPermission() {
+        requestPermissionLauncher.launch(
+            REQUIRED_PERMISSIONS
+        )
+    }
+
+    /**
+     * Display the [Toast] UI.
+     */
+    private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(
+            this,
+            message,
+            duration
+        ).show()
     }
 }
