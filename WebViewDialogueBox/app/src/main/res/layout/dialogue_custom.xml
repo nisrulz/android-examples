@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_margin="3dp"
-              android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,21 +22,18 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
-                android:text="Hello"/>
+                tools:text="Hello World" />
 
             <WebView
                 android:id="@+id/webView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/btn_dailogueOK"
+                android:id="@+id/btnDialogOk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DISMISS "
-                />
+                android:text="@string/dismiss" />
         </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
