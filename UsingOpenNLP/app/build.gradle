@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
+    compileSdk compileSdkVer
+
+    defaultConfig {
     applicationId "nisrulz.github.sample.usingopennlp"
     minSdk minSdkVer
     targetSdk targetSdkVer
@@ -17,10 +18,7 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_7
-    targetCompatibility JavaVersion.VERSION_1_7
-  }
+buildFeatures { viewBinding true }
 }
 
 dependencies {
