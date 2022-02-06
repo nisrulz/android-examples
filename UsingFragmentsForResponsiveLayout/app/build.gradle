@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
+    compileSdk compileSdkVer
+
+    defaultConfig {
     applicationId "nisrulz.github.example.usingfragmentsforresponsivelayout"
     minSdk minSdkVer
     targetSdk targetSdkVer
@@ -12,11 +13,13 @@ android {
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
-  }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
@@ -28,5 +31,5 @@ dependencies {
   androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
   implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation 'androidx.constraintlayout:constraintlayout:1.0.2'
+  implementation 'androidx.constraintlayout:constraintlayout:$constraintLayoutVer'
 }

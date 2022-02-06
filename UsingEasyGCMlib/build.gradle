@@ -4,9 +4,9 @@ buildscript {
     apply from: '../dependencies.gradle'
 
     repositories {
-        mavenCentral()
-        google()
-    }
+    google()
+    mavenCentral()
+  }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePlugin"
         classpath "com.google.gms:google-services:$googleServicesPluginVer"
@@ -19,17 +19,12 @@ buildscript {
   }
 }
 
-allprojects {
-  repositories {
-    mavenCentral()
-    google()
-  }
+task clean(type: Delete) {
+  delete rootProject.buildDir
 }
 
 subprojects {
     apply from: '../../dependencies.gradle'
 }
 
-task clean(type: Delete) {
-  delete rootProject.buildDir
-}
+
