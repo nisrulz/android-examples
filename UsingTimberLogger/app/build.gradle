@@ -5,14 +5,14 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-    applicationId "sample.github.nisrulz.usingtimberlogger"
-    minSdk 15
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
- testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
+        applicationId "github.nisrulz.example.usingtimberlogger"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -23,14 +23,13 @@ android {
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "com.jakewharton.timber:timber:$timberVer"
 
-
-  implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "com.jakewharton.timber:timber:$timberVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 }
