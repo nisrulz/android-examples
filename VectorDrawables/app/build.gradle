@@ -5,16 +5,17 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-    applicationId "github.nisrulz.sample.vectordrawables"
-    minSdk 15
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        applicationId "github.nisrulz.example.vectordrawables"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-    vectorDrawables.useSupportLibrary = true
-  }
-  buildTypes {
+        // For backward compatibility
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -25,14 +26,14 @@ android {
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
-  implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation 'androidx.constraintlayout:constraintlayout:1.0.1'
-  androidTestImplementation "androidx.annotation:annotation:$supportLibVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    androidTestImplementation "androidx.annotation:annotation:$supportLibVer"
 }
