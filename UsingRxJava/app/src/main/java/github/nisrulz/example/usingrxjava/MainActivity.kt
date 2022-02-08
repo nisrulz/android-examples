@@ -25,21 +25,8 @@ class MainActivity : AppCompatActivity() {
             subscription = createGistObservable(GIST_ID)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnNext { gist ->
-                    val sb = StringBuilder()
-                    // Output
-                    gist?.let {
-                        for ((key, value) in gist.files) {
-                            with(sb) {
-                                append(key)
-                                append("\n")
-                                append("Length of file ")
-                                append(value.content.length)
-                                append("\n-------------------\n\n")
-                            }
-                        }
-                    }
-                    mainMessage.text = sb.toString()
+                .doOnNext {
+                    mainMessage.text = createStringDataFromGist(it)
                 }
                 .subscribe()
         }
@@ -50,5 +37,22 @@ class MainActivity : AppCompatActivity() {
         if (!subscription.isUnsubscribed) {
             subscription.unsubscribe()
         }
+    }
+
+    private fun createStringDataFromGist(gist: Gist?): String {
+        val sb = StringBuilder()
+        // Output
+        gist?.let {
+            for ((key, value) in gist.files) {
+                with(sb) {
+                    append(key)
+                    append("\n")
+                    append("Length of file ")
+                    append(value.content.length)
+                    append("\n-------------------\n\n")
+                }
+            }
+        }
+        return sb.toString()
     }
 }
