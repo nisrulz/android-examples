@@ -44,7 +44,7 @@ ext {
  butterknifeVer = "8.8.1"
  daggerVer = "2.24"
  jsr250apiVer = "1.0"
- okhttpVer = "4.2.1"
+ okhttpVer = "4.7.2"
  okhttpLoggingInterceptorVer = "4.2.1"
  gsonVer = "2.8.6"
  retrofitVer = "2.9.0"
