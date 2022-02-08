@@ -1,2 +1,1 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.sample.lib" />
+<manifest package="github.nisrulz.android_lib" />
