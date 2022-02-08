@@ -1,7 +1,8 @@
-package nisrulz.github.example.callsandsms
+package github.nisrulz.example.callsandsms
 
 import android.Manifest
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
@@ -10,7 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import nisrulz.github.example.callsandsms.databinding.ActivityMainBinding
+import github.nisrulz.example.callsandsms.databinding.ActivityMainBinding
 
 private const val TELEPHONE_PROTOCOL = "tel"
 private const val SMS_PROTOCOL = "smsto"
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private lateinit var phoneCallStateReceiver: PhoneCallStateReceiver
+    private lateinit var smsReceiver: SMSReceiver
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +40,22 @@ class MainActivity : AppCompatActivity() {
             checkForPermissions()
             setOnClickListeners()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val phoneStateFilter = IntentFilter("android.intent.action.PHONE_STATE")
+        val smsReceiverFilter = IntentFilter("android.provider.Telephony.SMS_RECEIVED")
+        phoneCallStateReceiver = PhoneCallStateReceiver()
+        smsReceiver = SMSReceiver()
+        registerReceiver(phoneCallStateReceiver, phoneStateFilter)
+        registerReceiver(smsReceiver, smsReceiverFilter)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(phoneCallStateReceiver)
+        unregisterReceiver(smsReceiver)
     }
 
     private fun setOnClickListeners() {
@@ -56,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                     // Requires Permission to be declared in manifest
                     // <uses-permission android:name="android.permission.CALL_PHONE"/>
                     // Then check and request for permission during runtime
-                    if (isPermissionGranted(REQUIRED_PERMISSIONS[0])) {
+                    if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
                         startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dialUri)))
                     } else {
                         showToast("Permission not granted yet!")

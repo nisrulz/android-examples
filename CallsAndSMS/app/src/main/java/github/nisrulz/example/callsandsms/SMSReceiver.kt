@@ -1,4 +1,4 @@
-package nisrulz.github.example.callsandsms
+package github.nisrulz.example.callsandsms
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -16,13 +16,13 @@ class SMSReceiver : BroadcastReceiver() {
 
             pdus?.apply {
                 val messages = arrayOfNulls<SmsMessage>(size)
-                for (item in indices) {
+                for (index in indices) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        messages[item] = SmsMessage.createFromPdu(pdus[item] as ByteArray, format)
+                        messages[index] = SmsMessage.createFromPdu(pdus[index] as ByteArray, format)
                     } else {
-                        messages[item] = SmsMessage.createFromPdu(pdus[item] as ByteArray)
+                        messages[index] = SmsMessage.createFromPdu(pdus[index] as ByteArray)
                     }
-                    val senderPhoneNo = messages[item]?.displayOriginatingAddress
+                    val senderPhoneNo = messages[index]?.displayOriginatingAddress
                     Log.d(
                         "SMSReceiver",
                         "Message " + messages[0]?.messageBody + ", from " + senderPhoneNo,

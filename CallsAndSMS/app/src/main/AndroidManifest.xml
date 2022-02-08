@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="nisrulz.github.example.callsandsms">
+  package="github.nisrulz.example.callsandsms">
 
   <!--Required to make the call directly-->
   <uses-permission android:name="android.permission.CALL_PHONE" />
 
+  <!--Required to access read only phone state-->
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-  <!--Required to make the call directly-->
+  <!--Required to send SMS-->
   <uses-permission android:name="android.permission.SEND_SMS" />
 
-  <!--Required to monitor call states-->
+  <!--Required to receive SMS-->
   <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
-  <!--To send sms directly -->
   <application
     android:allowBackup="true"
     android:icon="@mipmap/ic_launcher"
@@ -31,27 +31,5 @@
       </intent-filter>
     </activity>
 
-    <!-- Registering the Broadcast Receiver here as we want to register it when app installs and
-        unregister it only when app gets uninstall. -->
-    <receiver
-      android:exported="true"
-      android:name=".PhoneCallStateReceiver">
-      <intent-filter>
-        <action android:name="android.intent.action.PHONE_STATE" />
-
-        <!--To monitor outgoing calls-->
-        <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-      </intent-filter>
-    </receiver>
-
-    <!--To receive sms-->
-    <receiver
-      android:exported="true"
-      android:name=".SMSReceiver"
-      android:permission="android.permission.BROADCAST_SMS">
-      <intent-filter>
-        <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-      </intent-filter>
-    </receiver>
   </application>
 </manifest>

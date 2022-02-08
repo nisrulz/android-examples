@@ -1,4 +1,4 @@
-package nisrulz.github.example.callsandsms
+package github.nisrulz.example.callsandsms
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat.getMainExecutor
 class PhoneCallStateReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
+        val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
         /**
          * This broadcast receiver declares an intent-filter for a protected broadcast action string,
          * which can only be sent by the system, not third-party applications.
@@ -26,13 +27,11 @@ class PhoneCallStateReceiver : BroadcastReceiver() {
             || intent.action == "android.intent.action.NEW_OUTGOING_CALL"
         ) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                (context.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager)?.registerTelephonyCallback(
+                telephonyManager.registerTelephonyCallback(
                     getMainExecutor(context),
                     CustomTelephonyCallback()
                 )
             } else {
-                val telephonyManager =
-                    context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
                 telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
             }
         }

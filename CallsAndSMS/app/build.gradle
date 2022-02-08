@@ -5,7 +5,7 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "nisrulz.github.example.callsandsms"
+        applicationId "github.nisrulz.example.callsandsms"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
