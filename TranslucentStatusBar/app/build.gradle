@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
+    compileSdk compileSdkVer
 
-  defaultConfig {
+    defaultConfig {
     applicationId "github.nisrulz.sample.translucentstatusbar"
     minSdk minSdkVer
     targetSdk targetSdkVer

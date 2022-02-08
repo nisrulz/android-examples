@@ -31,7 +31,7 @@ dependencies {
   androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
   implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "com.google.android.material:material:$supportLibVer"
+  implementation "com.google.android.material:material:$material"
 
   implementation "org.parceler:parceler-api:$parcelerVer"
   annotationProcessor "org.parceler:parceler:$parcelerVer"
