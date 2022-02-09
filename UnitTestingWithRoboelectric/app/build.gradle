@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
@@ -34,5 +35,5 @@ dependencies {
     testImplementation "org.robolectric:robolectric:$robolectricVer"
 
     implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "com.google.android.material:material:$supportLibVer"
+    implementation "com.google.android.material:material:$material"
 }

@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
+    compileSdk compileSdkVer
+
+    defaultConfig {
     applicationId "nisrulz.github.sample.usingandroidarchcomponents"
     minSdk minSdkVer
     targetSdk targetSdkVer
@@ -12,11 +13,13 @@ android {
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
-  }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {

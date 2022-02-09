@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
         minSdk minSdkVer
@@ -20,25 +20,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    buildFeatures { viewBinding true }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "androidx.appcompat:appcompat:$appCompat"
 
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-    implementation "androidx.appcompat:appcompat:$appCompat"
-
     // For DefaultLifecycleObserver
-    implementation "android.arch.lifecycle:common-java8:$lifecycleVer"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVer"
 }

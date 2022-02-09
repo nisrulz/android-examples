@@ -1,37 +1,36 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
-        applicationId "nisrulz.github.sample.usingrxjava2"
+        applicationId "github.nisrulz.example.usingrxjava2"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
-     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "androidx.appcompat:appcompat:$appCompat"
-
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
-
     implementation "io.reactivex.rxjava2:rxjava:$rxjava2Ver"
+
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 }

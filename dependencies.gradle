@@ -1,5 +1,5 @@
 ext {
- androidGradlePlugin = "7.1.0"
+ androidGradlePlugin = "7.1.1"
  googleServicesPluginVer = "4.3.3"
 
  kotlinVersion = "1.6.10"
@@ -36,7 +36,7 @@ ext {
  espressoCoreVer = "3.4.0"
  androidTestRunnerVer = "1.2.0"
 
- stethoVer = "1.5.1"
+ stethoVer = "1.6.0"
  picassoVer = "2.71828"
  robolectricVer = "3.5"
  appintroVer = "4.1.0"
@@ -44,7 +44,7 @@ ext {
  butterknifeVer = "8.8.1"
  daggerVer = "2.24"
  jsr250apiVer = "1.0"
- okhttpVer = "4.2.1"
+ okhttpVer = "4.7.2"
  okhttpLoggingInterceptorVer = "4.2.1"
  gsonVer = "2.8.6"
  retrofitVer = "2.9.0"
@@ -67,7 +67,7 @@ ext {
 
  lithoVer = "0.31.0"
 
- lifecycleVer = "2.2.0"
+ lifecycleVer = "2.4.0"
  roomVer = "2.2.3"
  pagingVer = "2.1.1"
 

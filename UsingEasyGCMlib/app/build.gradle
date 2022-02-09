@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
+    compileSdk compileSdkVer
 
-  defaultConfig {
+    defaultConfig {
     applicationId "github.nisrulz.sample.usingeasygcmlib"
     minSdk minSdkVer
     targetSdk targetSdkVer
@@ -13,11 +13,13 @@ android {
 testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
-  }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
@@ -30,9 +32,7 @@ dependencies {
 
 
   implementation "androidx.appcompat:appcompat:$appCompat"
-
   implementation "com.google.android.gms:play-services-gcm:$gpsGCM"
-
   implementation "eu.inloop:easygcm:$easygcmVer"
 }
 

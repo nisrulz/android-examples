@@ -1,41 +1,42 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
-        applicationId "sample.github.nisrulz.usingrxjava"
+        applicationId "github.nisrulz.example.usingrxjava"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
-  testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "androidx.appcompat:appcompat:$appCompat"
 
     implementation "com.squareup.okhttp3:okhttp:$okhttpVer"
     implementation "com.google.code.gson:gson:$gsonVer"
-    implementation "com.jakewharton:butterknife:$butterknifeVer"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVer"
-    implementation "io.reactivex:rxandroid:$rxandroidVer"
+
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
+    implementation "io.reactivex:rxandroid:$rxandroidVer"
     implementation "io.reactivex:rxjava:$rxjavaVer"
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="custom_view_2">
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="txtSize" format="dimension" />
+        <attr name="txtColor" format="color" />
+        <attr name="bgColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -31,5 +31,6 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
+    implementation "androidx.core:core-ktx:$coreKTX"
     implementation "androidx.appcompat:appcompat:$appCompat"
 }

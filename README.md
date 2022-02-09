@@ -55,6 +55,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [GCMNetworkManager](/GCMNetworkManager)
 1. [GPSLocation](/GPSLocation)
 1. [GestureDetection](/GestureDetection)
+1. [GitVersioning](/GitVersioning)
 1. [GridView](/GridView)
 1. [HeadlessFragment](/HeadlessFragment)
 1. [ImplementingEmoticons](/ImplementingEmoticons)

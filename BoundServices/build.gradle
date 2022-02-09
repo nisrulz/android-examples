@@ -4,9 +4,9 @@ buildscript {
     apply from: '../dependencies.gradle'
 
     repositories {
-        mavenCentral()
-        google()
-    }
+    google()
+    mavenCentral()
+  }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePlugin"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"

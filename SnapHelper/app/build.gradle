@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
+    compileSdk compileSdkVer
+
+    defaultConfig {
     applicationId "github.nisrulz.sample.snaphelper"
     minSdk 15
     targetSdk targetSdkVer
@@ -32,7 +33,7 @@ dependencies {
     
   implementation "androidx.appcompat:appcompat:$appCompat"
   implementation "androidx.recyclerview:recyclerview:$recyclerview"
-  implementation "androidx.cardview:cardview:$supportLibVer"
+  implementation "androidx.cardview:cardview:$cardView"
 
   implementation 'com.github.rubensousa:gravitysnaphelper:1.0'
 }

@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
+    compileSdk compileSdkVer
 
-  defaultConfig {
+    defaultConfig {
     applicationId "nisrulz.github.example.sharedelementtransitions"
     minSdk minSdkVer
     targetSdk targetSdkVer
@@ -32,5 +32,5 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
     
   implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "androidx.cardview:cardview:$supportLibVer"
+  implementation "androidx.cardview:cardview:$cardView"
 }
