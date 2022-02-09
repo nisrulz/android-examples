@@ -1,54 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="30dp"
+  android:gravity="center"
+  android:orientation="vertical">
+
+  <Button
+    android:id="@+id/btnDial"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="30dp">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/dial" />
 
-    <EditText
-        android:id="@+id/etPhoneNo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_phone_number"
-        android:inputType="phone" />
+  <Button
+    android:id="@+id/btnCall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/call" />
 
-    <Button
-        android:id="@+id/btnDial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/dial" />
+  <Button
+    android:id="@+id/btnSendMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/send_message" />
 
-    <Button
-        android:id="@+id/btnCall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/call" />
+  <EditText
+    android:id="@+id/etPhoneNo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:autofillHints="AUTOFILL_HINT_PHONE_NUMBER"
+    android:hint="@string/enter_phone_number"
+    android:inputType="phone" />
 
-
-    <EditText
-        android:id="@+id/etMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/enter_message"
-        android:inputType="textCapSentences|textMultiLine"
-        android:maxLength="2000"
-        android:maxLines="12" />
-
-    <Button
-        android:id="@+id/btnSendMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/send_message" />
-
-    <Button
-        android:id="@+id/btnSendMessageDirectly"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/send_message_directly" />
+  <EditText
+    android:id="@+id/etMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:autofillHints="no"
+    android:hint="@string/enter_message"
+    android:inputType="textCapSentences|textMultiLine"
+    android:maxLength="2000"
+    android:maxLines="12" />
 </LinearLayout>
