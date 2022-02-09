@@ -17,13 +17,7 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        
-    }
-}
+
 
 subprojects {
     if (projectDir.name in ["module1", "module2"]) {

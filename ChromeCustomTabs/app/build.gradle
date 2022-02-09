@@ -39,7 +39,7 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
     implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "com.google.android.material:material:$supportLibVer"
+    implementation "com.google.android.material:material:$material"
 
     // Chrome Custom Tabs
     implementation "androidx.browser:browser:$supportLibVer"

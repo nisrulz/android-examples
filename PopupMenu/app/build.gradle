@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
+    compileSdk compileSdkVer
+
+    defaultConfig {
     applicationId "nisrulz.github.example.popupmenu"
     minSdk minSdkVer
     targetSdk targetSdkVer
