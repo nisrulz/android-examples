@@ -28,7 +28,7 @@ ext {
  gpsGCM = "16.1.0"
  gpsDrive = "16.1.0"
 
- firebaseDatabase = "19.2.1"
+ firebaseDatabase = "20.0.3"
  firebaseMessaging = "20.1.0"
 
  junitVer = "4.13.2"
