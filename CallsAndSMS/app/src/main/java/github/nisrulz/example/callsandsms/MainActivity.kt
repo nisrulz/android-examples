@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresPermission
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import github.nisrulz.example.callsandsms.databinding.ActivityMainBinding
@@ -71,19 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
             btnCall.setOnClickListener {
                 val phoneNo = etPhoneNo.text.toString()
-                if (!TextUtils.isEmpty(phoneNo)) {
-                    val dialUri = createUriForProtocol(TELEPHONE_PROTOCOL, phoneNo)
-                    // Requires Permission to be declared in manifest
-                    // <uses-permission android:name="android.permission.CALL_PHONE"/>
-                    // Then check and request for permission during runtime
-                    if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
-                        startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dialUri)))
-                    } else {
-                        showToast("Permission not granted yet!")
-                    }
-                } else {
-                    showToast("Enter a phone number")
-                }
+                makeCall(phoneNo)
             }
             btnSendMessage.setOnClickListener {
                 val message = etMessage.text.toString()
@@ -100,6 +89,24 @@ class MainActivity : AppCompatActivity() {
                     startActivity(smsIntent)
                 }
             }
+        }
+    }
+
+    private fun makeCall(phoneNo: String) {
+        if (!TextUtils.isEmpty(phoneNo)) {
+            val dialUri = createUriForProtocol(TELEPHONE_PROTOCOL, phoneNo)
+            // Requires Permission to be declared in manifest
+            // <uses-permission android:name="android.permission.CALL_PHONE"/>
+            // Then check and request for permission during runtime
+            @RequiresPermission(Manifest.permission.CALL_PHONE)
+            if (isPermissionGranted(Manifest.permission.CALL_PHONE)) {
+                val intent = Intent(Intent.ACTION_CALL, Uri.parse(dialUri))
+                startActivity(intent)
+            } else {
+                showToast("Permission not granted yet!")
+            }
+        } else {
+            showToast("Enter a phone number")
         }
     }
 

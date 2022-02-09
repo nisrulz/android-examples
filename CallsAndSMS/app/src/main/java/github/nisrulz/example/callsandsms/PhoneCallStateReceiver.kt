@@ -11,7 +11,7 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.getMainExecutor
 
-// Listen for call states when in background
+// Listen for call states
 class PhoneCallStateReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
