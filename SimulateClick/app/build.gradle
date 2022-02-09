@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdk compileSdkVer
-    
 
     defaultConfig {
         applicationId "github.nisrulz.simulateclick"
@@ -11,9 +10,9 @@ android {
         targetSdk targetSdkVer
         versionCode 1
         versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-    
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,12 +25,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "com.google.android.material:material:$material"
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-    
-    implementation "androidx.appcompat:appcompat:$appCompat"
-    implementation "com.google.android.material:material:$material"
 }
