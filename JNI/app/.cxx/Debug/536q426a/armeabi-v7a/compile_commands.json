@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/nishantsrivastava/Documents/github/android-examples/JNI/app/.cxx/Debug/536q426a/armeabi-v7a",
-  "command": "/Users/nishantsrivastava/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --gcc-toolchain=/Users/nishantsrivastava/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nishantsrivastava/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dhello_android_jni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/hello-android-jni.dir/hello-android-jni.c.o -c /Users/nishantsrivastava/Documents/github/android-examples/JNI/app/src/main/cpp/hello-android-jni.c",
-  "file": "/Users/nishantsrivastava/Documents/github/android-examples/JNI/app/src/main/cpp/hello-android-jni.c"
-}
-]

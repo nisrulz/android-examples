@@ -305,3 +305,6 @@ google-services.json
 
 *.lst
 *.md5
+
+.cxx/
+.externalNativeBuild/
