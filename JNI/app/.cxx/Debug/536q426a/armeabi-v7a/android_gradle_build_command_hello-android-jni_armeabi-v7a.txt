@@ -1,0 +1,7 @@
+Executable : /Users/nishantsrivastava/Library/Android/sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/Users/nishantsrivastava/Documents/github/android-examples/JNI/app/.cxx/Debug/536q426a/armeabi-v7a
+hello-android-jni
+jvmArgs : 
+

@@ -1,0 +1,5 @@
+# ninja log v5
+0	322	1644456597	CMakeFiles/hello-android-jni.dir/hello-android-jni.c.o	851476ba50ac2630
+322	384	1644456597	/Users/nishantsrivastava/Documents/github/android-examples/JNI/app/build/intermediates/cxx/Debug/536q426a/obj/armeabi-v7a/libhello-android-jni.so	54e569ee4f693aff
+1	199	1644457049	CMakeFiles/hello-android-jni.dir/hello-android-jni.c.o	851476ba50ac2630
+199	253	1644457049	/Users/nishantsrivastava/Documents/github/android-examples/JNI/app/build/intermediates/cxx/Debug/536q426a/obj/armeabi-v7a/libhello-android-jni.so	54e569ee4f693aff
