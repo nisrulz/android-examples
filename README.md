@@ -123,12 +123,11 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingRxJava](/UsingRxJava)
 1. [UsingRxJava2](/UsingRxJava2)
 1. [UsingStetho](/UsingStetho)
-1. [UsingSugarORM](/UsingSugarORM)
-1. [UsingTimberLogger](/UsingTimberLogger)
-1. [UsingAltBeaconLib](/UsingltBeaconLib)
-1. [VectorDrawables](/VectorDrawables)
-1. [ViewPager](/ViewPager)
-1. [WebViewDialogueBox](/WebViewDialogueBox)
+2. [UsingTimberLogger](/UsingTimberLogger)
+3. [UsingAltBeaconLib](/UsingltBeaconLib)
+4. [VectorDrawables](/VectorDrawables)
+5. [ViewPager](/ViewPager)
+6. [WebViewDialogueBox](/WebViewDialogueBox)
 
 #### Example apps from my android libraries
 1. [UsingEasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo/tree/master/app)
