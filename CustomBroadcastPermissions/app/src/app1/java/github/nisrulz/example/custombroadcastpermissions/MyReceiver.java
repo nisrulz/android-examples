@@ -1,4 +1,4 @@
-package sample.github.nisrulz.custombroadcastpermissions;
+package github.nisrulz.example.custombroadcastpermissions;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

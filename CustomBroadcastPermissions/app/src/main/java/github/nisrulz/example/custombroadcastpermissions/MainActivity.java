@@ -1,4 +1,4 @@
-package sample.github.nisrulz.custombroadcastpermissions;
+package github.nisrulz.example.custombroadcastpermissions;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
