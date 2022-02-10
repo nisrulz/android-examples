@@ -68,7 +68,7 @@ ext {
  lithoVer = "0.31.0"
 
  lifecycleVer = "2.4.0"
- roomVer = "2.2.3"
+ roomVer = "2.4.1"
  pagingVer = "2.1.1"
 
  cameraCamera2Ver = "1.1.0-beta01"
