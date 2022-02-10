@@ -4,6 +4,7 @@ import android.annotation.TargetApi
 import android.os.Build
 import android.view.View
 import androidx.viewpager.widget.ViewPager.PageTransformer
+import kotlin.math.abs
 
 class IntroPageTransformer : PageTransformer {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -20,7 +21,7 @@ class IntroPageTransformer : PageTransformer {
         // on how far the user has swiped the page.
         val pageWidth = page.width
         val pageWidthTimesPosition = pageWidth * position
-        val absPosition = Math.abs(position)
+        val absPosition = abs(position)
 
         // Now it's time for the effects
         if (position <= -1.0f || position >= 1.0f) {
