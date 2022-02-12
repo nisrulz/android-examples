@@ -3,6 +3,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        jcenter() {
+            content {
+                // Migration is being tracked here: https://github.com/journeyapps/zxing-android-embedded/issues/606
+                includeModule("com.facebook", "litho")
+            }
+        }
     }
 }
 rootProject.name = "Using Litho"
