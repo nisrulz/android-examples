@@ -65,7 +65,8 @@ ext {
  rxandroid2Ver = "2.1.1"
  rxjava2Ver = "2.2.13"
 
- lithoVer = "0.31.0"
+ lithoVer = "0.41.0"
+ soloaderVer = "0.9.0"
 
  lifecycleVer = "2.4.0"
  roomVer = "2.4.1"
