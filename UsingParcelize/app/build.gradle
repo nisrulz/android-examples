@@ -1,15 +1,12 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-// Comes with Parcelize
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 
 android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "github.nisrulz.usingparcelize"
+        applicationId "github.nisrulz.example.usingparcelize"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
@@ -22,29 +19,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-// Only enable Parcelize
-// All others like ViewBindings and ViewCacheing is not included.
-androidExtensions {
-    features = ["parcelize"]
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
-    // Other JAR dependencies
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-
-    // App
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation "com.google.android.material:material:$material"
 
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test.ext:junit:$junitExtVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-
 }

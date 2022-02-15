@@ -1,7 +1,7 @@
-package github.nisrulz.usingparcelize
+package github.nisrulz.example.usingparcelize
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Person(
@@ -12,6 +12,9 @@ data class Person(
 ) : Parcelable {
 
     override fun toString(): String {
-        return "Name: $name\nAge: $age\nAddress: $address\nOccupation: $occupation".toString()
+        return "Name: $name" +
+                "\nAge: $age" +
+                "\nAddress: $address" +
+                "\nOccupation: $occupation"
     }
 }
