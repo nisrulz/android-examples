@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
     private fun initView(binding: ActivityMainBinding) {
         binding.apply {
             button.setOnClickListener {
-                if (!TextUtils.isEmpty(editText.text.toString())) {
+                val text = editText.text.toString()
+                if (!TextUtils.isEmpty(text)) {
                     button.isEnabled = false
                     button.text = "Processing..."
                     val activity: Activity = this@MainActivity
-                    val text = editText.text.toString()
                     val stringBuilder = StringBuilder().append("Sentences:\n")
                         .append(getSentencesFromParagraph(activity, text))
                         .append("\n\nNames:\n")
