@@ -57,7 +57,7 @@ ext {
  constraintLayoutVer = "2.1.3"
  firebaseJobdispatcherVer="0.8.5"
  dbflowVersion = "3.0.1"
- parcelerVer = '1.1.9'
+ parcelerVer = '1.1.12'
 
  rxandroidVer = "1.2.1"
  rxjavaVer = "1.3.4"
