@@ -5,34 +5,32 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-    applicationId "nisrulz.github.sample.usingopennlp"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        applicationId "nisrulz.github.example.usingopennlp"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-  }
-buildFeatures { viewBinding true }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
-  testImplementation "junit:junit:$junitVer"
-  implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
-
-  implementation 'org.apache.opennlp:opennlp-tools:1.6.0'
+    implementation "org.apache.opennlp:opennlp-tools:$opennlp"
 }
