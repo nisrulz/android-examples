@@ -49,7 +49,7 @@ ext {
  gsonVer = "2.8.6"
  retrofitVer = "2.9.0"
  retrofitConverterGsonVer = "2.6.1"
- mpAndroidChartVer = "v3.0.2"
+ mpAndroidChartVer = "v3.1.0"
  easygcmVer = "1.6.2@aar"
  altbeaconAndroidLibVer = "2+"
  timberVer = "4.7.1"
