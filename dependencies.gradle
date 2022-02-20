@@ -51,7 +51,7 @@ ext {
  retrofitConverterGsonVer = "2.6.1"
  mpAndroidChartVer = "v3.1.0"
  easygcmVer = "1.6.2@aar"
- altbeaconAndroidLibVer = "2+"
+ altbeaconAndroidLibVer = "2.19"
  timberVer = "4.7.1"
  sugarOrmVer = "1.5"
  constraintLayoutVer = "2.1.3"

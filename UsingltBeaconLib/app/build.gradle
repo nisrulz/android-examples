@@ -5,14 +5,14 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-    applicationId "github.nisrulz.sample.usingltbeaconlib"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
+        applicationId "github.nisrulz.example.usingltbeaconlib"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -23,15 +23,15 @@ testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
 
-  implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.appcompat:appcompat:$appCompat"
 
-  implementation "org.altbeacon:android-beacon-library:$altbeaconAndroidLibVer"
+    implementation "org.altbeacon:android-beacon-library:$altbeaconAndroidLibVer"
 }
