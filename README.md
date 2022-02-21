@@ -122,7 +122,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingRxJava2](/UsingRxJava2)
 1. [UsingStetho](/UsingStetho)
 1. [UsingTimberLogger](/UsingTimberLogger)
-1. [UsingAltBeaconLib](/UsingltBeaconLib)
+1. [UsingAltBeaconLib](/UsingAltBeaconLib)
 1. [VectorDrawables](/VectorDrawables)
 1. [ViewPager](/ViewPager)
 1. [WebViewDialogueBox](/WebViewDialogueBox)
