@@ -105,7 +105,6 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingButterKnife](/UsingButterKnife)
 1. [UsingDBFlow](/UsingDBFlow)
 1. [UsingDagger2](/UsingDagger2)
-1. [UsingEasyGCMlib](/UsingEasyGCMlib)
 1. [UsingFragmentsForResponsiveLayout](/UsingFragmentsForResponsiveLayout)
 1. [UsingFirebaseJobDispatcher](/UsingFirebaseJobDispatcher)
 1. [UsingFontAwesomeLib](/UsingFontAwesomeLib)
