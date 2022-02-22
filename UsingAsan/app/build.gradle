@@ -1,14 +1,11 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdk compileSdkVer
 
     defaultConfig {
-        applicationId "github.nisrulz.usingasan"
+        applicationId "github.nisrulz.example.usingasan"
         minSdk minSdkVer
         targetSdk targetSdkVer
         versionCode 1
@@ -21,14 +18,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
     // Other JAR dependencies
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     // App
     implementation "androidx.appcompat:appcompat:$appCompat"
