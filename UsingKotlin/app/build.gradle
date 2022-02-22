@@ -1,48 +1,33 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdk compileSdkVer
-  
-  defaultConfig {
-    applicationId "nisrulz.github.sample.usingkotlin"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-   testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    compileSdk compileSdkVer
+
+    defaultConfig {
+        applicationId "nisrulz.github.example.usingkotlin"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-  }
-
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
-
-  kotlinOptions {
-    jvmTarget = '1.8'
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures { viewBinding true }
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  // Testing-only dependencies
-  testImplementation "junit:junit:$junitVer"
-  androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
-  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+    // Testing-only dependencies
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
 
-  implementation "androidx.appcompat:appcompat:$appCompat"
-
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-}
-
-repositories {
-  mavenCentral()
+    implementation "androidx.appcompat:appcompat:$appCompat"
 }

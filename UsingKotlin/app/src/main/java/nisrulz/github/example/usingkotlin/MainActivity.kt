@@ -1,15 +1,25 @@
-package nisrulz.github.sample.usingkotlin
+package nisrulz.github.example.usingkotlin
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
+import nisrulz.github.example.usingkotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.apply {
+            setContentView(root)
+            setupUi(this)
+        }
+    }
+
+    private fun setupUi(binding: ActivityMainBinding) = binding.apply {
 
         var stringToDisplay = "Hello Kotlin World!"
 
@@ -46,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                   Import the layout in onCreateView() function and use the View references to setup the UI in onViewCreated().
                   The references won’t be assigned before the onCreateView() method has finished.
          */
-        txt_helloworld.text = stringToDisplay
+        txtHelloworld.text = stringToDisplay
 
 
         // Using the kotlin pojo class
@@ -65,23 +75,24 @@ class MainActivity : AppCompatActivity() {
         stringToDisplay += "\n\nUsing default setter\n" + "Hello " + userName.fullName
 
         // Create the operator class instance and display it in the activity
-        var operator = Operator("John", "Doe")
+        val operator = Operator("John", "Doe")
         stringToDisplay += "\n\nUsing inheritance\n" + "Hello " + operator.fullName
 
         // Using member function
         stringToDisplay += "\n\nUsing member function of User object\n" + userName.sayHello(
-                "Nishant")
+            "Nishant"
+        )
 
         stringToDisplay += "\n\nUsing local member function\n" + add(5, 10)
 
         // Using a defined kotlin extension
         stringToDisplay += "\n\nUsing kotlin extensions\n" + userName.getUserAge(22)
 
-        stringToDisplay += "\n\nUsing raw string\n" + rawStringToDisplay
+        stringToDisplay += "\n\nUsing raw string\n$rawStringToDisplay"
 
 
         // Set the value in textview
-        txt_helloworld.text = stringToDisplay
+        txtHelloworld.text = stringToDisplay
 
 
         /* Using lambdas
@@ -99,25 +110,8 @@ class MainActivity : AppCompatActivity() {
 
            More info : https://kotlinlang.org/docs/reference/lambdas.html
          */
-        btn_toast.setOnClickListener({ view -> toast("Click") })
-
+        btnToast.setOnClickListener { toast("Click") }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //region Utility Function
@@ -128,12 +122,12 @@ class MainActivity : AppCompatActivity() {
     // Defining a kotlin extension
     // Extension functions don’t modify the original extended class,
     // but are a convenient way of writing utility methods.
-    fun User.getUserAge(age: Int): String {
-        return "Age : " + age
+    private fun User.getUserAge(age: Int): String {
+        return "Age : $age"
     }
 
     // Defining a function in kotlin
-    fun add(x: Int, y: Int): Int {
+    private fun add(x: Int, y: Int): Int {
         return x + y
     }
     //endregion

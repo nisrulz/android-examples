@@ -1,4 +1,4 @@
-package nisrulz.github.sample.usingkotlin
+package nisrulz.github.example.usingkotlin
 
 /*
   If a non-abstract class does not declare any constructors (primary or secondary), it will have a
@@ -6,6 +6,4 @@ package nisrulz.github.sample.usingkotlin
   If you do not want your class to have a public constructor, you need to declare an empty primary
   constructor with non-default visibility:
  */
-class UtilityClass private constructor() {
-
-}
+class UtilityClass private constructor()

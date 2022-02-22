@@ -1,4 +1,4 @@
-package nisrulz.github.sample.usingkotlin
+package nisrulz.github.example.usingkotlin
 
 /*
   Note that you have to delegate to the default constructor of the extended class, which is similar to
