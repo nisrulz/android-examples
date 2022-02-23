@@ -102,7 +102,6 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [UsingAppintro](/UsingAppintro)
 1. [UsingArcMenu](/UsingArcMenu)
 1. [UsingBottomNavigationBar](/UsingBottomNavigationBar)
-1. [UsingButterKnife](/UsingButterKnife)
 1. [UsingDBFlow](/UsingDBFlow)
 1. [UsingDagger2](/UsingDagger2)
 1. [UsingFragmentsForResponsiveLayout](/UsingFragmentsForResponsiveLayout)

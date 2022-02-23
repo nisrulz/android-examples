@@ -41,7 +41,6 @@ ext {
  robolectricVer = "3.5"
  appintroVer = "4.1.0"
  bottombarVer = "2.1.1"
- butterknifeVer = "8.8.1"
  daggerVer = "2.24"
  jsr250apiVer = "1.0"
  okhttpVer = "4.7.2"
