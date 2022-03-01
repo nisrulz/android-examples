@@ -1,7 +1,6 @@
 # Snackbar
 
-
-### Reference
+## Reference
 
 + [Codepath Notes](https://guides.codepath.com/android/Displaying-the-Snackbar)
 + [API](https://developer.android.com/reference/android/support/design/widget/Snackbar.html)
