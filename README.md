@@ -38,6 +38,7 @@ Main repository containing all the example apps demonstrating features/functiona
 1. [CircularImage](/CircularImage)
 1. [CleanProject](/CleanProject)
 1. [CollapsibleToolbar](/CollapsibleToolbar)
+1. [ColoredConsoleLogs](/ColoredConsoleLogs)
 1. [CommonConfigForModules](/CommonConfigForModules)
 1. [CompileOnly](/CompileOnly)
 1. [ComposeTheme](/ComposeTheme)
