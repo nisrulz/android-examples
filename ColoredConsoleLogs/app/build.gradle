@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "$rootProject.projectDir/colored_console.gradle"
+
 android {
     compileSdk compileSdkVer
 
@@ -38,4 +40,10 @@ dependencies {
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test.ext:junit:$junitExtVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
+}
+
+task coloredHelloWorld {
+    printlnGreen("============")
+    printlnBlue("Hello World!")
+    printlnRed("============")
 }

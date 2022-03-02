@@ -1,0 +1,25 @@
+// Colored Console logs in Groovy
+def printlnWithColor(color, str) {
+    final colorsMap = [black  : 30, red: 31, green: 32, yellow: 33,
+                       blue   : 34, magenta: 35, cyan: 36, white: 37,
+                       default: 39]
+    final style = "${(char) 27}[${colorsMap[color]}" + "m"
+    final styledStr = style + str
+    println(styledStr)
+}
+
+ext.printlnBlack = { str -> printlnWithColor("black", str) }
+
+ext.printlnRed = { str -> printlnWithColor("red", str) }
+
+ext.printlnGreen = { str -> printlnWithColor("green", str) }
+
+ext.printlnYellow = { str -> printlnWithColor("yellow", str) }
+
+ext.printlnBlue = { str -> printlnWithColor("blue", str) }
+
+ext.printlnCyan = { str -> printlnWithColor("magenta", str) }
+
+ext.printlnWhite = { str -> printlnWithColor("white", str) }
+
+ext.printlnDefault = { str -> printlnWithColor("default", str) }
