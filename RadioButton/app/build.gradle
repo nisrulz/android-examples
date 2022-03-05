@@ -5,14 +5,14 @@ android {
     compileSdk compileSdkVer
 
     defaultConfig {
-    applicationId "nisrulz.github.example.radiobutton"
-    minSdk minSdkVer
-    targetSdk targetSdkVer
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-    
+        applicationId "github.nisrulz.example.radiobutton"
+        minSdk minSdkVer
+        targetSdk targetSdkVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,11 +25,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
     // Testing-only dependencies
     testImplementation "junit:junit:$junitVer"
     androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVer"
-    
-  implementation "androidx.appcompat:appcompat:$appCompat"
+
+    implementation "androidx.appcompat:appcompat:$appCompat"
 }
