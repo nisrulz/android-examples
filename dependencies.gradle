@@ -23,7 +23,8 @@ ext {
  recyclerview = "1.1.0"
  cardView = "1.0.0"
  preferenceKtx = "1.1.1"
-
+ paletteKtx = "1.0.0"
+ 
  gpsMobileVision= "17.0.2"
  gpsGCM = "16.1.0"
  gpsDrive = "16.1.0"

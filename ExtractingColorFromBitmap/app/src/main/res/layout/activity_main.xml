@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:gravity="center"
+    android:orientation="vertical">
 
-  <ImageView
-      android:id="@+id/main_image"
-      android:layout_width="@dimen/image_size"
-      android:layout_height="@dimen/image_size"
-      android:layout_gravity="center_horizontal"
-      android:scaleType="centerInside"
-      android:src="@drawable/ic_cloud_white_24dp"
-      />
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_cloud_white_24dp" />
 
-  <TextView
-      android:id="@+id/main_title_text"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="310dp"
-      android:text="TitleTextColor"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      />
+    <TextView
+        android:id="@+id/main_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="TitleTextColor"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-  <TextView
-      android:id="@+id/main_body_text"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="350dp"
-      android:text="BodyTextColor"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      />
+    <TextView
+        android:id="@+id/main_body_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="BodyTextColor"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-  <Button
-      android:id="@+id/btn_reload"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="390dp"
-      android:text="Reload"
-      />
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Reload" />
+</LinearLayout>
