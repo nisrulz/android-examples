@@ -1,11 +1,11 @@
 ext {
- androidGradlePlugin = "7.1.2"
+ androidGradlePlugin = "7.2.2"
  googleServicesPluginVer = "4.3.3"
 
- kotlinVersion = "1.6.10"
+ kotlinVersion = "1.7.10"
 
- compose_compiler_version = "1.1.0-rc02"
- compose_version = "1.1.0-rc01"
+ compose_compiler_version = "1.2.0"
+ compose_version = "1.2.0"
  coreKTX = "1.7.0"
  material = "1.5.0"
  lifecycleRuntimeKTX = "2.4.0"
@@ -14,12 +14,12 @@ ext {
  googleOssLicensePlugin ="0.10.0"
  googleOssLicense ="17.0.0"
 
- compileSdkVer = 32
+ compileSdkVer = 33
  minSdkVer = 21
  targetSdkVer = compileSdkVer
 
  supportLibVer = "1.0.0"
- appCompat = "1.4.1"
+ appCompat = "1.5.0"
  recyclerview = "1.1.0"
  cardView = "1.0.0"
  preferenceKtx = "1.1.1"
