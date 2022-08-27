@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             setupChart(this)
         }
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupChart(binding: ActivityMainBinding) {
-        binding.apply {
+        with(binding) {
             fab.setOnClickListener { view ->
                 Snackbar.make(
                     view,

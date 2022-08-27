@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             initView(this)
         }
     }
 
     private fun initView(binding: ActivityMainBinding) {
-        binding.apply {
+        with(binding) {
             button.setOnClickListener {
                 val text = editText.text.toString()
                 if (!TextUtils.isEmpty(text)) {

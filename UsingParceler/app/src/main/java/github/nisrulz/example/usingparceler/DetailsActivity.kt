@@ -12,7 +12,7 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailsBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
 
             // Use utility function Parcels#unwrap() to convert from parcelable to java bean

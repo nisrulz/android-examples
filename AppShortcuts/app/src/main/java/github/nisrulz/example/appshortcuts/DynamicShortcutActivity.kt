@@ -11,7 +11,7 @@ class DynamicShortcutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDynamicShortcutBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
         }
     }

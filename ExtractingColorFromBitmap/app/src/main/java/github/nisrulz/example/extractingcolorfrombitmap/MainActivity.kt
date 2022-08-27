@@ -32,21 +32,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             setupUi(this)
         }
     }
 
     private fun setupUi(binding: ActivityMainBinding) {
-        binding.apply {
+        with(binding) {
             btnReload.setOnClickListener { loadRandomImage() }
             loadRandomImage()
         }
     }
 
     private fun handleBitmapLoaded(binding: ActivityMainBinding, bitmap: Bitmap) {
-        binding.apply {
+        with(binding) {
             mainImage.setImageBitmap(bitmap)
             Palette.from(bitmap).generate(PaletteAsyncListener { palette ->
                 val darkMutedSwatch = palette?.darkMutedSwatch

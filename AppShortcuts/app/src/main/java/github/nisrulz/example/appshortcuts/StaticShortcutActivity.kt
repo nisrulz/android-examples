@@ -10,7 +10,7 @@ class StaticShortcutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStaticShortcutBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
         }
     }

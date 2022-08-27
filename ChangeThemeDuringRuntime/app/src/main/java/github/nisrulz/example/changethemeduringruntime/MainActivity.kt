@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
 
             btnChange.setOnClickListener { // Flip the flag

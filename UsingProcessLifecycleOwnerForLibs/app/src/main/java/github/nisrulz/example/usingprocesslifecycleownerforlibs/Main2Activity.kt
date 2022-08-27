@@ -11,7 +11,7 @@ class Main2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             txt2.setOnClickListener {
                 startActivity(

@@ -26,7 +26,7 @@ class Page : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentPageBinding.inflate(inflater, container, false)
-        binding.apply {
+        with(binding) {
             textView.text = "$page - $title"
         }
 

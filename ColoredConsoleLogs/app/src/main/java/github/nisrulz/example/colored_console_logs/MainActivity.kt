@@ -12,14 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             setupUi(this)
         }
     }
 
     private fun setupUi(binding: ActivityMainBinding) {
-        binding.apply {
+        with(binding) {
             textView.text = "Hello World!"
         }
     }

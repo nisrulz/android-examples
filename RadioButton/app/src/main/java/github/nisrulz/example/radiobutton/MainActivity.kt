@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
 
             // Initialize Radio Group and attach click handler
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     // Function name assigned in XML
     // Function signature requires v:View? as argument
     fun onSubmit(v: View?) {
-        binding.apply {
+        with(binding) {
             val checkedBtnId = radioGroup.checkedRadioButtonId
             val rb = radioGroup.findViewById<View>(checkedBtnId) as RadioButton?
             if (rb != null) {

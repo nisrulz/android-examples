@@ -13,7 +13,7 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(@Nullable savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailsBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
 
             val person = getPersonDataFromIntent()

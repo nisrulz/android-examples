@@ -13,13 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             setupUi(this)
         }
     }
 
-    private fun setupUi(binding: ActivityMainBinding) = binding.apply {
+    private fun setupUi(binding: ActivityMainBinding) = with(binding) {
 
         var stringToDisplay = "Hello Kotlin World!"
 

@@ -12,14 +12,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.apply {
+        with(binding) {
             setContentView(root)
             setupUi(this)
         }
     }
 
     private fun setupUi(binding: ActivityMainBinding) {
-        binding.apply {
+        with(binding) {
 
             // Iterate over all textview under the linear layout and apply the font awesome font to them
             val iconFont = getTypeface(
