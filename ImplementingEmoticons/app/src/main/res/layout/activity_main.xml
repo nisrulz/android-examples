@@ -52,7 +52,7 @@
       emojicon:emojiconSize="28sp"
       />
   <CheckBox
-      android:id="@+id/use_system_default"
+      android:id="@+id/use_system_default_checkbox"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:checked="false"
