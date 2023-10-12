@@ -1,15 +1,20 @@
+# Android Examples
+
 ![Image](img/github_banner.png)
 
-### Featured in
+## Featured in
+
 [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23100-blue.svg)](https://www.androiddevdigest.com/digest-100/)
 
 ### Show some :heart: and star the repo to support the project
+
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/android-examples.svg?style=social&label=Star)](https://github.com/nisrulz/android-examples) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/android-examples.svg?style=social&label=Fork)](https://github.com/nisrulz/android-examples/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/android-examples.svg?style=social&label=Watch)](https://github.com/nisrulz/android-examples) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/android-examples)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
 Main repository containing all the example apps demonstrating features/functionality/integrations in android application development
 
 > NOTE: If you are going to download just a single example app (using the download link), make sure you follow the below procedure
+>
 > 1. Create a folder `android-examples`
 > 1. Next download and add the [`dependencies.gradle`](/dependencies.gradle) to this `android-examples` folder
 > 1. Now move the example app folder inside the `android-examples` folder
@@ -17,132 +22,63 @@ Main repository containing all the example apps demonstrating features/functiona
 > The reason this is required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `android-examples`.
 
 ## Example apps
-1. [ActivityLifecycle](/ActivityLifecycle)
-1. [AnimatedGradientBackground](/AnimatedGradientBackground)
-1. [AudioRecording](/AudioRecording)
-1. [AutoCompleteTextview](/AutoCompleteTextview)
-1. [AutoInitLibrary](/AutoInitLibrary)
-1. [BasicMVP](/BasicMVP)
-1. [BoundServices](/BoundServices)
-1. [BottomSheet](/BottomSheet)
-1. [BottomNavigationView](/BottomNavigationView)
-1. [BroadcastReceiver](/BroadcastReceiver)
-1. [BuilderPattern](/BuilderPattern)
-1. [BuildVariants](/BuildVariants)
-1. [CallsAndSMS](/CallsAndSMS)
-1. [CameraX](/CameraX)
-1. [ChangeThemeDuringRuntime](/ChangeThemeDuringRuntime)
-1. [CheckIfPhoneOrTablet](/CheckIfPhoneOrTablet)
-1. [CheckIfScreenLocked](/CheckIfScreenLocked)
-1. [ChromeCustomTabs](/ChromeCustomTabs)
-1. [CircularImage](/CircularImage)
-1. [CleanProject](/CleanProject)
-1. [CollapsibleToolbar](/CollapsibleToolbar)
-1. [ColoredConsoleLogs](/ColoredConsoleLogs)
-1. [CommonConfigForModules](/CommonConfigForModules)
-1. [CompileOnly](/CompileOnly)
-1. [ComposeTheme](/ComposeTheme)
-1. [CustomBroadcastPermissions](/CustomBroadcastPermissions)
-1. [CustomOnboardingIntro](/CustomOnboardingIntro)
-1. [CustomView](/CustomView)
-1. [DataBinding](/DataBinding)
-1. [DebuggingWebViews](/DebuggingWebViews)
-1. [DepsManagementViaBuildSrc](/DepsManagementViaBuildSrc)
-1. [Encryption](/Encryption)
-1. [ExtractingColorFromBitmap](/ExtractingColorFromBitmap)
-1. [FingerprintAPI](/FingerprintAPI)
-1. [Firebase](/Firebase)
-1. [FirebaseCloudMessaging](/FirebaseCloudMessaging)
-1. [GCMNetworkManager](/GCMNetworkManager)
-1. [GPSLocation](/GPSLocation)
-1. [GestureDetection](/GestureDetection)
-1. [GitVersioning](/GitVersioning)
-1. [GridView](/GridView)
-1. [HeadlessFragment](/HeadlessFragment)
-1. [ImplementingEmoticons](/ImplementingEmoticons)
-1. [IntentService](/IntentService)
-1. [Intents](/Intents)
-1. [InterProcessService](/InterProcessService)
-1. [JNI](/JNI)
-1. [JUnitTests](/JUnitTests)
-1. [LifeCycleCompForLib](/LifeCycleCompForLib)
-1. [ListView](/ListView)
-1. [ListViewWithCustomAdapter](/ListViewWithCustomAdapter)
-1. [LoadHtmlIntoWebview](/LoadHtmlIntoWebview)
-1. [LocalBroadcastManager](/LocalBroadcastManager)
-1. [MobileVisionAPI2ReadBarCodes](/MobileVisionAPI2ReadBarCodes)
-1. [ModulesUnderSubdirectory](/ModulesUnderSubdirectory)
-1. [NavigationDrawer](/NavigationDrawer)
-1. [NestedModules](/NestedModules)
-1. [Notification](/Notification)
-1. [OSSLicenseActivity](/OSSLicenseActivity)
-1. [ParallaxHeaderListview](/ParallaxHeaderListview)
-1. [PopupMenu](/PopupMenu)
-1. [ProductFlavors](/ProductFlavors)
-1. [QuickSettingsTile](/QuickSettingsTile)
-1. [RadioButton](/RadioButton)
-1. [RatingBar](/RatingBar)
-1. [ReadJSONFile](/ReadJSONFile)
-1. [RecyclerView](/RecyclerView)
-1. [RuntimePermissions](/RuntimePermissions)
-1. [SQLite](/SQLite)
-1. [SearchView](/SearchView)
-1. [SearchViewInToolbar](/SearchViewInToolbar)
-1. [Service](/Service)
-1. [SharedElementTransitions](/SharedElementTransitions)
-1. [SimulateClick](/SimulateClick)
-1. [SnackBar](/SnackBar)
-1. [SnapHelper](/SnapHelper)
-1. [SpeechRecognition](/SpeechRecognition)
-1. [SplashScreen](/SplashScreen)
-1. [SplitSigninConfig](/SplitSigninConfig)
-1. [TabLayout](/TabLayout)
-1. [TextToSpeech](/TextToSpeech)
-1. [TranslucentStatusBar](/TranslucentStatusBar)
-1. [UnitTestingWithRoboelectric](/UnitTestingWithRoboelectric)
-1. [UsingAppintro](/UsingAppintro)
-1. [UsingArcMenu](/UsingArcMenu)
-1. [UsingBottomNavigationBar](/UsingBottomNavigationBar)
-1. [UsingDBFlow](/UsingDBFlow)
-1. [UsingDagger2](/UsingDagger2)
-1. [UsingFragmentsForResponsiveLayout](/UsingFragmentsForResponsiveLayout)
-1. [UsingFirebaseJobDispatcher](/UsingFirebaseJobDispatcher)
-1. [UsingFontAwesomeLib](/UsingFontAwesomeLib)
-1. [UsingKotlin](/UsingKotlin)
-1. [UsingLitho](/UsingLitho)
-1. [UsingMPChartsLib](/UsingMPChartsLib)
-1. [UsingOpenNLP](/UsingOpenNLP)
-1. [UsingParceler](/UsingParceler)
-1. [UsingParcelize](/UsingParcelize)
-1. [UsingPocketSphinxForVoiceRecognition](/UsingPocketSphinxForVoiceRecognition)
-1. [UsingRetrofit2](/UsingRetrofit2)
-1. [UsingRobolectric](/UsingRobolectric) 
-1. [UsingRoomORM](/UsingRoomORM)
-1. [UsingRxJava](/UsingRxJava)
-1. [UsingRxJava2](/UsingRxJava2)
-1. [UsingStetho](/UsingStetho)
-1. [UsingTimberLogger](/UsingTimberLogger)
-1. [UsingAltBeaconLib](/UsingAltBeaconLib)
-1. [VectorDrawables](/VectorDrawables)
-1. [ViewPager](/ViewPager)
-1. [WebViewDialogueBox](/WebViewDialogueBox)
 
-#### Example apps from my android libraries
+1. [Custom Drawer](/custom_home_drawer)
+1. [DropDown Button](/dropdown_button)
+1. [Enable Splash Screen](/enabling_splash_screen)
+1. [Firebase Analytics Integration](/analytics_integration)
+1. [Firebase Crashlytics Integration](/firebase_crash_reporting)
+1. [Google Signin](/google_signin)
+1. [Grid Layout](/grid_layout)
+1. [Image Editor](/image_editor)
+1. [Image from Network](/image_from_network)
+1. [Infinite List](/infinite_list)
+1. [Load local image](/load_local_image)
+1. [Load local json](/load_local_json)
+1. [Navigation Drawer](/navigation_drawer)
+1. [Persist Key Value](/persist_key_value)
+1. [Push Notifications](/push_notifications)
+1. [Simple Material App](/simple_material_app)
+1. [Sliver App Bar](/sliver_app_bar_example)
+1. [Stateful Widget](/stateful_widget)
+1. [Stateless counter app](/statless_counter_app)
+1. [Stateless Widgets](/stateless_widgets)
+1. [Todo list using Provider](/todo_list_using_provider)
+1. [Unit Testing](/unit_testing)
+1. [Using Alert Dialog](/using_alert_dialog)
+1. [Using Bottom Navigation Bar](/using_bottom_nav_bar)
+1. [Using Bottom Sheet](/bottom_sheet)
+1. [Using Custom Fonts](/using_custom_fonts)
+1. [Using EditText](/using_edittext)
+1. [Using Gradient](/using_gradient)
+1. [Using HTTP GET](/using_http_get)
+1. [Using InteractiveViewer](/using_interactiveviewer)
+1. [Using Listview](/using_listview)
+1. [Using ListwheelScrollView](/using_listwheelscrollview)
+1. [Using SnackBar](/using_snackbar)
+1. [Using Stepper](/using_stepper)
+1. [Using Tabs](/using_tabs)
+1. [Using Theme](/using_theme)
+1. [View PDF File](/view_pdf_file)
+
+## Example apps from my android libraries
+
+1. [UsingAndroidUtils](https://github.com/nisrulz/android-utils/tree/master/sample)
 1. [UsingEasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo/tree/master/app)
-1. [UsingSensey](https://github.com/nisrulz/sensey/tree/master/sample)
+1. [UsingOptimusHTTP](https://github.com/nisrulz/OptimusHTTP/tree/master/sample)
+1. [UsingPackageHunter](https://github.com/nisrulz/packagehunter/tree/master/app)
+1. [UsingQREader](https://github.com/nisrulz/qreader/tree/master/app)
 1. [UsingRecyclerViewHelper](https://github.com/nisrulz/recyclerviewhelper/tree/master/app)
 1. [UsingScreenshott](https://github.com/nisrulz/screenshott/tree/master/sample)
-1. [UsingStackedHorizontalProgressbar](https://github.com/nisrulz/stackedhorizontalprogressbar/tree/master/sample)
-1. [UsingQREader](https://github.com/nisrulz/qreader/tree/master/app)
-1. [UsingPackageHunter](https://github.com/nisrulz/packagehunter/tree/master/app)
-1. [UsingAndroidUtils](https://github.com/nisrulz/android-utils/tree/master/sample)
-1. [UsingZentone](https://github.com/nisrulz/zentone/tree/master/app)
-1. [UsingOptimusHTTP](https://github.com/nisrulz/OptimusHTTP/tree/master/sample)
+1. [UsingSensey](https://github.com/nisrulz/sensey/tree/master/sample)
 1. [UsingShoutout](https://github.com/nisrulz/ShoutOut/tree/master/sample)
+1. [UsingStackedHorizontalProgressbar](https://github.com/nisrulz/stackedhorizontalprogressbar/tree/master/sample)
+1. [UsingZentone](https://github.com/nisrulz/zentone/tree/master/app)
 
+## Pull Requests
 
-# Pull Requests
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
+
   1. Match coding style (braces, spacing, etc.) This is best achieved using `Reformat Code` feature of Android Studio `CMD`+`Option`+`L` on Mac and `CTRL` + `ALT` + `L` on Linux + Windows .
   2. If its a feature, bugfix, or anything please only change code to what you specify.
   3. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
@@ -152,40 +88,46 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 
       + Upgrade your gradle wrapper to the one all other apps are using. Use the below command at root of your project
 
-          ```
+          ```sh
           ./gradlew wrapper --gradle-version <version_name>
           ```
+
           i.e `./gradlew wrapper --gradle-version 6.0.1`
 
       + Use `ext` variables as defined in [`dependencies.gradle`](/dependencies.gradle), in your `build.gradle` files to make sure all apps are in sync with configurations and dependencies. Take a look [here](/DataBinding/app/build.gradle) and [here](/DataBinding/build.gradle)
-      
+
       + Use the package name of the format `github.nisrulz.*` where `*` is the example you are adding to the repo. I am trying to follow a set standard in the repo, please adhere to that.
   7. Have fun!
 
   > NOTE: There is a quick bootstrapping **cookiecutter** template to create an Android example project that adheres to all wiring up and standards for this repo. Read how to use use it from links below:
   >
-  > - [Standard Example](/cookiecutter-android-example)
-  > - [Compose Example](/cookiecutter-android-compose-example)
+  > + [Standard Example](/cookiecutter-android-example)
+  > + [Compose Example](/cookiecutter-android-compose-example)
 
 ## Extra
 
 Since the repo is pretty large now , I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
 
-  - Install `svn` using homebrew (mac/linux)
++ Install `svn` using homebrew (mac/linux)
+
     ```bash
     brew install svn
     ```
-  - Copy the name of the example folder in this repo i.e `AccessingGoogleDrive`
-  - Next replace `example_folder` in the below command:
+
++ Copy the name of the example folder in this repo i.e `AccessingGoogleDrive`
++ Next replace `example_folder` in the below command:
 
     ```bash
     svn checkout https://github.com/nisrulz/android-examples/trunk/example_folder
     ```
+
     i.e Consider `AccessingGoogleDrive` is the name of the example's folder, the command becomes:
+
     ```bash
     svn checkout https://github.com/nisrulz/android-examples/trunk/AccessingGoogleDrive
     ```
-  - Done! You should have the specific example all checked out!
+
++ Done! You should have the specific example all checked out!
 
 ## Author & support
 
